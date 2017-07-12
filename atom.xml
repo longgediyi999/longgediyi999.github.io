@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>潇凌</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-07-12T03:25:10.842Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>xiao ling</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>haha</title>
+    <link href="http://yoursite.com/2017/07/12/haha/"/>
+    <id>http://yoursite.com/2017/07/12/haha/</id>
+    <published>2017-07-12T03:23:58.000Z</published>
+    <updated>2017-07-12T03:25:10.842Z</updated>
+    
+    <content type="html"><![CDATA[<p>阿斯顿发生地方</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;阿斯顿发生地方&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>js_01</title>
+    <link href="http://yoursite.com/2017/07/07/js_01/"/>
+    <id>http://yoursite.com/2017/07/07/js_01/</id>
+    <published>2017-07-07T13:00:10.000Z</published>
+    <updated>2017-07-08T00:31:09.265Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JavaScript基础"><a href="#JavaScript基础" class="headerlink" title="JavaScript基础"></a>JavaScript基础</h1><h2 id="JavaScript介绍"><a href="#JavaScript介绍" class="headerlink" title="JavaScript介绍"></a>JavaScript介绍</h2><h3 id="浏览器以及网站相关介绍"><a href="#浏览器以及网站相关介绍" class="headerlink" title="浏览器以及网站相关介绍"></a>浏览器以及网站相关介绍</h3><blockquote>
+<p><strong>浏览器定义</strong>：可以显示网页服务器或者文件系统的HTML文件内容，并让用户与这些文件交互的一种软件</p>
+</blockquote>
+<p><img src="/images/media/图片1.png" alt="图片1"></p>
+<pre><code>我们常规使用的五大浏览器：chorme，firefox，IE，Safari以及Oprea
+从内核来看：有webkit，gecko，trident，presto
+</code></pre><h3 id="浏览器工作原理的介绍"><a href="#浏览器工作原理的介绍" class="headerlink" title="浏览器工作原理的介绍"></a>浏览器工作原理的介绍</h3><p><img src="/images/media/网站简单介绍.png" alt=""></p>
+<h3 id="为什么要有JavaScript？"><a href="#为什么要有JavaScript？" class="headerlink" title="为什么要有JavaScript？"></a>为什么要有JavaScript？</h3><ul>
+<li>JavaScript设计的最初目的<pre><code>- 判断客户端表单输入验证(以前的网速慢)
+- 后来被一度用于小广告
+</code></pre></li>
+<li>JavaScript现在的意义<pre><code>- 页面特效（pc端的网页特效）
+- 移动端（移动web和app）
+- 异步和服务器交互 AJAX
+- 服务器端开发（NodeJs）
+- 数据库甚至烤面包机都可以运行js了 
+- 另外还可以抢火车票（阿里巴巴月饼事件）
+</code></pre></li>
+</ul>
+<p>演示炫酷效果：<br>    游戏:<a href="http://www.codecombat.cn/" target="_blank" rel="external">http://www.codecombat.cn/</a><br>    简历:<a href="http://www.webhek.com/misc/interactive-resume" target="_blank" rel="external">http://www.webhek.com/misc/interactive-resume</a><br>    WebApp:    <a href="http://m.kuaidi100.com/" target="_blank" rel="external">http://m.kuaidi100.com/</a><br>            <a href="http://m.kugou.com/index/index" target="_blank" rel="external">http://m.kugou.com/index/index</a><br>    打飞机</p>
+<h3 id="JavaScript是什么"><a href="#JavaScript是什么" class="headerlink" title="JavaScript是什么"></a>JavaScript是什么</h3><p>​    JavaScript 诞生于 1995 年。 它当时的目的是为了验证表单输入的验证。 因为在 JavaScript问世之前，表单的验证都是通过服务器端验证的。而当时都是电话拨号上网的年代，服务器验证数据是一件非常痛苦的事情。</p>
+<p>​    1995 年， 当时工作在 Netscape(网景)公司的布兰登(Brendan Eich)为解决类似于 “向服务器提交数据之前验证”的问题。在 Netscape Navigator 2.0 与 Sun 公司联手开发一个称之为LiveScript 的脚本语言。为了营销便利，之后更名为 JavaScript</p>
+<p><img src="/images/media/图片4.png" alt=""><br>JavaScript的历史总结：<br>        1.JavaScript诞生于1995年;<br>        2.是由网景公司布兰登艾奇开发的;<br>        3.JavaScript前名叫LiveScript;</p>
+<blockquote>
+<p>JavaScript是一种运行在<strong><em>客户端</em></strong> 的<strong><em>脚本语言</em></strong> </p>
+</blockquote>
+<p>客户端：即接受服务的一端，与服务端相对应，在前端开发中，通常客户端指的就是浏览器。<br>    JavaScript的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML（标准通用标记语言下的一个应用）网页上使用，用来给HTML网页增加动态功能。<br>脚本语言：也叫解释型语言，特点是<strong><em>执行一行，解释一行，如果发现报错，代码就停止执行</em></strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tips：脚本语言一般会有一个宿主环境（当前脚本运行并且起作用一个环境）</div><div class="line">类似的有：as（actionScript flash宿主环境）</div></pre></td></tr></table></figure>
+<h3 id="JavaScript和HTML、CSS的区别"><a href="#JavaScript和HTML、CSS的区别" class="headerlink" title="JavaScript和HTML、CSS的区别"></a>JavaScript和HTML、CSS的区别</h3><ol>
+<li>HTML：提供网页的结构，提供网页中的内容</li>
+<li>CSS: 用来美化网页</li>
+<li>JavaScript: 可以用来控制网页内容，给网页增加动态的效果</li>
+</ol>
+<h2 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h2><p><img src="/images/media/1496912475691.png" alt="1496912475691"></p>
+<h3 id="ECMAScript-JavaScript的核心"><a href="#ECMAScript-JavaScript的核心" class="headerlink" title="ECMAScript - JavaScript的核心"></a>ECMAScript - JavaScript的核心</h3><p>定义了JavaScript的语法规范</p>
+<p>JavaScript的核心，描述了语言的基本语法和数据类型，ECMAScript是一套标准，定义了一种语言的标准,与具体实现无关</p>
+<h3 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM - 浏览器对象模型"></a>BOM - 浏览器对象模型</h3><p>一套操作浏览器功能的API(可以理解为一套工具和方法)</p>
+<p>通过BOM可以操作浏览器窗口，比如：弹出框、控制浏览器跳转、获取分辨率等</p>
+<h3 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM - 文档对象模型"></a>DOM - 文档对象模型</h3><p>一套操作页面元素的API</p>
+<p>DOM可以把HTML看做是文档树，通过DOM提供的API可以对树上的节点进行操作</p>
+<h2 id="JavaScript初体验"><a href="#JavaScript初体验" class="headerlink" title="JavaScript初体验"></a>JavaScript初体验</h2><h3 id="JavaScript的书写位置"><a href="#JavaScript的书写位置" class="headerlink" title="JavaScript的书写位置"></a>JavaScript的书写位置</h3><blockquote>
+<p>书写Javascript代码有三种方式，第一种是直接在script标签中书写，第二种是将代码写在js文件中，通过script进行引入。第三种为内嵌入html结构中书写js，但不利于后期代码开发和维护，不推荐；</p>
+</blockquote>
+<ul>
+<li>写在script标签中</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    alert('Hello World!');</div><div class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li>写在外部js文件中，在页面引入</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"main.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<ul>
+<li><p>注意点</p>
+<p><strong><em>引用外部js文件的script标签中不可以写JavaScript代码</em></strong></p>
+</li>
+</ul>
+<blockquote>
+<p>script标签的书写位置，原则上来说，可以在页面中的任意位置书写script标签。</p>
+</blockquote>
+<ol>
+<li>写在head标签中，style标签之后。</li>
+<li>写在标签的前面。</li>
+<li>写在的后面，即页面的最后面。</li>
+</ol>
+<blockquote>
+<p>script的一些属性</p>
+</blockquote>
+<ul>
+<li>language已废弃</li>
+<li>src 表示要引入的外部文件</li>
+<li>type 表示脚本语言的类型 （在html5的结构中可以省略不写）</li>
+</ul>
+<hr>
+<h2 id="计算机组成"><a href="#计算机组成" class="headerlink" title="计算机组成"></a>计算机组成</h2><h3 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h3><ul>
+<li>应用软件：浏览器(chrome/ie/firefox)、QQ、Sublime、Word</li>
+<li>系统软件：Windows、Linux、OSX</li>
+</ul>
+<h3 id="硬件"><a href="#硬件" class="headerlink" title="硬件"></a>硬件</h3><ul>
+<li>三大件：CPU、内存、硬盘</li>
+<li>输入设备：鼠标、键盘、手写板、摄像头等</li>
+<li>输出设备：显示器、打印机、投影仪等</li>
+</ul>
+<p><img src="/images/media/1497317567484.png" alt="1497317567484"></p>
+<p><img src="/images/media/1496916239525.png" alt="1496916239525"></p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="什么是变量"><a href="#什么是变量" class="headerlink" title="什么是变量"></a>什么是变量</h3><ul>
+<li><p>什么是变量</p>
+<p>变量是计算机内存中存储数据的标识符，根据变量名称可以获取到内存中存储的数据</p>
+</li>
+<li><p>为什么要使用变量</p>
+<p>使用变量可以方便的获取或者修改内存中的数据</p>
+</li>
+</ul>
+<h3 id="如何使用变量"><a href="#如何使用变量" class="headerlink" title="如何使用变量"></a>如何使用变量</h3><ul>
+<li>var声明变量</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age;</div></pre></td></tr></table></figure>
+<ul>
+<li>变量的赋值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age;</div><div class="line">age = <span class="number">18</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>同时声明多个变量</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age, name, sex;</div><div class="line">age = <span class="number">10</span>;</div><div class="line">name = <span class="string">'zs'</span>;</div></pre></td></tr></table></figure>
+<ul>
+<li>同时声明多个变量并赋值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">10</span>, name = <span class="string">'zs'</span>;</div></pre></td></tr></table></figure>
+<h3 id="变量在内存中的存储"><a href="#变量在内存中的存储" class="headerlink" title="变量在内存中的存储"></a>变量在内存中的存储</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</div></pre></td></tr></table></figure>
+<p>画图演示<br><img src="/images/media/内存中的变量存储.png" alt=""></p>
+<h3 id="变量的命名规则和规范"><a href="#变量的命名规则和规范" class="headerlink" title="变量的命名规则和规范"></a>变量的命名规则和规范</h3><ul>
+<li><p>规则 - 必须遵守的，不遵守会报错</p>
+<ul>
+<li><p>由字母、数字、下划线、$符号组成，不能以数字开头</p>
+</li>
+<li><p>不能是关键字和保留字，例如：for、while。(变量名称为name的注意点)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 通过浏览器的控制台查看，是带引号的</span></div><div class="line"><span class="comment">// name比较特殊，name是window对象的一个属性</span></div><div class="line"><span class="keyword">var</span> name = <span class="number">18</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>区分大小写</p>
+</li>
+</ul>
+</li>
+<li><p>规范 - 建议遵守的，不遵守不会报错</p>
+<ul>
+<li>变量名必须有意义</li>
+<li>遵守驼峰命名法。首字母小写，后面单词的首字母需要大写。例如：userName、userPassword<br><strong>关键字</strong><br><img src="/images/media/关键字.png" alt=""><br><strong>保留字</strong><br><img src="/images/media/保留字.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h3 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h3><ol>
+<li>交换两个变量的值</li>
+<li>不使用临时变量，交换两个数值变量的值</li>
+</ol>
+<p><strong>tips</strong>:javascript是一种弱类型语言，不管声明什么类型的变量，都是用var，并且变量的类型是可以变化的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> age = <span class="number">18</span>;</div><div class="line">age = <span class="string">'马户'</span>;</div><div class="line"><span class="comment">// Javascript的变量所存储的数据类型不在定义的时候确定 ，而在赋值的确定</span></div><div class="line"><span class="comment">// int i=10;</span></div></pre></td></tr></table></figure>
+<hr>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><blockquote>
+<p>不被程序执行的代码。用于程序员标记代码，在后期的修改，以及他人的学习时有所帮助，在JS中，分为单行注释和多行注释</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//这是单行注释，只能注释一行</span></div><div class="line"><span class="comment">/*</span></div><div class="line">	这是多行注释，不能嵌套</div><div class="line">*/</div></pre></td></tr></table></figure>
+<p>注释的作用：</p>
+<pre><code>1. 模块划分，方便代码查找和维护
+2. 用于解释复杂代码的逻辑，方便维护和后期开发。
+</code></pre><p>要求：写代码的时候必须要写注释 不加注释是不道德的</p>
+<p>【永无bug.js】</p>
+<hr>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><blockquote>
+<p>数据类型学习目标:掌握四种常用的数据类型</p>
+</blockquote>
+<ul>
+<li><p>简单(基本、值)数据类型</p>
+<p>Number（数字类型）、String（字符串）、Boolean（布尔类型）<br>Undefined、Null（特殊类型）</p>
+</li>
+<li><p>复杂(引用)数据类型（暂时了解</p>
+<p>object</p>
+</li>
+</ul>
+<h3 id="如何查看数据类型"><a href="#如何查看数据类型" class="headerlink" title="如何查看数据类型"></a>如何查看数据类型</h3><p>使用typeof关键字查看数据类型</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">typeof name;</div><div class="line">typeof(name);</div></pre></td></tr></table></figure>
+<h4 id="Number类型"><a href="#Number类型" class="headerlink" title="Number类型"></a>Number类型</h4><ul>
+<li><p>数值字面量：数值的固定值的表示法</p>
+<p>6    7    110</p>
+</li>
+<li><p>进制</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">十进制</div><div class="line">	var num = 9;</div><div class="line">	进行算数计算时，八进制和十六进制表示的数值最终都将被转换成十进制数值。</div><div class="line">十六进制</div><div class="line">	var num = 0xA;</div><div class="line">	数字序列范围：0~9以及A~F</div><div class="line">八进制</div><div class="line">    var num1 = 07;   // 对应十进制的7</div><div class="line">    var num2 = 019;  // 对应十进制的19</div><div class="line">    var num3 = 08;   // 对应十进制的8</div><div class="line">    数字序列范围：0~7</div><div class="line">    如果字面值中的数值超出了范围，那么前导零将被忽略，后面的数值将被当作十进制数值解析</div></pre></td></tr></table></figure>
+<ul>
+<li><p>浮点数</p>
+<p>科学计数法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var num = 5e+3; // 5*10^3</div><div class="line">var num1 = 5e-2;// 5*10^-2</div><div class="line">//如何表示0.003和20000?</div></pre></td></tr></table></figure>
+<p>浮点数的精度问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">0.1 + 0.2 = ?</div><div class="line">0.07 * 100 = ?</div></pre></td></tr></table></figure>
+<p>​<br>浮点数在运算的时候会出现精度丢失的问题，因此在做比较运算的时候，尽量不要用小数进行比较。</p>
+<ul>
+<li>数值范围</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>由于内存的限制，ECMAScript 并不能保存世界上所有的数值。JavaScript不能表示世界上所有的数，因此在JavaScript中，数值大小是有一定限制的。</p>
+</blockquote>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">最小值：Number.MIN_VALUE，这个值为： 5e-324</div><div class="line">最大值：Number.MAX_VALUE，这个值为： 1.7976931348623157e+308</div><div class="line">无穷大：Infinity</div><div class="line">无穷小：-Infinity</div></pre></td></tr></table></figure>
+<p>画图演示</p>
+<ul>
+<li>数值判断</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1. NaN:表示一个非数值，当无法运算或者运算错误的时候，会得到一个NaN，NaN是number类型，表示一个非数值。</div><div class="line">2. NaN不等于NaN</div><div class="line">3. isNaN用来判断是否是一个数字，当返回true的时候，表示不是一个数字，返回false表示是一个数字。</div><div class="line"></div><div class="line">练习：</div><div class="line">	isNaN(NaN);</div><div class="line">	isNaN(“blue”); </div><div class="line">	isNaN(123);</div></pre></td></tr></table></figure>
+<h4 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h4><ul>
+<li>字符串字面量</li>
+</ul>
+<p>字符串的字面量：“abc”  、 ‘abc’  字符串可以是双引号，也可以是单引号引起来。</p>
+<p>  ‘程序猿’，’程序媛’, “黑马程序猿”</p>
+<p>  ​</p>
+<p>  思考：如何打印以下字符串。<br>  我是一个”正直”的人<br>  我很喜欢”传’智’播客”</p>
+<ul>
+<li><p>转义符</p>
+<p><img src="/images/media/1498289626813.png" alt="1498289626813"></p>
+</li>
+<li><p>字符串长度</p>
+<p>length属性用来获取字符串的长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'黑马程序猿 Hello World'</span>;</div><div class="line"><span class="built_in">console</span>.log(str.length);</div></pre></td></tr></table></figure>
+</li>
+<li><p>字符串的不可变性<br>画图演示</p>
+</li>
+<li><p>字符串拼接</p>
+<p>字符串拼接使用 + 连接</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="number">11</span> + <span class="number">11</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'hello'</span> + <span class="string">' world'</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'100'</span> + <span class="string">'100'</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'11'</span> + <span class="number">11</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'male:'</span> + <span class="literal">true</span>);</div></pre></td></tr></table></figure>
+<ol>
+<li>两边只要有一个是字符串，那么+就是字符串拼接功能</li>
+<li>两边如果都是数字，那么就是算术功能。</li>
+</ol>
+</li>
+</ul>
+<h4 id="boolean类型"><a href="#boolean类型" class="headerlink" title="boolean类型"></a>boolean类型</h4><ul>
+<li>boolean字面量：  true和false，区分大小写</li>
+<li>计算机内部存储：true为1，false为0</li>
+</ul>
+<h4 id="undefined和null"><a href="#undefined和null" class="headerlink" title="undefined和null"></a>undefined和null</h4><ol>
+<li>undefined表示一个声明了没有赋值的变量，变量只声明的时候值默认是undefined</li>
+<li>null表示一个空，变量的值如果想为null，必须手动设置</li>
+</ol>
+<h3 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h3><p>在源代码中一个固定值的表示法。</p>
+<p>数值字面量：8, 9, 10</p>
+<p>字符串字面量：’黑马程序员’, “大前端”</p>
+<p>布尔字面量：true，false</p>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><p>如何使用谷歌浏览器，快速的查看数据类型？</p>
+<p>字符串的颜色是黑色的，数值类型是蓝色的，布尔类型也是浅紫色的，undefined和null是灰色的</p>
+<h3 id="转换成字符串类型"><a href="#转换成字符串类型" class="headerlink" title="转换成字符串类型"></a>转换成字符串类型</h3><ul>
+<li>toString()</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var num = 5;</div><div class="line">console.log(num.toString());</div></pre></td></tr></table></figure>
+<ul>
+<li><p>String()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">String()函数存在的意义：有些值没有toString()，这个时候可以使用String()。比如：undefined和null</div></pre></td></tr></table></figure>
+</li>
+<li><p>拼接字符串方式</p>
+<p>num  +  “”，当 + 两边一个操作符是字符串类型，一个操作符是其它类型的时候，会先把其它类型转换成字符串再进行字符串拼接，返回字符串</p>
+</li>
+</ul>
+<h3 id="转换成数值类型"><a href="#转换成数值类型" class="headerlink" title="转换成数值类型"></a>转换成数值类型</h3><ul>
+<li><p>Number()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Number()可以把任意值转换成数值，如果要转换的字符串中有一个不是数值的字符，返回NaN</div><div class="line"></div><div class="line">练习一下：</div><div class="line">	var num1 = Number(true); </div><div class="line">    var num2 = Number(undefined); </div><div class="line">    var num3 = Number(&quot;hello&quot;);  </div><div class="line">    var num4 = Number(&quot;   &quot;); </div><div class="line">    var num5 = Number(123);</div><div class="line">    var num6 = Number(&quot;123abc&quot;);</div><div class="line">    var num7 = Number(&quot;abc123&quot;);</div><div class="line">	var num8 = Number(null);</div></pre></td></tr></table></figure>
+</li>
+<li><p>parseInt()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="built_in">parseInt</span>(<span class="string">"12.3abc"</span>);  <span class="comment">// 返回12，如果第一个字符是数字会解析知道遇到非数字结束</span></div><div class="line"><span class="keyword">var</span> num2 = <span class="built_in">parseInt</span>(<span class="string">"abc123"</span>);   <span class="comment">// 返回NaN，如果第一个字符不是数字或者符号就返回NaN</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>parseFloat()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">parseFloat()把字符串转换成浮点数</div></pre></td></tr></table></figure>
+</li>
+<li><p>+，-0等运算</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'500'</span>;</div><div class="line"><span class="built_in">console</span>.log(+str);		<span class="comment">// 取正</span></div><div class="line"><span class="built_in">console</span>.log(-str);		<span class="comment">// 取负</span></div><div class="line"><span class="built_in">console</span>.log(str - <span class="number">0</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="转换成布尔类型"><a href="#转换成布尔类型" class="headerlink" title="转换成布尔类型"></a>转换成布尔类型</h3><ul>
+<li>Boolean()<br>代码演示</li>
+<li>流程控制语句中会隐式转换 <h2 id="操作符"><a href="#操作符" class="headerlink" title="操作符"></a>操作符</h2></li>
+</ul>
+<h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">+  加法运算符</div><div class="line">	如果运算符，有一个操作数为字符串则将另一个操作数转换成字符串然后再将两个字符</div><div class="line">	拼接</div><div class="line">	例如：</div><div class="line">	var str = &quot;abc&quot; + 123;   //返回&quot;abc123&quot;</div><div class="line">   -  减法运算符</div><div class="line">   *  乘法运算符</div><div class="line">   /  除法运算符</div><div class="line">   % 求模(取余)运算符</div><div class="line">   /  除0，返回Infinity</div><div class="line">   %  取余，返回NaN</div></pre></td></tr></table></figure>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><pre><code>=  +=  -=  *=  /=
+例如: var num = 0;
+      num+=5;(相当于 num = num + 5);
+</code></pre><h3 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a>一元运算符</h3><p>常识:<br>    只能操作一个值的操作符叫一元操作符,组成的表达式叫一元表达式.(一个值一个运算符)<br>    由两个值和一个运算符连接起来的表达式叫二元表达式。(两个值一个运算符)<br>    由三个值和两个运算符连接起来的表达式叫三元表达式.(三个值两个运算符)</p>
+<pre><code>一元运算符分为前置型和后置型
+    区别：在于前置型先自增或者自减 后将结果参与运算;后置型为先参与运算 ，然后在自增或自减;
+</code></pre><p>++、–</p>
+<ul>
+<li><p>前置++</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</div><div class="line">++ num1;</div><div class="line"><span class="keyword">var</span> num2 = <span class="number">6</span>;</div><div class="line"><span class="built_in">console</span>.log(num1 + ++ num2);</div></pre></td></tr></table></figure>
+</li>
+<li><p>后置++</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var num1 = <span class="number">5</span>;</div><div class="line">num1 ++;</div><div class="line">var num2 = <span class="number">6</span> </div><div class="line">console.log(num1 + num2 ++);</div></pre></td></tr></table></figure>
+</li>
+<li><p>猜猜看</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = ++a + ++a; <span class="built_in">console</span>.log(b);    </div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = a++ + ++a; <span class="built_in">console</span>.log(b);    </div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = a++ + a++; <span class="built_in">console</span>.log(b);    </div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>; <span class="keyword">var</span> b = ++a + a++; <span class="built_in">console</span>.log(b);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var k=-2;</div><div class="line">alert(++k + k++ + ++k + k);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><pre><code>&lt;  &gt;  &gt;=  &lt;= == != === !==
+</code></pre><p>比较规则：</p>
+<ul>
+<li>两边都为字符串时，则按照字符串的字符编码进行逐位比较</li>
+<li>一边为数字，一边为字符串时，则将字符串转换为数字进行比较</li>
+<li>一边为数字，一边为布尔值时，则将布尔值转换为数字进行比较</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">==与===的区别：==只进行值得比较，===类型和值同时相等，则相等</div><div class="line"></div><div class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> == <span class="number">55</span>;  	<span class="comment">//true</span></div><div class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> === <span class="number">55</span>; 	<span class="comment">//false 值相等，类型不相等</span></div><div class="line"><span class="keyword">var</span> result = <span class="number">55</span> === <span class="number">55</span>; 	<span class="comment">//true</span></div></pre></td></tr></table></figure>
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><pre><code>&amp;&amp;  两个操作数同时为true，结果为true，否则都是false
+||  两个操作数有一个为true，结果为true，否则为false
+!   取反
+</code></pre>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 练习	</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> aa  =   <span class="number">0</span>&amp;&amp;<span class="number">1</span>;</div><div class="line">alert(aa)</div><div class="line"><span class="keyword">var</span> bb =  <span class="number">1</span>&amp;&amp;<span class="number">0</span>;</div><div class="line">alert(bb);</div><div class="line"><span class="keyword">var</span> cc =  <span class="number">1</span>&amp;&amp;<span class="number">10</span>;</div><div class="line">alert(cc);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="number">0</span>||<span class="number">1</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="number">1</span>||<span class="number">0</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="number">1</span>||<span class="number">5</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="number">5</span>||<span class="number">1</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = <span class="number">3</span>  &amp;&amp;  <span class="number">0</span> || <span class="number">2</span>;  </div><div class="line"><span class="keyword">var</span> b = <span class="number">3</span> || <span class="number">0</span> &amp;&amp;  <span class="number">2</span>; </div><div class="line"><span class="keyword">var</span> c= <span class="number">0</span> || <span class="number">2</span> &amp;&amp; <span class="number">3</span>; </div><div class="line">alert(a),alert(b),alert(c);</div></pre></td></tr></table></figure>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 面试题</span></div><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>+<span class="number">1</span> &amp;&amp; <span class="number">3</span>;</div><div class="line"><span class="keyword">var</span> b = <span class="number">0</span> &amp;&amp; <span class="number">1</span>+<span class="number">1</span>; </div><div class="line"><span class="keyword">var</span> c = <span class="number">1</span> ||  <span class="number">2</span> &amp;&amp; <span class="number">3</span><span class="number">-1</span>;</div><div class="line">alert(a);</div><div class="line">alert(b);</div><div class="line">alert(c);</div></pre></td></tr></table></figure>
+<h3 id="运算符的优先级"><a href="#运算符的优先级" class="headerlink" title="运算符的优先级"></a>运算符的优先级</h3><pre><code>优先级从高到底
+    1. ()  优先级最高
+    2. 一元运算符  ++   --   !
+    3. 算数运算符  先*  /  %   后 +   -
+    4. 关系运算符  &gt;   &gt;=   &lt;   &lt;=
+    5. 相等运算符   ==   !=    ===    !==
+    6. 逻辑运算符 先&amp;&amp;   后||
+    7. 赋值运算符
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 练习1：</span></div><div class="line">((<span class="number">4</span> &gt;= <span class="number">6</span>) || (<span class="string">'人'</span> != <span class="string">'阿凡达'</span>)) &amp;&amp; !(((<span class="number">12</span> * <span class="number">2</span>) == <span class="number">144</span>) &amp;&amp; <span class="literal">true</span>) </div><div class="line"><span class="comment">// 练习2：</span></div><div class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</div><div class="line"><span class="keyword">if</span> (<span class="number">5</span> == num / <span class="number">2</span> &amp;&amp; (<span class="number">2</span> + <span class="number">2</span> * num).toString() === <span class="string">'22'</span>) &#123;   </div><div class="line">  <span class="built_in">console</span>.log(<span class="literal">true</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;JavaScript基础&quot;&gt;&lt;a href=&quot;#JavaScript基础&quot; class=&quot;headerlink&quot; title=&quot;JavaScript基础&quot;&gt;&lt;/a&gt;JavaScript基础&lt;/h1&gt;&lt;h2 id=&quot;JavaScript介绍&quot;&gt;&lt;a href=&quot;#J
+    
+    </summary>
+    
+      <category term="js" scheme="http://yoursite.com/categories/js/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo经验</title>
+    <link href="http://yoursite.com/2017/05/11/1%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <id>http://yoursite.com/2017/05/11/1 - 副本/</id>
+    <published>2017-05-11T08:23:15.000Z</published>
+    <updated>2017-05-11T08:24:52.559Z</updated>
+    
+    <content type="html"><![CDATA[<p>html代码块两个tab</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;html代码块两个tab&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>重装（异地hexo）</title>
+    <link href="http://yoursite.com/2017/05/11/%E5%BC%82%E5%9C%B0hexo/"/>
+    <id>http://yoursite.com/2017/05/11/异地hexo/</id>
+    <published>2017-05-11T08:23:15.000Z</published>
+    <updated>2017-05-12T06:25:57.423Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="重装系统之后hexo更新"><a href="#重装系统之后hexo更新" class="headerlink" title="重装系统之后hexo更新"></a>重装系统之后hexo更新</h1><hr>
+<blockquote>
+<ul>
+<li>安装git与node.js （注意版本）</li>
+</ul>
+</blockquote>
+<h1 id="一丶git本地仓库与github远成仓库关联"><a href="#一丶git本地仓库与github远成仓库关联" class="headerlink" title="一丶git本地仓库与github远成仓库关联"></a>一丶git本地仓库与github远成仓库关联</h1><p>1.Windows下打开Git Bash，创建SSH Key，按提示输入密码，可以不填密码一路回车</p>
+<p>$ ssh-keygen -t rsa -C “注册邮箱”<br>然后用户主目录/.ssh/下有两个文件，id_rsa是私钥，id_rsa.pub是公钥</p>
+<p>2.获取key，打开.ssh下的id_rsa.pub文件，里面的内容就是key的内容</p>
+<p>$ start ~/.ssh/id_rsa.pub </p>
+<p>3.登录GitHub，打开”SSH Keys”页面，快捷地址：<a href="https://github.com/settings/ssh" target="_blank" rel="external">https://github.com/settings/ssh</a> </p>
+<p>4.测试ssh key是否成功，使用命令“ssh -T git@github.com”，如果出现You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。</p>
+<h1 id="二丶1-将你原来电脑上已经配置好并生成的hexo目录拷到你的新电脑上，注意无需拷全部，只拷如下几个目录："><a href="#二丶1-将你原来电脑上已经配置好并生成的hexo目录拷到你的新电脑上，注意无需拷全部，只拷如下几个目录：" class="headerlink" title="二丶1.将你原来电脑上已经配置好并生成的hexo目录拷到你的新电脑上，注意无需拷全部，只拷如下几个目录："></a>二丶1.将你原来电脑上已经配置好并生成的hexo目录拷到你的新电脑上，注意无需拷全部，只拷如下几个目录：</h1><pre><code>_config.yml
+package.json
+scaffolds/
+source/
+themes/
+</code></pre><p>将这些目录放到一个目录下，如：hexo／</p>
+<p>2.在你的新电脑上首先配置hexo环境：安装Node.js</p>
+<p>3.安装hexo，执行命令：</p>
+<pre><code>npm install -g hexo
+</code></pre><p>4.安装好之后，进入hexo／目录,把U盘文件拷入hexo</p>
+<p>（注意）cnpm：因为npm安装插件是从国外服务器下载，受网络影响大，可能出现异常，如果npm的服务器在中国就好了，所以我们乐于分享的淘宝团队干了这事。来自官网：“这是一个完整 npmjs.org 镜像，你可以用此代替官方版本(只读)，同步频率目前为 10分钟 一次以保证尽量与官方服务同步。<br>官方网址：<a href="http://npm.taobao.org；" target="_blank" rel="external">http://npm.taobao.org；</a><br>安装：命令提示符执行npm install cnpm -g –registry=<a href="https://registry.npm.taobao.org；" target="_blank" rel="external">https://registry.npm.taobao.org；</a>  注意：安装完后最好查看其版本号cnpm -v或关闭命令提示符重新打开，安装完直接使用有可能会出现错误；<br>注：cnpm跟npm用法完全一致，只是在执行命令时将npm改为cnpm（以下操作将以cnpm代替npm）。</p>
+<p>5.模块安装，执行命令：</p>
+<pre><code>npm install
+npm install hexo-deployer-git --save
+npm install hexo-generator-feed --save
+npm install hexo-generator-sitemap --save
+</code></pre><p>6.部署，执行命令：</p>
+<pre><code>hexo g
+hexo deploy
+</code></pre><h1 id="三丶出现的问题"><a href="#三丶出现的问题" class="headerlink" title="三丶出现的问题"></a>三丶出现的问题</h1><p>Hexo本地安装 都是默认的文件 命令运行了 访问4000端口出现cannot get?</p>
+<p>运行一下 npm install</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;重装系统之后hexo更新&quot;&gt;&lt;a href=&quot;#重装系统之后hexo更新&quot; class=&quot;headerlink&quot; title=&quot;重装系统之后hexo更新&quot;&gt;&lt;/a&gt;重装系统之后hexo更新&lt;/h1&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;安装git与
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>学习的六条经验(转)</title>
+    <link href="http://yoursite.com/2017/05/08/acticle/"/>
+    <id>http://yoursite.com/2017/05/08/acticle/</id>
+    <published>2017-05-08T13:23:25.000Z</published>
+    <updated>2017-05-11T07:32:35.662Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.要避免骄傲，好学习他人的长处</p>
+<p>这被放在了第一条。我们国家的教育强调竞争，不重视合作。除了抄作业，高中几乎没有什么机会可以两个人合作出来的项目。因此，对于那些在班级，年级成绩靠前，在市、省、国、国际比赛取得名次的学生，要善用自己的天赋，而不是心存骄傲。</p>
+<p>要 避免骄傲，一是不要瞧不起成绩不如自己的同学。尽管我们的教育，到大学还是强调考试，甚至公务员也要考，英语也要考，但是在任何国家，尤其我们这儿，将来 的发展，和考试能力几乎完全没有关系。如果能够把每个同学，无论成绩好坏，都当成一个人格独立的个体，那么在十几岁的年纪里，就会形成一种先知先觉的一种 公民意识，而不会妄自尊大。</p>
+<p>有两个很残酷的事实：第一个，就是很多竞赛得奖者，后来的职业是继续辅导竞赛。我完全尊重每个人的劳动，但是必须承认，如果这样人有如此之多（你会知道原来这么多！），其实还是很可惜，因为当你取得高级别竞赛的名次，站在全校面前倍感光荣的时候，“将来辅导其他学生”这件事儿，肯定不在你的梦想范围里。<br>第二个现实，就是说，即使对于学习本身，竞赛的帮助并不大。一个共识是：大学入学的时候，竞赛生和非竞赛生差距比较大，但是大学毕业时，基本看不出差距，甚至很多学业最优秀的学生，都是非竞赛生。这个匪夷所思的事实，有很多原因。比如：找满足感——这些甚至都不是自己有意的，只是无意识的就会朝这里靠拢。</p>
+<p>也许你会说，这有什么不好？每个人都可以选择他要的生活方式。</p>
+<p>我想说，当然没什么不好，只是你这么做，就等于选择了困难模式。</p>
+<p>有没有想过为什么讨厌的家长总是让你学习，学习？尽管他们小时候未必是那个学习好的？<br>如果他们是那个学习好的，那他们让你学习，肯定是意识到学习的好处；如果他们不是，那多半是尝到了不学习恶果。（无意损人，请抓住主旨，勿断章取义）</p>
+<p>既然打游戏，和学习，都可以获得满足感，那么它们两者本质的不同在哪里？</p>
+<p>前者不可沉淀，过去了就过去；后者却能让改变自己，给自己带来看不见的变化。并且为自己创造机会。</p>
+<p>当然，也有打游戏到世界冠军，扮靓找来大款，打架变成拳王的。难道那样成功的概率比学习获得改善生活的机会要高吗？所以说，才是困难模式。不要因为小概率而蒙蔽自己。发达国家，那些不愁医保不愁吃穿的宅男里，天天打游戏，才可能有世界冠军，我们的出身决定了和他们拼不起。</p>
+<p>这些和自信到底有什么关系啊？</p>
+<p>以上就是说，不要因为学习上不足，就失去动力而分散注意力，过早的想在其他方面表现自己；任何方面都需要足够的专业才能把表现自己变成糊口的手段，学习是最简单的一条路。</p>
+<p>因此，看到那些成绩好的同学手执考卷，眉飞色舞，看到家长戳着自己的脑门骂人，看到老师失望的样子，都不可以放弃自己。如果想要超越，必须另辟蹊径。必须不断的努力，必须不断的寻找努力的方式（即方法），不要空谈方法，所有的方法都是实践中失败或者成功才获得的。</p>
+<p>在成绩不如人的时候，想要超过去，就必须具备他人所没有的品质。</p>
+<p>2.做好牺牲的准备</p>
+<p>几乎任何事情，都是有得必有失。一个人前闪耀的明星，可能<br>1）只是公司的一枚棋子，被迫做很多不情愿的事<br>2）一点私生活都没有，一点小事就可能满城风雨<br>3） 常年处于担心自己过气的焦虑和恐惧中</p>
+<p>对 于学习，也一样。没有白来的好事，能够帮助自己突飞猛进，却还不用付出多少代价。有些人不肯付出这些代价，觉得过大家一样的生活，就挺好。有些人苦苦想进步，只是不知道怎么办。对于前者，尽到自己认为足够的努力即可；后者，即想付出又不知道该怎么做的人，或者有雄心取得更大进步的人，是真正需要本文的读 者；为了提升，就需要做好牺牲的准备。</p>
+<p>原谅我把这几个真正大家一开始就想看的内容放到了最后，只有读到这里的人才能看到：</p>
+<p>学习的第一条，就是要练就大脑封闭术。</p>
+<p>不是封闭起来拒绝新知的封闭，而是要特意给大脑留下一块儿干净的空间。这个空间，不要受任何外界的干扰。即，不管情绪如何，外界或喜或悲，打开书/打开卷子，就忘掉一切，好像世界只有你和那个学习的内容。</p>
+<p>为了达到这个终极的目标，各种方式都可能需要用到，比如听音乐，发泄，运动，和朋友交流，聊qq。。。。不知不觉，就会发现，自己把本来用于学习的时间用到了其他事情上，而且还没有多少改善。</p>
+<p>其实并不难，人在想一件事的时候，脑子里当然想着它；为了使得大脑封闭，必须把自己的心血和精力，倾注到面前的书或其他的学习资料上。别的事情不要主动去想它，过了一会儿，书上的内容在大脑里占据的比例越来越大，就自然读进去了。</p>
+<p>这样做的好处很多，比如不会浮躁。浮躁就是在做一件事的时候，想另外一件事。沉下来，深吸两口气，不去想那一件事，多读几句，让这个要学的内容充满大脑，让那个烦心事逐渐排空。如果有意识的这样做，即以时日，不难做到，就会专注而高效，而不会杂念纷纷了。</p>
+<p>学习的第二条，就是要争取最多的工作时间。</p>
+<p>原 因很简单，每个人生来有不同的模样，成长于不同的环境，实在有很多很多不公平的事，而且这些不公平往往不朝着自己这一边倾斜。。。怎么办？上天赐给了人一 样最公平的东西，就是时间。无论聪明或者愚钝，无论贫贱或者富裕，每个人每天都有24小时，即86400秒（不要扯恒星日和太阳日！），再公平不过。</p>
+<p>试想一个男生身高1米82，那就是一个标准的美男子，有着人人趋之若鹜的高度。另一个男生1米56（无意对先天进行歧视），那不管我们多么想忽略这个事实，心里都会承认这个格子有点矮。182：156=7：6. 什么意思呢？</p>
+<p>如果一个人七天工作，和六天工作，其产生的差距其实是很大的，和身高的差距类似。只是对于工作上的一点，很难短期内直接看出。</p>
+<p>也 许有人觉得个人有休闲，不要太累，就是想慢慢的，悠哉悠哉，这当然要尊重个人的自由意志；然而，如果你心里想的是，你愿意试试看这种方法，只是不知道怎么 办，那么这里是针对你而写的。也许你读了很多传记，发现政治家，成功的企业家（包含果粉的神Jobs），科学家，都是连续工作的，他们是精力充沛？还是什 么？最近有一篇文章写奥巴马，“我教你怎么当总统”。里面有一重要的条，就是要天天运动。也许有人觉得，运动不是更累吗？其实休息有两种，一种是消极的休 息（消极不等于不必要），比如睡眠，懒懒地呆在那里什么的，一种是积极的休息，就是运动。除了奥巴马，比如著名生物学家施一公非常擅长长跑，比尔盖茨也是 坚持跑步运动。。</p>
+<p>有人说，这些人真厉害。做这么多事的同时，又天天运动，真是多面手。其实换个角度想，坚持运动正是能够完成大量工作的前提保证。运动可以增强细胞的自噬效应，可以增强心肺等器官的机能，使得人更能承受长期工作的劳累。</p>
+<p>不敢说100%，如果查看那些那些大牛们，有很大的比例都在于运动；各种运动中，又有很大的比例在于长跑。</p>
+<p>正因为如此，一个人才可能承受7天的工作量，反而不会疲劳。这是一个公开的秘密。</p>
+<p>学习的第三条，就是不去想学习的目的。</p>
+<p>所谓不去想学习的目的，并非说没有长远的理想，也不是说不要调整学习的方向，只是不要去天天问自己，“学这些干什么？有什么用？” </p>
+<p>要经历过很多事情之后，才有可能知道学习的目的，并且每个人会形成不同的理解。</p>
+<p>在我看来，要把每天割开来过，在学习的时候，只希望当天是最饱满的一天，做自己认为最有意义的事情，而不是拖拉到明天，或者为过去而懊恼。</p>
+<p>这样子每天认真学习，过一定的阶段，自己的视野才能取得有所觉察的增长，然后进而调整方法和内容，并更进一步的试图确定理想；过更长的阶段，学习会带来不同的机会，使得自己对于生活的选择余地更加广阔。总而言之，学习的目的，是在学习的过程当中慢慢获得的。</p>
+<p>如果还没开始学习，就先问目的，是一种永不可能实现的功利主义——因为不知道有什么用，所以不做。实际上的逻辑恰恰是反过来：因为没有做，所以不可能知道它的目的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1.要避免骄傲，好学习他人的长处&lt;/p&gt;
+&lt;p&gt;这被放在了第一条。我们国家的教育强调竞争，不重视合作。除了抄作业，高中几乎没有什么机会可以两个人合作出来的项目。因此，对于那些在班级，年级成绩靠前，在市、省、国、国际比赛取得名次的学生，要善用自己的天赋，而不是心存骄傲。&lt;/p
+    
+    </summary>
+    
+      <category term="小记" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>html_day_01</title>
+    <link href="http://yoursite.com/2017/05/08/heng/"/>
+    <id>http://yoursite.com/2017/05/08/heng/</id>
+    <published>2017-05-08T13:23:25.000Z</published>
+    <updated>2017-05-11T08:21:54.097Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<ul>
+<li>换行标签 &nbsp; &nbsp;&nbsp;&nbsp;  <code>&lt;br/&gt;</code></li>
+<li>水平线标签 &nbsp; <code>&lt;hr/&gt;</code></li>
+<li>段落标签&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;p&gt;文本内容&lt;/p&gt;</code></li>
+<li>标题标签&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>&lt;h1&gt;-&lt;h6&gt;&amp;nbsp;&amp;nbsp;: 1最大 取值到h6</code></li>
+<li>文本标签&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <code>&lt;font&gt;文本内容&lt;/font&gt;</code></li>
+<li>文本倾斜标签&nbsp;<code>&lt;i&gt;&lt;/i&gt; &lt;em&gt;&lt;/em&gt;</code></li>
+<li>删除线标签&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;s&gt;&lt;/s&gt; &lt;del&gt;&lt;/del&gt;</code></li>
+<li>下划线标签&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;u&gt;&lt;/u&gt; &lt;ins&gt;&lt;/ins&gt;</code> </li>
+<li>图片标签 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;img src=&quot;来源（必写属性）&quot; alt=&quot;图片不显示的时候显示的文字&quot; title=&quot;鼠标放到图片上显示的文字&quot; width=&quot;宽&quot; height=&quot;高&quot;&gt;</code></li>
+<li>相对路径 &nbsp;&nbsp;&nbsp;&nbsp; <code>下一级目录a/a.jpg上一级目录../a.jpg上一级的其他目录../a/a.jpg  总结：找到下一级目录（文件夹）的图片（文件）用 / 跳出当前目录使用../</code></li>
+<li>绝对路径&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>f:\a\a\a.jpg</code></li>
+<li>超链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>&lt;a href=&quot;去往的路径，跳转的页面（必写属性）&quot; title=&quot;鼠标放到链接上显示的文字（提示文本）&quot; target=&quot;有两个填写方式(_self默认值)在自身页面打开(_blank)打开新页面&quot;&gt;&lt;/a&gt;</code></li>
+<li>锚链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>&lt;p id=&quot;sd&quot;&gt; 超链接到锚点 &lt;a href=&quot;#sd&quot;&gt;回到顶部&lt;/a&gt;</code></li>
+<li>无序列表<pre><code>&lt;ul type=&quot;&quot;&gt;  
+&lt;li&gt;&lt;/li&gt; (列表项)
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul
+type=”square”      小方块
+type=”disc”        实心小圆圈
+type=”circle”      空心小圆圈
+</code></pre></li>
+</ul>
+<ul>
+<li>有序列表<pre><code>&lt;ol&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+type=”1,a,A,i,I” type的值可以为1,a,A,i,I
+start=”3”  决定了开始的位置。
+</code></pre></li>
+</ul>
+<ul>
+<li><p>自定义列表</p>
+<pre><code>&lt;dl&gt;      
+&lt;dt&gt;&lt;/dt&gt;  小标题  
+&lt;dd&gt;&lt;/dd&gt;  解释标题  
+&lt;dd&gt;&lt;/dd&gt;  解释标题  
+&lt;/dl&gt;  
+</code></pre></li>
+</ul>
+<ul>
+<li>音乐标签 <code>&lt;embed src=&quot;&quot; hidden=&quot;true&quot;&gt;</code></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;换行标签 &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;  &lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;水平线标签 &amp;nbsp; &lt;code&gt;&amp;lt;hr/&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;段落标签&amp;nbsp;&amp;nb
+    
+    </summary>
+    
+      <category term="html" scheme="http://yoursite.com/categories/html/"/>
+    
+    
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
+  
+</feed>
