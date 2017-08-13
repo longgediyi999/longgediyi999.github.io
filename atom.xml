@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-13T07:16:18.210Z</updated>
+  <updated>2017-08-13T07:28:55.263Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,18 +16,215 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo经验</title>
-    <link href="http://yoursite.com/2017/05/11/1%20-%20%E5%89%AF%E6%9C%AC/"/>
-    <id>http://yoursite.com/2017/05/11/1 - 副本/</id>
-    <published>2017-05-11T08:23:15.000Z</published>
-    <updated>2017-08-13T07:16:18.210Z</updated>
+    <title>jQuery笔记</title>
+    <link href="http://yoursite.com/2017/08/13/jQuery/"/>
+    <id>http://yoursite.com/2017/08/13/jQuery/</id>
+    <published>2017-08-13T07:27:44.000Z</published>
+    <updated>2017-08-13T07:28:55.263Z</updated>
     
-    <content type="html"><![CDATA[<p>html代码块两个tab<br><img src="/2017/05/11/1 - 副本/haha/1.png" alt="可以的"></p>
+    <content type="html"><![CDATA[<hr>
+<pre><code>标准选择器
+
+$(&quot;#box&quot;).html     //innerHtml  id选择器
+
+$(&quot;#box&quot;).text     //innerText
+
+$(&quot;.add&quot;).css(&quot;backgorundColor&quot;,&quot;red&quot;);
+    获取所有的class名字为add的名字的标签
+$(&quot;.add&quot;).css ({
+    &quot;backgorund&quot;: &quot;red&quot;,
+    &quot;left&quot;:&quot;1px&quot;,
+})
+
+$(&quot;li&quot;).css(&quot;&quot;,&quot;&quot;);  //标签选择器
+
+$(&quot;#box,span&quot;).css(&quot;&quot;,&quot;&quot;)  选择上id为box的与span标签  冰机选择器
+
+$(&quot;span.abc&quot;).css(&quot;&quot;,&quot;&quot;)   带abc类选择器的span标签  
+前面可以加双引号 或者不加双引号 不加代表字符串 加代表套路
+
+
+
+
+层级选择器
+
+$(&quot;ul&gt;li&quot;).css(&quot;&quot;,&quot;&quot;);   子代选择器
+
+$(&quot;ul li&quot;).css()  后代选择器
+
+ul（id = oul）
+    li li
+    li li
+    li li
+ul
+$(&quot;#oul&lt;li:eq(0)&quot;).css();   选中下标为0的 也就是第一个
+
+$(&quot;li:odd&quot;)  获取li里面 奇数的元素
+$(&quot;li:even&quot;)  偶数元素
+
+$(function(){})
+
+$(&quot;#box&quot;).children();   获取jq对象下面的一级子元素
+$(&quot;#box&quot;).children(&quot;strong&quot;)  选择叫做strong的孩子 
+
+$(&quot;#box&quot;).find(&quot;span&quot;);  后代选择器  获取后代所有的span 
+
+
+$(&quot;#box&gt;q:eq(2)&quot;).css(&quot;backgorundColor&quot;,&quot;red&quot;).sibings().css(&quot;&quot;,&quot;&quot;);
+前面这个jq对象设置完属性返回的还是这个jq对象 然后继续让这个jq对象继续做后续操作  元素.sibings 抛出他本身以外所有的兄弟（一个父亲下的）元素都被选中
+
+$(&quot;.aa&quot;).parent().css(&quot;&quot;,&quot;&quot;);   aa的类选择器的标签的所有父亲被选中 如果想特定 要在parent()中添加
+
+$(&quot;.aa&quot;).click(function()
+{}
+)                     用类选择器添加click事件的时候不需要for循环 jquery内部自动循环了     
+                                        show()  显示
+$(this).parent().siblings().find(&quot;div&quot;).hide(); 隐藏方法
+
+$(document).ready(function(){alert(&quot;1&quot;);});     等待dom元素加载完毕
+
+windows.onload = function() {alert(&quot;test1&quot;)};
+windows.onload = function() {alert(&quot;test2&quot;)};  结果只会输出第二个语句
+$(document).ready(function(){alert(1)});
+$(document).ready(function(){alert(2)});   两次都会输出
+
+$(function(){}); 简化写法
+
+
+var $cr = $(&quot;#cr&quot;);  jq对象转dom
+var cr = $cr[0];
+console.log(cr);
+console.log($cr);
+
+var cr = document.getElementById(&quot;cr&quot;);
+var $cr = $(cr);
+
+addClass  添加类
+removeClass 移除类  
+hasClass() 判断是否有类 返回true false
+toggleClass(&quot;aa&quot;)  切换类
+
+fadeIn   只改变透明不 不会隐藏元素
+fadeOut
+fadeTo  可以把元素的不透明度以渐进的方式调整到指定的值 只调整元素的不透明度 fadeTo(600,0.2)
+
+animate({
+    width:100,
+    left:10,
+    height:100
+},1000);     参数json  运动时间 （可选值：匀速或者swing） 回调函数
+
+stop();  不清楚动画队列  不跳转最后的效果
+stop(true); 清楚动画队列 不跳转到最终效果
+stop(true,true) 清楚动画队列 将当前动画直接跳转到最终效果
+stop(false,true)  不清楚动画队列 后续动画有 当前动画停止 直接跳转到最后效果
+
+
+gt(5):not(:last)  索引值大于5不大于最后一个的集合
+
+按钮.toggle(function(){
+    //显示元素
+},function(){
+    //隐藏元素
+})
+
+attr(&quot;属性名字&quot;) (jq拿到属性节点的操作方法)
+
+
+var $li_1 = $(&quot;&lt;li&gt;adsf&lt;/li&gt;&quot;);
+var $li_2 = $(&quot;&lt;li&gt;qwer&lt;/li&gt;&quot;);
+$(&quot;ul&quot;).append($li_1);
+$(&quot;ul&quot;).append($li_2); （ul已经有了）
+clone() 复制一个节点  if clone(true)
+说明事件也一起复制
+
+removeattr() 移除属性
+
+next()  同辈节点 的 下一个
+prev() 同辈节点的上一个
+siblings()  同辈节点除了自己的所有
+
+$(document).ready() dom加载完就可以 如果有多个 执行多次
+
+
+window.onload等价于$(window).load(function{});   dom和资源都下载完  执行一次  后者覆盖前者
+
+event.stopPropagation(); jq阻止时间冒泡 || return false
+event.preventDefault()   阻止默认行为 || return false 意义于对事件的停止
+event.type() 事件类型  event.target.href   获取出发事件的属性值
+
+unbind(&quot;事件&quot;,元素)  移除事件 如果不添加那么久移除所有事假
+
+slideUp(5000) slideDown 改变高度
+
+hide() show()  同时改变 元素的高度宽度 透明度
+
+animate(params,speed,callback);
+params 元素要运动到的位置
+speed 速度
+callback 回调函数 
+如果在params  +=500px  代表累加 意思为在此基础上 向右运动500px
+{
+    left:&quot;500px&quot;,
+    height:&quot;100px&quot;
+}  同时运动多个动画 同时发生
+
+if(!$(element).is(&quot;:animated&quot;)){} 判断元素是否处于运动状态
+
+![jQuery/1.png](jQuery/1.png)
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;标准选择器
+
+$(&amp;quot;#box&amp;quot;).html     //innerHtml  id选择器
+
+$(&amp;quot;#box&amp;quot;).text     //innerText
+
+$(&amp;quot;.add&amp;quot;).css(&amp;q
+    
+    </summary>
+    
+      <category term="jQuery" scheme="http://yoursite.com/categories/jQuery/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>ceshitupian</title>
+    <link href="http://yoursite.com/2017/08/13/ceshitupian/"/>
+    <id>http://yoursite.com/2017/08/13/ceshitupian/</id>
+    <published>2017-08-13T07:22:42.000Z</published>
+    <updated>2017-08-13T07:23:19.738Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2017/08/13/ceshitupian/1.png" alt="可以的"></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;html代码块两个tab&lt;br&gt;&lt;img src=&quot;/2017/05/11/1 - 副本/haha/1.png&quot; alt=&quot;可以的&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/2017/08/13/ceshitupian/1.png&quot; alt=&quot;可以的&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hexo经验</title>
+    <link href="http://yoursite.com/2017/05/11/1%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <id>http://yoursite.com/2017/05/11/1 - 副本/</id>
+    <published>2017-05-11T08:23:15.000Z</published>
+    <updated>2017-08-13T07:23:03.872Z</updated>
+    
+    <content type="html"><![CDATA[<p>html代码块两个tab</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;html代码块两个tab&lt;/p&gt;
 
     
     </summary>
