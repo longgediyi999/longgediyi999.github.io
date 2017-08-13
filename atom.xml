@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-13T07:34:54.261Z</updated>
+  <updated>2017-08-13T07:37:29.005Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/08/13/jQuery/"/>
     <id>http://yoursite.com/2017/08/13/jQuery/</id>
     <published>2017-08-13T07:27:44.000Z</published>
-    <updated>2017-08-13T07:34:54.261Z</updated>
+    <updated>2017-08-13T07:37:29.005Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <pre><code>标准选择器
@@ -170,9 +170,8 @@ callback 回调函数
 }  同时运动多个动画 同时发生
 
 if(!$(element).is(&quot;:animated&quot;)){} 判断元素是否处于运动状态
-
-![jQuery/1.png](jQuery/1.png)
-</code></pre>]]></content>
+</code></pre><p><img src="/2017/08/13/jQuery/1.png" alt="jQuery/1.png"></p>
+]]></content>
     
     <summary type="html">
     
