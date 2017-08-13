@@ -1,0 +1,845 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="����,����html,����С¹" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="潇凌" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="标准选择器  $(&amp;quot;#box&amp;quot;).html     //innerHtml  id选择器  $(&amp;quot;#box&amp;quot;).text     //innerText  $(&amp;quot;.add&amp;quot;).css(&amp;quot;backgorundColor&amp;quot;,&amp;quot;red&amp;quot;);     获取所有的class名字为add的名字的标签 $(&amp;q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery笔记">
+<meta property="og:url" content="http://yoursite.com/2017/08/13/jQuery/index.html">
+<meta property="og:site_name" content="潇凌">
+<meta property="og:description" content="标准选择器  $(&amp;quot;#box&amp;quot;).html     //innerHtml  id选择器  $(&amp;quot;#box&amp;quot;).text     //innerText  $(&amp;quot;.add&amp;quot;).css(&amp;quot;backgorundColor&amp;quot;,&amp;quot;red&amp;quot;);     获取所有的class名字为add的名字的标签 $(&amp;q">
+<meta property="og:updated_time" content="2017-08-13T07:28:55.263Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery笔记">
+<meta name="twitter:description" content="标准选择器  $(&amp;quot;#box&amp;quot;).html     //innerHtml  id选择器  $(&amp;quot;#box&amp;quot;).text     //innerText  $(&amp;quot;.add&amp;quot;).css(&amp;quot;backgorundColor&amp;quot;,&amp;quot;red&amp;quot;);     获取所有的class名字为add的名字的标签 $(&amp;q">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'applicationID',
+      apiKey: 'apiKey',
+      indexName: 'indexName',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/08/13/jQuery/"/>
+
+
+
+
+
+  <title>jQuery笔记 | 潇凌</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">潇凌</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/13/jQuery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xiao ling">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/the_cat.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="潇凌">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">jQuery笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-13T15:27:44+08:00">
+                2017-08-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/jQuery/" itemprop="url" rel="index">
+                    <span itemprop="name">jQuery</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<pre><code>标准选择器
+
+$(&quot;#box&quot;).html     //innerHtml  id选择器
+
+$(&quot;#box&quot;).text     //innerText
+
+$(&quot;.add&quot;).css(&quot;backgorundColor&quot;,&quot;red&quot;);
+    获取所有的class名字为add的名字的标签
+$(&quot;.add&quot;).css ({
+    &quot;backgorund&quot;: &quot;red&quot;,
+    &quot;left&quot;:&quot;1px&quot;,
+})
+
+$(&quot;li&quot;).css(&quot;&quot;,&quot;&quot;);  //标签选择器
+
+$(&quot;#box,span&quot;).css(&quot;&quot;,&quot;&quot;)  选择上id为box的与span标签  冰机选择器
+
+$(&quot;span.abc&quot;).css(&quot;&quot;,&quot;&quot;)   带abc类选择器的span标签  
+前面可以加双引号 或者不加双引号 不加代表字符串 加代表套路
+
+
+
+
+层级选择器
+
+$(&quot;ul&gt;li&quot;).css(&quot;&quot;,&quot;&quot;);   子代选择器
+
+$(&quot;ul li&quot;).css()  后代选择器
+
+ul（id = oul）
+    li li
+    li li
+    li li
+ul
+$(&quot;#oul&lt;li:eq(0)&quot;).css();   选中下标为0的 也就是第一个
+
+$(&quot;li:odd&quot;)  获取li里面 奇数的元素
+$(&quot;li:even&quot;)  偶数元素
+
+$(function(){})
+
+$(&quot;#box&quot;).children();   获取jq对象下面的一级子元素
+$(&quot;#box&quot;).children(&quot;strong&quot;)  选择叫做strong的孩子 
+
+$(&quot;#box&quot;).find(&quot;span&quot;);  后代选择器  获取后代所有的span 
+
+
+$(&quot;#box&gt;q:eq(2)&quot;).css(&quot;backgorundColor&quot;,&quot;red&quot;).sibings().css(&quot;&quot;,&quot;&quot;);
+前面这个jq对象设置完属性返回的还是这个jq对象 然后继续让这个jq对象继续做后续操作  元素.sibings 抛出他本身以外所有的兄弟（一个父亲下的）元素都被选中
+
+$(&quot;.aa&quot;).parent().css(&quot;&quot;,&quot;&quot;);   aa的类选择器的标签的所有父亲被选中 如果想特定 要在parent()中添加
+
+$(&quot;.aa&quot;).click(function()
+{}
+)                     用类选择器添加click事件的时候不需要for循环 jquery内部自动循环了     
+                                        show()  显示
+$(this).parent().siblings().find(&quot;div&quot;).hide(); 隐藏方法
+
+$(document).ready(function(){alert(&quot;1&quot;);});     等待dom元素加载完毕
+
+windows.onload = function() {alert(&quot;test1&quot;)};
+windows.onload = function() {alert(&quot;test2&quot;)};  结果只会输出第二个语句
+$(document).ready(function(){alert(1)});
+$(document).ready(function(){alert(2)});   两次都会输出
+
+$(function(){}); 简化写法
+
+
+var $cr = $(&quot;#cr&quot;);  jq对象转dom
+var cr = $cr[0];
+console.log(cr);
+console.log($cr);
+
+var cr = document.getElementById(&quot;cr&quot;);
+var $cr = $(cr);
+
+addClass  添加类
+removeClass 移除类  
+hasClass() 判断是否有类 返回true false
+toggleClass(&quot;aa&quot;)  切换类
+
+fadeIn   只改变透明不 不会隐藏元素
+fadeOut
+fadeTo  可以把元素的不透明度以渐进的方式调整到指定的值 只调整元素的不透明度 fadeTo(600,0.2)
+
+animate({
+    width:100,
+    left:10,
+    height:100
+},1000);     参数json  运动时间 （可选值：匀速或者swing） 回调函数
+
+stop();  不清楚动画队列  不跳转最后的效果
+stop(true); 清楚动画队列 不跳转到最终效果
+stop(true,true) 清楚动画队列 将当前动画直接跳转到最终效果
+stop(false,true)  不清楚动画队列 后续动画有 当前动画停止 直接跳转到最后效果
+
+
+gt(5):not(:last)  索引值大于5不大于最后一个的集合
+
+按钮.toggle(function(){
+    //显示元素
+},function(){
+    //隐藏元素
+})
+
+attr(&quot;属性名字&quot;) (jq拿到属性节点的操作方法)
+
+
+var $li_1 = $(&quot;&lt;li&gt;adsf&lt;/li&gt;&quot;);
+var $li_2 = $(&quot;&lt;li&gt;qwer&lt;/li&gt;&quot;);
+$(&quot;ul&quot;).append($li_1);
+$(&quot;ul&quot;).append($li_2); （ul已经有了）
+clone() 复制一个节点  if clone(true)
+说明事件也一起复制
+
+removeattr() 移除属性
+
+next()  同辈节点 的 下一个
+prev() 同辈节点的上一个
+siblings()  同辈节点除了自己的所有
+
+$(document).ready() dom加载完就可以 如果有多个 执行多次
+
+
+window.onload等价于$(window).load(function{});   dom和资源都下载完  执行一次  后者覆盖前者
+
+event.stopPropagation(); jq阻止时间冒泡 || return false
+event.preventDefault()   阻止默认行为 || return false 意义于对事件的停止
+event.type() 事件类型  event.target.href   获取出发事件的属性值
+
+unbind(&quot;事件&quot;,元素)  移除事件 如果不添加那么久移除所有事假
+
+slideUp(5000) slideDown 改变高度
+
+hide() show()  同时改变 元素的高度宽度 透明度
+
+animate(params,speed,callback);
+params 元素要运动到的位置
+speed 速度
+callback 回调函数 
+如果在params  +=500px  代表累加 意思为在此基础上 向右运动500px
+{
+    left:&quot;500px&quot;,
+    height:&quot;100px&quot;
+}  同时运动多个动画 同时发生
+
+if(!$(element).is(&quot;:animated&quot;)){} 判断元素是否处于运动状态
+
+![jQuery/1.png](jQuery/1.png)
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/13/ceshitupian/" rel="next" title="ceshitupian">
+                <i class="fa fa-chevron-left"></i> ceshitupian
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/the_cat.png"
+               alt="xiao ling" />
+          <p class="site-author-name" itemprop="name">xiao ling</p>
+           
+              <p class="site-description motion-element" itemprop="description">勤能补拙是良训，一分辛苦一分才。</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xiao ling</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
