@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-13T07:37:29.005Z</updated>
+  <updated>2017-08-14T13:55:41.262Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,92 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试题8月</title>
+    <link href="http://yoursite.com/2017/08/14/%E9%9D%A2%E8%AF%95%E9%A2%988%E6%9C%88/"/>
+    <id>http://yoursite.com/2017/08/14/面试题8月/</id>
+    <published>2017-08-14T13:20:18.000Z</published>
+    <updated>2017-08-14T13:55:41.262Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li><p>Doctype作用？标准模式与兼容模式各有什么区别?</p>
+<pre><code>(1) Doctype 处于html第一行,处于html之前告诉浏览器解析以什么标准解析这个文档,  
+doctype不存在会导致文档以兼容模式运行.
+(2) 标准模式运行和js运行模式运行都是以浏览器支持的最高标准运行,  
+在兼容模式中页面以宽松的向后兼容的方式展现,模拟老式浏览器以防止站点无法工作.
+</code></pre></li>
+<li><p>HTML5 为什么只需要写 <code>&lt;!DOCTYPE HTML&gt;</code>？</p>
+<pre><code>因为html5不基于SGML,因此不需要对DTD的引用,但是需要用doctype来规范浏览器的行为.
+而html4基于sgml,需要对DTD进行引用,因此需要告诉浏览器文档使用的文档类型.
+</code></pre></li>
+</ul>
+<ul>
+<li><p>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</p>
+<pre><code>首先,css规范规定,每个元素都有display的属性,用来确定该元素的类型,每个元素都有默认的display值,
+行内元素有:a b span img input select strong
+块级的元素有: div ol ul li dl dt dd h1-h.. p
+空元素: &lt;br&gt; &lt;hr&gt; &lt;img&gt; input meta
+</code></pre></li>
+<li><p>页面导入样式时，使用link和@import有什么区别？</p>
+<pre><code>(1) link属于xhtml标签 除了加载css外还能用于定义rss,定义rel连接属性等作用;  
+ 而@import是css提供的只能用于加载css.
+(2) 页面被加载时 link会同时加载 而@import只会在页面被加载完毕才会加载
+(3) import是css2.1的标签,只有ie5以上才能识别,而link是xhtml标签没有兼容问题
+</code></pre></li>
+<li><p>介绍一下你对浏览器内核的理解？</p>
+<pre><code>(1) 主要分为渲染引擎和js引擎.
+渲染引擎:负责驱动网页的内容(html xml 图像等) 整理讯息(例如加入css等),以及计算网页的显示方式  
+然后输出到显示器,浏览器的内核的不同对于网页的语法解释也不同,所以渲染的效果也不相同,所有的网页
+浏览器都需要内核.
+js引擎:解析js文件执行javascript来实现网页的动态效果
+最开始js引擎和渲染引擎并没有明确的分别 但是后来js引擎越来越独立 内核倾向于渲染引擎.
+</code></pre></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Doctype作用？标准模式与兼容模式各有什么区别?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(1) Doctype 处于html第一行,处于html之前告诉浏览器解析以什么标准解析这个文档,  
+doctype不存在会导致文档以兼容模式运行.
+(2) 标准模式运行
+    
+    </summary>
+    
+      <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>bootstrap8月记录</title>
+    <link href="http://yoursite.com/2017/08/14/bootstrap8%E6%9C%88%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2017/08/14/bootstrap8月记录/</id>
+    <published>2017-08-14T12:10:41.000Z</published>
+    <updated>2017-08-14T12:15:35.653Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<pre><code>1.为了让bootstrap对移动设备更加友好需要在head引入
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;&gt;
+initial-scale 确保网页是1:1显示
+user-scalable=no 可以禁用其缩放（zooming）功能。
+通常情况下，maximum-scale=1.0 与 user-scalable=no 一起使用。这样禁用缩放功能后，用户只能滚动屏幕，就能让您的网站看上去更像原生应用的感觉。
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;1.为了让bootstrap对移动设备更加友好需要在head引入
+&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0&amp;quot;
+    
+    </summary>
+    
+      <category term="bootstrap" scheme="http://yoursite.com/categories/bootstrap/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>jQuery</title>
