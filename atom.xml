@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-20T10:54:47.267Z</updated>
+  <updated>2017-08-25T06:27:36.563Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,13 +16,53 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>京东移动端</title>
-    <link href="http://yoursite.com/2017/08/18/%E4%BA%AC%E4%B8%9C%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
-    <id>http://yoursite.com/2017/08/18/京东移动端/</id>
-    <published>2017-08-18T11:50:48.000Z</published>
-    <updated>2017-08-20T10:54:47.267Z</updated>
+    <title>mysql解压版安装经验</title>
+    <link href="http://yoursite.com/2017/08/25/mysql%E8%A7%A3%E5%8E%8B%E7%89%88%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/"/>
+    <id>http://yoursite.com/2017/08/25/mysql解压版安装经验/</id>
+    <published>2017-08-25T06:17:06.000Z</published>
+    <updated>2017-08-25T06:27:36.563Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">1.京东移动端的搜索框,把header的左边pandding值设置的长度应该和左边所在的logo的宽度相等.</div><div class="line"></div><div class="line">2.less调用函数的时候需要加.</div><div class="line"></div><div class="line">3. background-origin: content-box;</div><div class="line">    background-clip: content-box;   ?</div><div class="line"></div><div class="line">4.关于less等层级关系 如果写的不对样式添加不进去  可以优先检查</div><div class="line"></div><div class="line">5.一共有8个span  选中3 6  nth:child(3n)</div><div class="line"></div><div class="line">6.border-radius 做椭圆形  用50%</div><div class="line"></div><div class="line">7.nth-child()  意义在于第几个子元素(不管第一个子元素与第二个子元素是否相同)</div><div class="line"></div><div class="line">8.</div><div class="line">我是一个表	nth-child（）	   莫用</div><div class="line">奇数偶数	  nth-child（2n）	 偶数项选中</div><div class="line">技术偶数	  nth-child（2n-1）   奇数项选中</div><div class="line">区间         nth-child(n+4）	 选中大于4的项</div><div class="line">区间	     nth-child（-n+4）   选中小于4的项</div><div class="line">间隔区间	 nth-child(3n+1)	 隔二选一</div><div class="line">间隔区间	 nth-child(3n)	   隔三选一</div><div class="line">从后数数	 nth-last-child()	倒着数哦</div><div class="line"></div><div class="line">9.vertical-align? 行内居中</div><div class="line"></div><div class="line">10.因为精度问题 浮动不上去(或者偶尔上偶尔下),把浮动不上去的元素 clear:both ?</div></pre></td></tr></table></figure>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">my.ini文件</div><div class="line"></div><div class="line">[mysql]</div><div class="line"># 设置客户端默认字符集</div><div class="line">default-character-set=utf8</div><div class="line">[mysqld]</div><div class="line">#设置3306端口</div><div class="line">port = 3306</div><div class="line"># 设置安装目录</div><div class="line">basedir=C:\Program Files\MySQL\MySQL Server 5.7.14</div><div class="line"># 设置数据存放目录</div><div class="line">datadir=C:\Program Files\MySQL\MySQL Server 5.7.14\data</div><div class="line"># 设置最大连接数</div><div class="line">max_connections=200</div><div class="line"># 设置服务端字符集</div><div class="line">character-set-server=utf8</div><div class="line">(管理员权限)</div><div class="line">1.添加path路径 mysql安装的bin目录添加到path路径中</div><div class="line">2.初始化mysql 运行mysqld --instal，出现Service successfully installed.即可。然后服务里面就多了mysql服务启动选项。(临时密码)</div><div class="line">3.net start mysql  或者在服务启动都可以</div><div class="line">4.mysql -uroot -p   输入刚才记住的临时密码 (记住)</div><div class="line">5.set password = password(&apos;123456&apos;);</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>微金所</title>
+    <link href="http://yoursite.com/2017/08/24/%E5%BE%AE%E9%87%91%E6%89%80/"/>
+    <id>http://yoursite.com/2017/08/24/微金所/</id>
+    <published>2017-08-24T01:42:04.000Z</published>
+    <updated>2017-08-25T06:27:41.771Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>类不需要&lt;  div标签需要&lt;</div><div class="line"></div><div class="line"><span class="number">2.</span>nth-child nth-<span class="keyword">of</span>-type  区别   动态创建一个导致nth-child层级出现问题</div><div class="line"></div><div class="line"><span class="number">3.</span>鼠标悬浮到外元素 显示内元素的东西</div><div class="line">	:hover&gt;img &#123;</div><div class="line">		<span class="attr">display</span>:block;</div><div class="line">	&#125;</div><div class="line"></div><div class="line"><span class="number">4.</span>鼠标悬浮当前a 在当前的样式内写   显示红色的一个底边线</div><div class="line">	&amp;:hover,</div><div class="line">	&amp;:focus &#123;</div><div class="line">		border-bottom: <span class="number">1</span>px solid red;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;
+    
+    </summary>
+    
+      <category term="项目" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>京东分类</title>
+    <link href="http://yoursite.com/2017/08/22/%E4%BA%AC%E4%B8%9C%E5%88%86%E7%B1%BB/"/>
+    <id>http://yoursite.com/2017/08/22/京东分类/</id>
+    <published>2017-08-22T13:01:27.000Z</published>
+    <updated>2017-08-25T06:27:48.987Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. touchstart 手指按下事件 touchend手指抬起事件 touchmove 触摸移动事件</div><div class="line"></div><div class="line">2. e.targetTouches.length 触摸的手指 返回数字</div><div class="line"></div><div class="line">3.</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
@@ -30,6 +70,48 @@
       &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
     
     </summary>
+    
+      <category term="项目" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>响应式布局</title>
+    <link href="http://yoursite.com/2017/08/22/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
+    <id>http://yoursite.com/2017/08/22/响应式布局/</id>
+    <published>2017-08-22T06:49:08.000Z</published>
+    <updated>2017-08-22T07:01:09.960Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.@media screen and (width:640px)&#123;&#125;  注意空格</div><div class="line"></div><div class="line">2.@media screen and (min-width:400px) and (max-width:800px)</div><div class="line"></div><div class="line">3.引入方式: &lt;link rel=&quot;stylesheet&quot; href=&quot;&quot; media=&quot;screen and (width:640px)&quot;&gt;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>京东移动端</title>
+    <link href="http://yoursite.com/2017/08/18/%E4%BA%AC%E4%B8%9C%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    <id>http://yoursite.com/2017/08/18/京东移动端/</id>
+    <published>2017-08-18T11:50:48.000Z</published>
+    <updated>2017-08-25T06:27:57.619Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">1.京东移动端的搜索框,把header的左边pandding值设置的长度应该和左边所在的logo的宽度相等.</div><div class="line"></div><div class="line">2.less调用函数的时候需要加.</div><div class="line"></div><div class="line">3. background-origin: content-box;</div><div class="line">    background-clip: content-box;   ?</div><div class="line"></div><div class="line">4.关于less等层级关系 如果写的不对样式添加不进去  可以优先检查</div><div class="line"></div><div class="line">5.一共有8个span  选中3 6  nth:child(3n)</div><div class="line"></div><div class="line">6.border-radius 做椭圆形  用50%</div><div class="line"></div><div class="line">7.nth-child()  意义在于第几个子元素(不管第一个子元素与第二个子元素是否相同)</div><div class="line"></div><div class="line">8.</div><div class="line">我是一个表	nth-child（）	   莫用</div><div class="line">奇数偶数	  nth-child（2n）	 偶数项选中</div><div class="line">技术偶数	  nth-child（2n-1）   奇数项选中</div><div class="line">区间         nth-child(n+4）	 选中大于4的项</div><div class="line">区间	     nth-child（-n+4）   选中小于4的项</div><div class="line">间隔区间	 nth-child(3n+1)	 隔二选一</div><div class="line">间隔区间	 nth-child(3n)	   隔三选一</div><div class="line">从后数数	 nth-last-child()	倒着数哦</div><div class="line"></div><div class="line">9.vertical-align? 行内居中</div><div class="line"></div><div class="line">10.因为精度问题 浮动不上去(或者偶尔上偶尔下),把浮动不上去的元素 clear:both ?</div><div class="line"></div><div class="line">11.滚动条事件 windows.onscroll = func</div><div class="line"></div><div class="line">12.获取页面被卷去的高度</div><div class="line">	scrollTop = document.doucmentElement.scrollTop || document.body.scrollTop;</div><div class="line"></div><div class="line">13.不能直接用opacity直接设置顶部栏透明度	 必须要颜色透明度rgb拼接字符串</div><div class="line"></div><div class="line">14.添加监听事件 transitionend 运动完毕</div><div class="line"></div><div class="line">15.返回的必须是return函数 才可以赋值</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
+    
+    </summary>
+    
+      <category term="项目" scheme="http://yoursite.com/categories/%E9%A1%B9%E7%9B%AE/"/>
     
     
   </entry>
@@ -152,21 +234,15 @@ doctype不存在会导致文档以兼容模式运行.
     <link href="http://yoursite.com/2017/08/14/bootstrap8%E6%9C%88%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/08/14/bootstrap8月记录/</id>
     <published>2017-08-14T12:10:41.000Z</published>
-    <updated>2017-08-14T12:15:35.653Z</updated>
+    <updated>2017-08-24T13:44:35.484Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<pre><code>1.为了让bootstrap对移动设备更加友好需要在head引入
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;&gt;
-initial-scale 确保网页是1:1显示
-user-scalable=no 可以禁用其缩放（zooming）功能。
-通常情况下，maximum-scale=1.0 与 user-scalable=no 一起使用。这样禁用缩放功能后，用户只能滚动屏幕，就能让您的网站看上去更像原生应用的感觉。
-</code></pre>]]></content>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">1.栅格系统  布局容器 始终需要</div><div class="line">.container 类用于固定宽度并支持响应式布局的容器。</div><div class="line">&lt;div class="container"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">.container-fluid 类似于100%宽度 占据全部视口</div><div class="line">&lt;div class="cantainer-fluid"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">2.行（row）”必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，以便为其赋予合适的排列（aligment）和内补（padding）。</div><div class="line">通过“行（row）”在水平方向创建一组“列（column）”。</div><div class="line"></div><div class="line">3.glyphicon 不要和其他组件混合使用</div><div class="line">图标类不能和其它组件直接联合使用。它们不能在同一个元素上与其他类共同存在。应该创建一个嵌套的 &lt;span&gt; 标签，并将图标类应用到这个 &lt;span&gt; 标签上。</div><div class="line"></div><div class="line">只对内容为空的元素起作用</div><div class="line">图标类只能应用在不包含任何文本内容或子元素的元素上。</div><div class="line"></div><div class="line">4.  .col.xs- 超小(手机)</div><div class="line">	.col.sm- 小屏幕(平板)</div><div class="line">	.col-md- 桌面显示器</div><div class="line">	.col-lg- 大显示器</div><div class="line"></div><div class="line">5. 如果是XX屏幕就隐藏  hidden-xx(屏幕) </div><div class="line"></div><div class="line">6. navbar-right 让标签靠右边</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       &lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;1.为了让bootstrap对移动设备更加友好需要在head引入
-&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0&amp;quot;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div
     
     </summary>
     
@@ -237,53 +313,6 @@ $(&quot;.index-rank-list img&quot;).eq(i).mouseenter(function () {
     vertical-align: 
     
     </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>dom总结</title>
-    <link href="http://yoursite.com/2017/08/13/dom%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2017/08/13/dom总结/</id>
-    <published>2017-08-13T07:27:44.000Z</published>
-    <updated>2017-08-18T01:02:01.808Z</updated>
-    
-    <content type="html"><![CDATA[<p>###1 焦点问题</p>
-<blockquote>
-<ul>
-<li>当窗口获得焦点时：onfucus</li>
-<li>当窗口失去焦点时：onblue<br>上述用法和onclick类似</li>
-</ul>
-</blockquote>
-<p>###2 禁用按钮</p>
-<blockquote>
-<ul>
-<li>disabled = “true”</li>
-</ul>
-</blockquote>
-<p>###3 让页面自动获取焦点</p>
-<blockquote>
-<ul>
-<li>想要获取焦点的元素.focus()</li>
-</ul>
-</blockquote>
-<p>###4 节点的操作方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"> 1 父级元素.appendChild（需要添加的节点） 在父级元素里面的末位添加进去节点</div><div class="line">	</div><div class="line"> 2 var oUL = $(&quot;#oUl&quot;) </div><div class="line">	var o = document.createElement(&quot;li&quot;);  创建节点语句</div><div class="line">	var text = document.createTextNode(&quot;哈哈哈&quot;) 创建文本</div><div class="line">	o.appendChild(text);  把text添加到o文本节点中</div><div class="line">	oUl.appendChild(oLi);</div><div class="line"></div><div class="line"> 3 parentNode  指向父亲方法</div><div class="line"></div><div class="line"> 4 insertBefore  （需要添加的节点） 在父级元素里面的头部添加进去节点</div><div class="line"> 5 父级.removeChild（移除的节点） 父级移除子节点</div><div class="line"></div><div class="line"> 6 父级.replaceChild（要替换的节点） 替换</div><div class="line"></div><div class="line"> 7 oBox.clientWidth  获取div的width padding 不带单位   浏览器可视区域</div><div class="line"></div><div class="line"> 8 obox.clientHeight 获取div的height padding 不带单位  浏览器可视区域</div><div class="line"></div><div class="line"> 9 obox.offsetWidth  比上述多一个边框  width padding border 不带单位 </div><div class="line"></div><div class="line"> 10 obox.offsetHeight 带边框的高度  height padding border 不带单位</div><div class="line"></div><div class="line"> 11 obox.offsetLeft    距离body左边的距离  加上浏览器外边距（谷歌为8）</div><div class="line"> 12 oBox.offsetTop 距离body上边的距离  加上浏览器外边距</div><div class="line"></div><div class="line"> 13 document.onkeydown  键盘按下函数</div><div class="line"></div><div class="line"> 14 元素.focus()  让这个元素自动获取焦点</div><div class="line"> 15 offsetLeft返回当前元素的左边界到它的包含元素的左边界的偏移量，以像素为单位。类型：int。状态：只读</div><div class="line"> 16 上38 下40 左37 右 39</div><div class="line"> 17 offsetwidth = border+padding +width</div><div class="line">	clientWidth = padding+ width - 滚动条</div><div class="line"> 18 鼠标阻止事件冒泡 ev 传进去 ev.cancelBubble = &quot;true&quot;;</div><div class="line"></div><div class="line"> 19 document.documentElement.scrollTop  ie ff</div><div class="line">	document.body scrillTop 谷歌支持</div><div class="line">	(一般网页中 出于用户体验考虑不推荐出现水平滚动条 所以scrollLeft用的比较少)</div><div class="line">    document.documentElement.scrollLeft || document.body.scrollLeft</div><div class="line">    有兼容性问题 如何处理？</div><div class="line">    var scrollT = document.documentElement.scrollTop || document.body.scrollTop;</div><div class="line"></div><div class="line"> 20 具体的元素.scrollTop    重点(元素内部) 滚动条滚动的距离 比如说 body.scrollTop</div><div class="line">    具体的元素.scrollLeft</div><div class="line">    scrollWidth 页面内容的实际宽度 (包含滚动过的水平距离和可视区域的宽) </div><div class="line">    scrollHeight 页面内容实际高度 (包含滚动过的垂直距离和可视区域的高)</div><div class="line"> 21鼠标在对象上按下	</div><div class="line"></div><div class="line"> 22凭空创建节点   var rootElement = document.body;</div><div class="line">       		 var newDiv = document.createElement(&quot;div&quot;); </div><div class="line"></div><div class="line"> 23parseFloat(getStyle(div[0],&quot;top&quot;))  默认把px去掉了就</div><div class="line"> 24 obj.style[arrt] = current + &quot;px&quot;; 封装 格式【】这个</div><div class="line"></div><div class="line"> 25 mouseover mouseenter</div><div class="line">	mouseout  mouseleave</div><div class="line"></div><div class="line"></div><div class="line">&gt;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###1 焦点问题&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;当窗口获得焦点时：onfucus&lt;/li&gt;
-&lt;li&gt;当窗口失去焦点时：onblue&lt;br&gt;上述用法和onclick类似&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;###2 禁用按钮&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
     
     
   </entry>
@@ -487,6 +516,53 @@ $(&amp;quot;.add&amp;quot;).css(&amp;q
   </entry>
   
   <entry>
+    <title>dom总结</title>
+    <link href="http://yoursite.com/2017/08/13/dom%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/08/13/dom总结/</id>
+    <published>2017-08-13T07:27:44.000Z</published>
+    <updated>2017-08-18T01:02:01.808Z</updated>
+    
+    <content type="html"><![CDATA[<p>###1 焦点问题</p>
+<blockquote>
+<ul>
+<li>当窗口获得焦点时：onfucus</li>
+<li>当窗口失去焦点时：onblue<br>上述用法和onclick类似</li>
+</ul>
+</blockquote>
+<p>###2 禁用按钮</p>
+<blockquote>
+<ul>
+<li>disabled = “true”</li>
+</ul>
+</blockquote>
+<p>###3 让页面自动获取焦点</p>
+<blockquote>
+<ul>
+<li>想要获取焦点的元素.focus()</li>
+</ul>
+</blockquote>
+<p>###4 节点的操作方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"> 1 父级元素.appendChild（需要添加的节点） 在父级元素里面的末位添加进去节点</div><div class="line">	</div><div class="line"> 2 var oUL = $(&quot;#oUl&quot;) </div><div class="line">	var o = document.createElement(&quot;li&quot;);  创建节点语句</div><div class="line">	var text = document.createTextNode(&quot;哈哈哈&quot;) 创建文本</div><div class="line">	o.appendChild(text);  把text添加到o文本节点中</div><div class="line">	oUl.appendChild(oLi);</div><div class="line"></div><div class="line"> 3 parentNode  指向父亲方法</div><div class="line"></div><div class="line"> 4 insertBefore  （需要添加的节点） 在父级元素里面的头部添加进去节点</div><div class="line"> 5 父级.removeChild（移除的节点） 父级移除子节点</div><div class="line"></div><div class="line"> 6 父级.replaceChild（要替换的节点） 替换</div><div class="line"></div><div class="line"> 7 oBox.clientWidth  获取div的width padding 不带单位   浏览器可视区域</div><div class="line"></div><div class="line"> 8 obox.clientHeight 获取div的height padding 不带单位  浏览器可视区域</div><div class="line"></div><div class="line"> 9 obox.offsetWidth  比上述多一个边框  width padding border 不带单位 </div><div class="line"></div><div class="line"> 10 obox.offsetHeight 带边框的高度  height padding border 不带单位</div><div class="line"></div><div class="line"> 11 obox.offsetLeft    距离body左边的距离  加上浏览器外边距（谷歌为8）</div><div class="line"> 12 oBox.offsetTop 距离body上边的距离  加上浏览器外边距</div><div class="line"></div><div class="line"> 13 document.onkeydown  键盘按下函数</div><div class="line"></div><div class="line"> 14 元素.focus()  让这个元素自动获取焦点</div><div class="line"> 15 offsetLeft返回当前元素的左边界到它的包含元素的左边界的偏移量，以像素为单位。类型：int。状态：只读</div><div class="line"> 16 上38 下40 左37 右 39</div><div class="line"> 17 offsetwidth = border+padding +width</div><div class="line">	clientWidth = padding+ width - 滚动条</div><div class="line"> 18 鼠标阻止事件冒泡 ev 传进去 ev.cancelBubble = &quot;true&quot;;</div><div class="line"></div><div class="line"> 19 document.documentElement.scrollTop  ie ff</div><div class="line">	document.body scrillTop 谷歌支持</div><div class="line">	(一般网页中 出于用户体验考虑不推荐出现水平滚动条 所以scrollLeft用的比较少)</div><div class="line">    document.documentElement.scrollLeft || document.body.scrollLeft</div><div class="line">    有兼容性问题 如何处理？</div><div class="line">    var scrollT = document.documentElement.scrollTop || document.body.scrollTop;</div><div class="line"></div><div class="line"> 20 具体的元素.scrollTop    重点(元素内部) 滚动条滚动的距离 比如说 body.scrollTop</div><div class="line">    具体的元素.scrollLeft</div><div class="line">    scrollWidth 页面内容的实际宽度 (包含滚动过的水平距离和可视区域的宽) </div><div class="line">    scrollHeight 页面内容实际高度 (包含滚动过的垂直距离和可视区域的高)</div><div class="line"> 21鼠标在对象上按下	</div><div class="line"></div><div class="line"> 22凭空创建节点   var rootElement = document.body;</div><div class="line">       		 var newDiv = document.createElement(&quot;div&quot;); </div><div class="line"></div><div class="line"> 23parseFloat(getStyle(div[0],&quot;top&quot;))  默认把px去掉了就</div><div class="line"> 24 obj.style[arrt] = current + &quot;px&quot;; 封装 格式【】这个</div><div class="line"></div><div class="line"> 25 mouseover mouseenter</div><div class="line">	mouseout  mouseleave</div><div class="line"></div><div class="line"></div><div class="line">&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###1 焦点问题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;当窗口获得焦点时：onfucus&lt;/li&gt;
+&lt;li&gt;当窗口失去焦点时：onblue&lt;br&gt;上述用法和onclick类似&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;###2 禁用按钮&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>重装（异地hexo）</title>
     <link href="http://yoursite.com/2017/05/11/%E5%BC%82%E5%9C%B0hexo/"/>
     <id>http://yoursite.com/2017/05/11/异地hexo/</id>
@@ -543,69 +619,11 @@ hexo deploy
   </entry>
   
   <entry>
-    <title>学习的六条经验(转)</title>
-    <link href="http://yoursite.com/2017/05/08/acticle/"/>
-    <id>http://yoursite.com/2017/05/08/acticle/</id>
-    <published>2017-05-08T13:23:25.000Z</published>
-    <updated>2017-05-11T07:32:35.662Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.要避免骄傲，好学习他人的长处</p>
-<p>这被放在了第一条。我们国家的教育强调竞争，不重视合作。除了抄作业，高中几乎没有什么机会可以两个人合作出来的项目。因此，对于那些在班级，年级成绩靠前，在市、省、国、国际比赛取得名次的学生，要善用自己的天赋，而不是心存骄傲。</p>
-<p>要 避免骄傲，一是不要瞧不起成绩不如自己的同学。尽管我们的教育，到大学还是强调考试，甚至公务员也要考，英语也要考，但是在任何国家，尤其我们这儿，将来 的发展，和考试能力几乎完全没有关系。如果能够把每个同学，无论成绩好坏，都当成一个人格独立的个体，那么在十几岁的年纪里，就会形成一种先知先觉的一种 公民意识，而不会妄自尊大。</p>
-<p>有两个很残酷的事实：第一个，就是很多竞赛得奖者，后来的职业是继续辅导竞赛。我完全尊重每个人的劳动，但是必须承认，如果这样人有如此之多（你会知道原来这么多！），其实还是很可惜，因为当你取得高级别竞赛的名次，站在全校面前倍感光荣的时候，“将来辅导其他学生”这件事儿，肯定不在你的梦想范围里。<br>第二个现实，就是说，即使对于学习本身，竞赛的帮助并不大。一个共识是：大学入学的时候，竞赛生和非竞赛生差距比较大，但是大学毕业时，基本看不出差距，甚至很多学业最优秀的学生，都是非竞赛生。这个匪夷所思的事实，有很多原因。比如：找满足感——这些甚至都不是自己有意的，只是无意识的就会朝这里靠拢。</p>
-<p>也许你会说，这有什么不好？每个人都可以选择他要的生活方式。</p>
-<p>我想说，当然没什么不好，只是你这么做，就等于选择了困难模式。</p>
-<p>有没有想过为什么讨厌的家长总是让你学习，学习？尽管他们小时候未必是那个学习好的？<br>如果他们是那个学习好的，那他们让你学习，肯定是意识到学习的好处；如果他们不是，那多半是尝到了不学习恶果。（无意损人，请抓住主旨，勿断章取义）</p>
-<p>既然打游戏，和学习，都可以获得满足感，那么它们两者本质的不同在哪里？</p>
-<p>前者不可沉淀，过去了就过去；后者却能让改变自己，给自己带来看不见的变化。并且为自己创造机会。</p>
-<p>当然，也有打游戏到世界冠军，扮靓找来大款，打架变成拳王的。难道那样成功的概率比学习获得改善生活的机会要高吗？所以说，才是困难模式。不要因为小概率而蒙蔽自己。发达国家，那些不愁医保不愁吃穿的宅男里，天天打游戏，才可能有世界冠军，我们的出身决定了和他们拼不起。</p>
-<p>这些和自信到底有什么关系啊？</p>
-<p>以上就是说，不要因为学习上不足，就失去动力而分散注意力，过早的想在其他方面表现自己；任何方面都需要足够的专业才能把表现自己变成糊口的手段，学习是最简单的一条路。</p>
-<p>因此，看到那些成绩好的同学手执考卷，眉飞色舞，看到家长戳着自己的脑门骂人，看到老师失望的样子，都不可以放弃自己。如果想要超越，必须另辟蹊径。必须不断的努力，必须不断的寻找努力的方式（即方法），不要空谈方法，所有的方法都是实践中失败或者成功才获得的。</p>
-<p>在成绩不如人的时候，想要超过去，就必须具备他人所没有的品质。</p>
-<p>2.做好牺牲的准备</p>
-<p>几乎任何事情，都是有得必有失。一个人前闪耀的明星，可能<br>1）只是公司的一枚棋子，被迫做很多不情愿的事<br>2）一点私生活都没有，一点小事就可能满城风雨<br>3） 常年处于担心自己过气的焦虑和恐惧中</p>
-<p>对 于学习，也一样。没有白来的好事，能够帮助自己突飞猛进，却还不用付出多少代价。有些人不肯付出这些代价，觉得过大家一样的生活，就挺好。有些人苦苦想进步，只是不知道怎么办。对于前者，尽到自己认为足够的努力即可；后者，即想付出又不知道该怎么做的人，或者有雄心取得更大进步的人，是真正需要本文的读 者；为了提升，就需要做好牺牲的准备。</p>
-<p>原谅我把这几个真正大家一开始就想看的内容放到了最后，只有读到这里的人才能看到：</p>
-<p>学习的第一条，就是要练就大脑封闭术。</p>
-<p>不是封闭起来拒绝新知的封闭，而是要特意给大脑留下一块儿干净的空间。这个空间，不要受任何外界的干扰。即，不管情绪如何，外界或喜或悲，打开书/打开卷子，就忘掉一切，好像世界只有你和那个学习的内容。</p>
-<p>为了达到这个终极的目标，各种方式都可能需要用到，比如听音乐，发泄，运动，和朋友交流，聊qq。。。。不知不觉，就会发现，自己把本来用于学习的时间用到了其他事情上，而且还没有多少改善。</p>
-<p>其实并不难，人在想一件事的时候，脑子里当然想着它；为了使得大脑封闭，必须把自己的心血和精力，倾注到面前的书或其他的学习资料上。别的事情不要主动去想它，过了一会儿，书上的内容在大脑里占据的比例越来越大，就自然读进去了。</p>
-<p>这样做的好处很多，比如不会浮躁。浮躁就是在做一件事的时候，想另外一件事。沉下来，深吸两口气，不去想那一件事，多读几句，让这个要学的内容充满大脑，让那个烦心事逐渐排空。如果有意识的这样做，即以时日，不难做到，就会专注而高效，而不会杂念纷纷了。</p>
-<p>学习的第二条，就是要争取最多的工作时间。</p>
-<p>原 因很简单，每个人生来有不同的模样，成长于不同的环境，实在有很多很多不公平的事，而且这些不公平往往不朝着自己这一边倾斜。。。怎么办？上天赐给了人一 样最公平的东西，就是时间。无论聪明或者愚钝，无论贫贱或者富裕，每个人每天都有24小时，即86400秒（不要扯恒星日和太阳日！），再公平不过。</p>
-<p>试想一个男生身高1米82，那就是一个标准的美男子，有着人人趋之若鹜的高度。另一个男生1米56（无意对先天进行歧视），那不管我们多么想忽略这个事实，心里都会承认这个格子有点矮。182：156=7：6. 什么意思呢？</p>
-<p>如果一个人七天工作，和六天工作，其产生的差距其实是很大的，和身高的差距类似。只是对于工作上的一点，很难短期内直接看出。</p>
-<p>也 许有人觉得个人有休闲，不要太累，就是想慢慢的，悠哉悠哉，这当然要尊重个人的自由意志；然而，如果你心里想的是，你愿意试试看这种方法，只是不知道怎么 办，那么这里是针对你而写的。也许你读了很多传记，发现政治家，成功的企业家（包含果粉的神Jobs），科学家，都是连续工作的，他们是精力充沛？还是什 么？最近有一篇文章写奥巴马，“我教你怎么当总统”。里面有一重要的条，就是要天天运动。也许有人觉得，运动不是更累吗？其实休息有两种，一种是消极的休 息（消极不等于不必要），比如睡眠，懒懒地呆在那里什么的，一种是积极的休息，就是运动。除了奥巴马，比如著名生物学家施一公非常擅长长跑，比尔盖茨也是 坚持跑步运动。。</p>
-<p>有人说，这些人真厉害。做这么多事的同时，又天天运动，真是多面手。其实换个角度想，坚持运动正是能够完成大量工作的前提保证。运动可以增强细胞的自噬效应，可以增强心肺等器官的机能，使得人更能承受长期工作的劳累。</p>
-<p>不敢说100%，如果查看那些那些大牛们，有很大的比例都在于运动；各种运动中，又有很大的比例在于长跑。</p>
-<p>正因为如此，一个人才可能承受7天的工作量，反而不会疲劳。这是一个公开的秘密。</p>
-<p>学习的第三条，就是不去想学习的目的。</p>
-<p>所谓不去想学习的目的，并非说没有长远的理想，也不是说不要调整学习的方向，只是不要去天天问自己，“学这些干什么？有什么用？” </p>
-<p>要经历过很多事情之后，才有可能知道学习的目的，并且每个人会形成不同的理解。</p>
-<p>在我看来，要把每天割开来过，在学习的时候，只希望当天是最饱满的一天，做自己认为最有意义的事情，而不是拖拉到明天，或者为过去而懊恼。</p>
-<p>这样子每天认真学习，过一定的阶段，自己的视野才能取得有所觉察的增长，然后进而调整方法和内容，并更进一步的试图确定理想；过更长的阶段，学习会带来不同的机会，使得自己对于生活的选择余地更加广阔。总而言之，学习的目的，是在学习的过程当中慢慢获得的。</p>
-<p>如果还没开始学习，就先问目的，是一种永不可能实现的功利主义——因为不知道有什么用，所以不做。实际上的逻辑恰恰是反过来：因为没有做，所以不可能知道它的目的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;1.要避免骄傲，好学习他人的长处&lt;/p&gt;
-&lt;p&gt;这被放在了第一条。我们国家的教育强调竞争，不重视合作。除了抄作业，高中几乎没有什么机会可以两个人合作出来的项目。因此，对于那些在班级，年级成绩靠前，在市、省、国、国际比赛取得名次的学生，要善用自己的天赋，而不是心存骄傲。&lt;/p
-    
-    </summary>
-    
-      <category term="小记" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>html_day_01</title>
+    <title>html标签</title>
     <link href="http://yoursite.com/2017/05/08/heng/"/>
     <id>http://yoursite.com/2017/05/08/heng/</id>
     <published>2017-05-08T13:23:25.000Z</published>
-    <updated>2017-05-11T08:21:54.097Z</updated>
+    <updated>2017-08-20T13:51:24.328Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <ul>
@@ -670,6 +688,64 @@ start=”3”  决定了开始的位置。
     
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习的六条经验(转)</title>
+    <link href="http://yoursite.com/2017/05/08/acticle/"/>
+    <id>http://yoursite.com/2017/05/08/acticle/</id>
+    <published>2017-05-08T13:23:25.000Z</published>
+    <updated>2017-05-11T07:32:35.662Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.要避免骄傲，好学习他人的长处</p>
+<p>这被放在了第一条。我们国家的教育强调竞争，不重视合作。除了抄作业，高中几乎没有什么机会可以两个人合作出来的项目。因此，对于那些在班级，年级成绩靠前，在市、省、国、国际比赛取得名次的学生，要善用自己的天赋，而不是心存骄傲。</p>
+<p>要 避免骄傲，一是不要瞧不起成绩不如自己的同学。尽管我们的教育，到大学还是强调考试，甚至公务员也要考，英语也要考，但是在任何国家，尤其我们这儿，将来 的发展，和考试能力几乎完全没有关系。如果能够把每个同学，无论成绩好坏，都当成一个人格独立的个体，那么在十几岁的年纪里，就会形成一种先知先觉的一种 公民意识，而不会妄自尊大。</p>
+<p>有两个很残酷的事实：第一个，就是很多竞赛得奖者，后来的职业是继续辅导竞赛。我完全尊重每个人的劳动，但是必须承认，如果这样人有如此之多（你会知道原来这么多！），其实还是很可惜，因为当你取得高级别竞赛的名次，站在全校面前倍感光荣的时候，“将来辅导其他学生”这件事儿，肯定不在你的梦想范围里。<br>第二个现实，就是说，即使对于学习本身，竞赛的帮助并不大。一个共识是：大学入学的时候，竞赛生和非竞赛生差距比较大，但是大学毕业时，基本看不出差距，甚至很多学业最优秀的学生，都是非竞赛生。这个匪夷所思的事实，有很多原因。比如：找满足感——这些甚至都不是自己有意的，只是无意识的就会朝这里靠拢。</p>
+<p>也许你会说，这有什么不好？每个人都可以选择他要的生活方式。</p>
+<p>我想说，当然没什么不好，只是你这么做，就等于选择了困难模式。</p>
+<p>有没有想过为什么讨厌的家长总是让你学习，学习？尽管他们小时候未必是那个学习好的？<br>如果他们是那个学习好的，那他们让你学习，肯定是意识到学习的好处；如果他们不是，那多半是尝到了不学习恶果。（无意损人，请抓住主旨，勿断章取义）</p>
+<p>既然打游戏，和学习，都可以获得满足感，那么它们两者本质的不同在哪里？</p>
+<p>前者不可沉淀，过去了就过去；后者却能让改变自己，给自己带来看不见的变化。并且为自己创造机会。</p>
+<p>当然，也有打游戏到世界冠军，扮靓找来大款，打架变成拳王的。难道那样成功的概率比学习获得改善生活的机会要高吗？所以说，才是困难模式。不要因为小概率而蒙蔽自己。发达国家，那些不愁医保不愁吃穿的宅男里，天天打游戏，才可能有世界冠军，我们的出身决定了和他们拼不起。</p>
+<p>这些和自信到底有什么关系啊？</p>
+<p>以上就是说，不要因为学习上不足，就失去动力而分散注意力，过早的想在其他方面表现自己；任何方面都需要足够的专业才能把表现自己变成糊口的手段，学习是最简单的一条路。</p>
+<p>因此，看到那些成绩好的同学手执考卷，眉飞色舞，看到家长戳着自己的脑门骂人，看到老师失望的样子，都不可以放弃自己。如果想要超越，必须另辟蹊径。必须不断的努力，必须不断的寻找努力的方式（即方法），不要空谈方法，所有的方法都是实践中失败或者成功才获得的。</p>
+<p>在成绩不如人的时候，想要超过去，就必须具备他人所没有的品质。</p>
+<p>2.做好牺牲的准备</p>
+<p>几乎任何事情，都是有得必有失。一个人前闪耀的明星，可能<br>1）只是公司的一枚棋子，被迫做很多不情愿的事<br>2）一点私生活都没有，一点小事就可能满城风雨<br>3） 常年处于担心自己过气的焦虑和恐惧中</p>
+<p>对 于学习，也一样。没有白来的好事，能够帮助自己突飞猛进，却还不用付出多少代价。有些人不肯付出这些代价，觉得过大家一样的生活，就挺好。有些人苦苦想进步，只是不知道怎么办。对于前者，尽到自己认为足够的努力即可；后者，即想付出又不知道该怎么做的人，或者有雄心取得更大进步的人，是真正需要本文的读 者；为了提升，就需要做好牺牲的准备。</p>
+<p>原谅我把这几个真正大家一开始就想看的内容放到了最后，只有读到这里的人才能看到：</p>
+<p>学习的第一条，就是要练就大脑封闭术。</p>
+<p>不是封闭起来拒绝新知的封闭，而是要特意给大脑留下一块儿干净的空间。这个空间，不要受任何外界的干扰。即，不管情绪如何，外界或喜或悲，打开书/打开卷子，就忘掉一切，好像世界只有你和那个学习的内容。</p>
+<p>为了达到这个终极的目标，各种方式都可能需要用到，比如听音乐，发泄，运动，和朋友交流，聊qq。。。。不知不觉，就会发现，自己把本来用于学习的时间用到了其他事情上，而且还没有多少改善。</p>
+<p>其实并不难，人在想一件事的时候，脑子里当然想着它；为了使得大脑封闭，必须把自己的心血和精力，倾注到面前的书或其他的学习资料上。别的事情不要主动去想它，过了一会儿，书上的内容在大脑里占据的比例越来越大，就自然读进去了。</p>
+<p>这样做的好处很多，比如不会浮躁。浮躁就是在做一件事的时候，想另外一件事。沉下来，深吸两口气，不去想那一件事，多读几句，让这个要学的内容充满大脑，让那个烦心事逐渐排空。如果有意识的这样做，即以时日，不难做到，就会专注而高效，而不会杂念纷纷了。</p>
+<p>学习的第二条，就是要争取最多的工作时间。</p>
+<p>原 因很简单，每个人生来有不同的模样，成长于不同的环境，实在有很多很多不公平的事，而且这些不公平往往不朝着自己这一边倾斜。。。怎么办？上天赐给了人一 样最公平的东西，就是时间。无论聪明或者愚钝，无论贫贱或者富裕，每个人每天都有24小时，即86400秒（不要扯恒星日和太阳日！），再公平不过。</p>
+<p>试想一个男生身高1米82，那就是一个标准的美男子，有着人人趋之若鹜的高度。另一个男生1米56（无意对先天进行歧视），那不管我们多么想忽略这个事实，心里都会承认这个格子有点矮。182：156=7：6. 什么意思呢？</p>
+<p>如果一个人七天工作，和六天工作，其产生的差距其实是很大的，和身高的差距类似。只是对于工作上的一点，很难短期内直接看出。</p>
+<p>也 许有人觉得个人有休闲，不要太累，就是想慢慢的，悠哉悠哉，这当然要尊重个人的自由意志；然而，如果你心里想的是，你愿意试试看这种方法，只是不知道怎么 办，那么这里是针对你而写的。也许你读了很多传记，发现政治家，成功的企业家（包含果粉的神Jobs），科学家，都是连续工作的，他们是精力充沛？还是什 么？最近有一篇文章写奥巴马，“我教你怎么当总统”。里面有一重要的条，就是要天天运动。也许有人觉得，运动不是更累吗？其实休息有两种，一种是消极的休 息（消极不等于不必要），比如睡眠，懒懒地呆在那里什么的，一种是积极的休息，就是运动。除了奥巴马，比如著名生物学家施一公非常擅长长跑，比尔盖茨也是 坚持跑步运动。。</p>
+<p>有人说，这些人真厉害。做这么多事的同时，又天天运动，真是多面手。其实换个角度想，坚持运动正是能够完成大量工作的前提保证。运动可以增强细胞的自噬效应，可以增强心肺等器官的机能，使得人更能承受长期工作的劳累。</p>
+<p>不敢说100%，如果查看那些那些大牛们，有很大的比例都在于运动；各种运动中，又有很大的比例在于长跑。</p>
+<p>正因为如此，一个人才可能承受7天的工作量，反而不会疲劳。这是一个公开的秘密。</p>
+<p>学习的第三条，就是不去想学习的目的。</p>
+<p>所谓不去想学习的目的，并非说没有长远的理想，也不是说不要调整学习的方向，只是不要去天天问自己，“学这些干什么？有什么用？” </p>
+<p>要经历过很多事情之后，才有可能知道学习的目的，并且每个人会形成不同的理解。</p>
+<p>在我看来，要把每天割开来过，在学习的时候，只希望当天是最饱满的一天，做自己认为最有意义的事情，而不是拖拉到明天，或者为过去而懊恼。</p>
+<p>这样子每天认真学习，过一定的阶段，自己的视野才能取得有所觉察的增长，然后进而调整方法和内容，并更进一步的试图确定理想；过更长的阶段，学习会带来不同的机会，使得自己对于生活的选择余地更加广阔。总而言之，学习的目的，是在学习的过程当中慢慢获得的。</p>
+<p>如果还没开始学习，就先问目的，是一种永不可能实现的功利主义——因为不知道有什么用，所以不做。实际上的逻辑恰恰是反过来：因为没有做，所以不可能知道它的目的。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1.要避免骄傲，好学习他人的长处&lt;/p&gt;
+&lt;p&gt;这被放在了第一条。我们国家的教育强调竞争，不重视合作。除了抄作业，高中几乎没有什么机会可以两个人合作出来的项目。因此，对于那些在班级，年级成绩靠前，在市、省、国、国际比赛取得名次的学生，要善用自己的天赋，而不是心存骄傲。&lt;/p
+    
+    </summary>
+    
+      <category term="小记" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%AE%B0/"/>
+    
     
   </entry>
   

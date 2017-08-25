@@ -92,16 +92,16 @@
 
 
 
-<meta name="description" content="1.为了让bootstrap对移动设备更加友好需要在head引入 &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0&amp;quot;&amp;gt; initial-scale 确保网页是1:1显示 user-scalable=no 可以禁用其缩放（zooming）功能。 通常情况下，ma">
+<meta name="description" content="123456789101112131415161718192021222324252627281.栅格系统  布局容器 始终需要.container 类用于固定宽度并支持响应式布局的容器。&amp;lt;div class=&quot;container&quot;&amp;gt;...&amp;lt;/div&amp;gt;.container-fluid 类似于100%宽度 占据全部视口&amp;lt;div class=&quot;cantainer-flu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="bootstrap8月记录">
 <meta property="og:url" content="http://yoursite.com/2017/08/14/bootstrap8月记录/index.html">
 <meta property="og:site_name" content="潇凌">
-<meta property="og:description" content="1.为了让bootstrap对移动设备更加友好需要在head引入 &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0&amp;quot;&amp;gt; initial-scale 确保网页是1:1显示 user-scalable=no 可以禁用其缩放（zooming）功能。 通常情况下，ma">
-<meta property="og:updated_time" content="2017-08-14T12:15:35.653Z">
+<meta property="og:description" content="123456789101112131415161718192021222324252627281.栅格系统  布局容器 始终需要.container 类用于固定宽度并支持响应式布局的容器。&amp;lt;div class=&quot;container&quot;&amp;gt;...&amp;lt;/div&amp;gt;.container-fluid 类似于100%宽度 占据全部视口&amp;lt;div class=&quot;cantainer-flu">
+<meta property="og:updated_time" content="2017-08-24T13:44:35.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bootstrap8月记录">
-<meta name="twitter:description" content="1.为了让bootstrap对移动设备更加友好需要在head引入 &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0&amp;quot;&amp;gt; initial-scale 确保网页是1:1显示 user-scalable=no 可以禁用其缩放（zooming）功能。 通常情况下，ma">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627281.栅格系统  布局容器 始终需要.container 类用于固定宽度并支持响应式布局的容器。&amp;lt;div class=&quot;container&quot;&amp;gt;...&amp;lt;/div&amp;gt;.container-fluid 类似于100%宽度 占据全部视口&amp;lt;div class=&quot;cantainer-flu">
 
 
 
@@ -361,12 +361,7 @@
 
       
         <hr>
-<pre><code>1.为了让bootstrap对移动设备更加友好需要在head引入
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;&gt;
-initial-scale 确保网页是1:1显示
-user-scalable=no 可以禁用其缩放（zooming）功能。
-通常情况下，maximum-scale=1.0 与 user-scalable=no 一起使用。这样禁用缩放功能后，用户只能滚动屏幕，就能让您的网站看上去更像原生应用的感觉。
-</code></pre>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">1.栅格系统  布局容器 始终需要</div><div class="line">.container 类用于固定宽度并支持响应式布局的容器。</div><div class="line">&lt;div class="container"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">.container-fluid 类似于100%宽度 占据全部视口</div><div class="line">&lt;div class="cantainer-fluid"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">2.行（row）”必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，以便为其赋予合适的排列（aligment）和内补（padding）。</div><div class="line">通过“行（row）”在水平方向创建一组“列（column）”。</div><div class="line"></div><div class="line">3.glyphicon 不要和其他组件混合使用</div><div class="line">图标类不能和其它组件直接联合使用。它们不能在同一个元素上与其他类共同存在。应该创建一个嵌套的 &lt;span&gt; 标签，并将图标类应用到这个 &lt;span&gt; 标签上。</div><div class="line"></div><div class="line">只对内容为空的元素起作用</div><div class="line">图标类只能应用在不包含任何文本内容或子元素的元素上。</div><div class="line"></div><div class="line">4.  .col.xs- 超小(手机)</div><div class="line">	.col.sm- 小屏幕(平板)</div><div class="line">	.col-md- 桌面显示器</div><div class="line">	.col-lg- 大显示器</div><div class="line"></div><div class="line">5. 如果是XX屏幕就隐藏  hidden-xx(屏幕) </div><div class="line"></div><div class="line">6. navbar-right 让标签靠右边</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -477,7 +472,7 @@ user-scalable=no 可以禁用其缩放（zooming）功能。
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -488,7 +483,7 @@ user-scalable=no 可以禁用其缩放（zooming）功能。
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
