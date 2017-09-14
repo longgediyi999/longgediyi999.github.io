@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-25T06:27:36.563Z</updated>
+  <updated>2017-08-25T10:47:51.001Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2017/08/25/mysql%E8%A7%A3%E5%8E%8B%E7%89%88%E5%AE%89%E8%A3%85%E7%BB%8F%E9%AA%8C/"/>
     <id>http://yoursite.com/2017/08/25/mysql解压版安装经验/</id>
     <published>2017-08-25T06:17:06.000Z</published>
-    <updated>2017-08-25T06:27:36.563Z</updated>
+    <updated>2017-08-25T10:47:51.001Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">my.ini文件</div><div class="line"></div><div class="line">[mysql]</div><div class="line"># 设置客户端默认字符集</div><div class="line">default-character-set=utf8</div><div class="line">[mysqld]</div><div class="line">#设置3306端口</div><div class="line">port = 3306</div><div class="line"># 设置安装目录</div><div class="line">basedir=C:\Program Files\MySQL\MySQL Server 5.7.14</div><div class="line"># 设置数据存放目录</div><div class="line">datadir=C:\Program Files\MySQL\MySQL Server 5.7.14\data</div><div class="line"># 设置最大连接数</div><div class="line">max_connections=200</div><div class="line"># 设置服务端字符集</div><div class="line">character-set-server=utf8</div><div class="line">(管理员权限)</div><div class="line">1.添加path路径 mysql安装的bin目录添加到path路径中</div><div class="line">2.初始化mysql 运行mysqld --instal，出现Service successfully installed.即可。然后服务里面就多了mysql服务启动选项。(临时密码)</div><div class="line">3.net start mysql  或者在服务启动都可以</div><div class="line">4.mysql -uroot -p   输入刚才记住的临时密码 (记住)</div><div class="line">5.set password = password(&apos;123456&apos;);</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">my.ini文件</div><div class="line"></div><div class="line">[mysql]</div><div class="line"># 设置客户端默认字符集</div><div class="line">default-character-set=utf8</div><div class="line">[mysqld]</div><div class="line">#设置3306端口</div><div class="line">port = 3306</div><div class="line"># 设置安装目录</div><div class="line">basedir=C:\Program Files\MySQL\MySQL Server 5.7.14</div><div class="line"># 设置数据存放目录</div><div class="line">datadir=C:\Program Files\MySQL\MySQL Server 5.7.14\data</div><div class="line"># 设置最大连接数</div><div class="line">max_connections=200</div><div class="line"># 设置服务端字符集</div><div class="line">character-set-server=utf8</div><div class="line">(管理员权限)</div><div class="line">1.添加path路径 mysql安装的bin目录添加到path路径中</div><div class="line">2.初始化mysql 运行mysqld --instal，出现Service successfully installed.</div><div class="line">即可。然后服务里面就多了mysql服务启动选项。(临时密码)</div><div class="line">3.net start mysql  或者在服务启动都可以</div><div class="line">4.mysql -uroot -p   输入刚才记住的临时密码 (记住)</div><div class="line">5.set password = password(&apos;123456&apos;);</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -40,9 +40,9 @@
     <link href="http://yoursite.com/2017/08/24/%E5%BE%AE%E9%87%91%E6%89%80/"/>
     <id>http://yoursite.com/2017/08/24/微金所/</id>
     <published>2017-08-24T01:42:04.000Z</published>
-    <updated>2017-08-25T06:27:41.771Z</updated>
+    <updated>2017-08-26T07:10:44.488Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>类不需要&lt;  div标签需要&lt;</div><div class="line"></div><div class="line"><span class="number">2.</span>nth-child nth-<span class="keyword">of</span>-type  区别   动态创建一个导致nth-child层级出现问题</div><div class="line"></div><div class="line"><span class="number">3.</span>鼠标悬浮到外元素 显示内元素的东西</div><div class="line">	:hover&gt;img &#123;</div><div class="line">		<span class="attr">display</span>:block;</div><div class="line">	&#125;</div><div class="line"></div><div class="line"><span class="number">4.</span>鼠标悬浮当前a 在当前的样式内写   显示红色的一个底边线</div><div class="line">	&amp;:hover,</div><div class="line">	&amp;:focus &#123;</div><div class="line">		border-bottom: <span class="number">1</span>px solid red;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>类不需要&lt;  div标签需要&lt;</div><div class="line"></div><div class="line"><span class="number">2.</span>nth-child nth-<span class="keyword">of</span>-type  区别   动态创建一个导致nth-child层级出现问题</div><div class="line"></div><div class="line"><span class="number">3.</span>鼠标悬浮到外元素 显示内元素的东西</div><div class="line">	:hover&gt;img &#123;</div><div class="line">		<span class="attr">display</span>:block;</div><div class="line">	&#125;</div><div class="line"></div><div class="line"><span class="number">4.</span>鼠标悬浮当前a 在当前的样式内写   显示红色的一个底边线</div><div class="line">	&amp;:hover,</div><div class="line">	&amp;:focus &#123;</div><div class="line">		border-bottom: <span class="number">1</span>px solid red;</div><div class="line">	&#125;	</div><div class="line"></div><div class="line"><span class="number">5.</span>	box-shadow		</div><div class="line">		none： 无阴影 </div><div class="line">		&lt;length&gt;①： 第<span class="number">1</span>个长度值用来设置对象的阴影水平偏移值。可以为负值 </div><div class="line">		&lt;length&gt;②： 第<span class="number">2</span>个长度值用来设置对象的阴影垂直偏移值。可以为负值 </div><div class="line">		&lt;length&gt;③： 如果提供了第<span class="number">3</span>个长度值则用来设置对象的阴影模糊值。不允许负值 </div><div class="line">		&lt;length&gt;④： 如果提供了第<span class="number">4</span>个长度值则用来设置对象的阴影外延值。可以为负值 </div><div class="line">		&lt;color&gt;： 设置对象的阴影的颜色。</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -234,10 +234,10 @@ doctype不存在会导致文档以兼容模式运行.
     <link href="http://yoursite.com/2017/08/14/bootstrap8%E6%9C%88%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/08/14/bootstrap8月记录/</id>
     <published>2017-08-14T12:10:41.000Z</published>
-    <updated>2017-08-24T13:44:35.484Z</updated>
+    <updated>2017-08-27T11:55:35.571Z</updated>
     
     <content type="html"><![CDATA[<hr>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">1.栅格系统  布局容器 始终需要</div><div class="line">.container 类用于固定宽度并支持响应式布局的容器。</div><div class="line">&lt;div class="container"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">.container-fluid 类似于100%宽度 占据全部视口</div><div class="line">&lt;div class="cantainer-fluid"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">2.行（row）”必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，以便为其赋予合适的排列（aligment）和内补（padding）。</div><div class="line">通过“行（row）”在水平方向创建一组“列（column）”。</div><div class="line"></div><div class="line">3.glyphicon 不要和其他组件混合使用</div><div class="line">图标类不能和其它组件直接联合使用。它们不能在同一个元素上与其他类共同存在。应该创建一个嵌套的 &lt;span&gt; 标签，并将图标类应用到这个 &lt;span&gt; 标签上。</div><div class="line"></div><div class="line">只对内容为空的元素起作用</div><div class="line">图标类只能应用在不包含任何文本内容或子元素的元素上。</div><div class="line"></div><div class="line">4.  .col.xs- 超小(手机)</div><div class="line">	.col.sm- 小屏幕(平板)</div><div class="line">	.col-md- 桌面显示器</div><div class="line">	.col-lg- 大显示器</div><div class="line"></div><div class="line">5. 如果是XX屏幕就隐藏  hidden-xx(屏幕) </div><div class="line"></div><div class="line">6. navbar-right 让标签靠右边</div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">1.栅格系统  布局容器 始终需要</div><div class="line">.container 类用于固定宽度并支持响应式布局的容器。</div><div class="line">&lt;div class="container"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">.container-fluid 类似于100%宽度 占据全部视口</div><div class="line">&lt;div class="cantainer-fluid"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">2.行（row）”必须包含在 .container （固定宽度）或 </div><div class="line">.container-fluid （100% 宽度）中，</div><div class="line">以便为其赋予合适的排列（aligment）和内补（padding）。</div><div class="line">通过“行（row）”在水平方向创建一组“列（column）”。</div><div class="line"></div><div class="line">3.glyphicon 不要和其他组件混合使用</div><div class="line">图标类不能和其它组件直接联合使用。</div><div class="line">它们不能在同一个元素上与其他类共同存在。</div><div class="line">应该创建一个嵌套的 &lt;span&gt; 标签，</div><div class="line">并将图标类应用到这个 &lt;span&gt; 标签上。</div><div class="line"></div><div class="line">只对内容为空的元素起作用</div><div class="line">图标类只能应用在不包含任何文本内容或子元素的元素上。</div><div class="line"></div><div class="line">4.  .col.xs- 超小(手机)</div><div class="line">	.col.sm- 小屏幕(平板)</div><div class="line">	.col-md- 桌面显示器</div><div class="line">	.col-lg- 大显示器</div><div class="line"></div><div class="line">5. 如果是XX屏幕就隐藏  hidden-xx(屏幕) </div><div class="line"></div><div class="line">6. navbar-right 让标签靠右边   </div><div class="line"></div><div class="line">7.关于轮播图</div><div class="line">	(1) 一般用a包裹</div><div class="line">	(2)如果需要大小图互相换 这样设置在大屏幕 中屏幕 小屏幕 显示一张,</div><div class="line">	极小屏幕显示一样   用hidden-XX隐藏互相切换 </div><div class="line">	</div><div class="line">	data-interval="number"    自动循环每个项目之间的延迟的时间</div><div class="line">	data-pause="string"  鼠标进入时暂停 离开恢复</div><div class="line"></div><div class="line">8.关于栅格系统  另起一行不需要重新定义row  算好即可</div><div class="line">	如果上下不相同 可以另起一行row</div><div class="line"></div><div class="line">9.col-lg-offset-XX 列偏移</div><div class="line"></div><div class="line">10 列表组 list-group-item</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -252,67 +252,22 @@ doctype不存在会导致文档以兼容模式运行.
   </entry>
   
   <entry>
-    <title>唯品会</title>
-    <link href="http://yoursite.com/2017/08/13/%E5%94%AF%E5%93%81%E4%BC%9A/"/>
-    <id>http://yoursite.com/2017/08/13/唯品会/</id>
-    <published>2017-08-13T07:27:44.000Z</published>
-    <updated>2017-08-18T01:02:33.968Z</updated>
+    <title>css不懂总结</title>
+    <link href="http://yoursite.com/2017/08/14/css%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/08/14/css总结/</id>
+    <published>2017-08-14T12:10:41.000Z</published>
+    <updated>2017-09-02T00:44:43.026Z</updated>
     
-    <content type="html"><![CDATA[<hr>
-<pre><code>1.  sel-area div i {
-    display: inline-block;
-    width: 0px;
-    height: 0px;
-    border-width: 5px;
-    vertical-align: middle;
-    border-color: #999 transparent transparent transparent;
-    border-style: solid dashed dotted dashed;}
-
-2.内部盒子动导致外部盒子定位不稳
-  设置外部盒子为相对定位
-
-3.
- &lt;div class=&quot;index-rank-list clearfix&quot;&gt;
-      &lt;a class=&quot;index-rank-item&quot; href=&quot;&quot;&gt;
-           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
-           &lt;img src=&quot;images/weipin_index/1501479587607.jpg&quot; alt=&quot;&quot;/&gt;
-      &lt;/a&gt;
-      &lt;a class=&quot;index-rank-item index-rank-item1&quot; href=&quot;&quot;&gt;
-           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
-           &lt;img src=&quot;images/weipin_index/1501479675015.jpg&quot; alt=&quot;&quot;/&gt;
-      &lt;/a&gt;
-      &lt;a class=&quot;index-rank-item index-rank-item2&quot; href=&quot;&quot;&gt;
-           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
-           &lt;img src=&quot;images/weipin_index/1501479634643.jpg&quot; alt=&quot;&quot;/&gt;
-      &lt;/a&gt;
-  &lt;/div&gt;
-
-for(var i = 0; i &lt; $(&quot;.index-rank-list img&quot;).length ; i++) {
-$(&quot;.index-rank-list img&quot;).eq(i).mouseenter(function () {
-  jianjinjianchu($(this));
-    });
-  }
-如果在$内部取$(this).index() 得到的值是相对于span img 的 而不是3个img
-
- pointer-events: none;  元素遮盖 绝对定位导致    给绝对定位元素设置这个属性  底层的元素就可以控制了
-
- $(this).parent().children().eq(0).children().css(&quot;filter&quot;,&quot;blur(0px)&quot;);   //图片模糊恢复‘
-
-
-让元素固定与中间 使元素左边的距离不管浏览器窗口大小都稳定不变  固定定位之后 用left百分比控制居中 然后用margin-left往左移动
-</code></pre>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. E:first-of-type </div><div class="line">选中每个父元素下子元素为E的元素</div><div class="line"></div><div class="line">2.</div></pre></td></tr></table></figure>
+]]></content>
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;1.  sel-area div i {
-    display: inline-block;
-    width: 0px;
-    height: 0px;
-    border-width: 5px;
-    vertical-align: 
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
     
     </summary>
+    
+      <category term="css" scheme="http://yoursite.com/categories/css/"/>
     
     
   </entry>
@@ -494,28 +449,6 @@ $(&amp;quot;.add&amp;quot;).css(&amp;q
   </entry>
   
   <entry>
-    <title>运动函数</title>
-    <link href="http://yoursite.com/2017/08/13/%E8%BF%90%E5%8A%A8%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2017/08/13/运动函数总结/</id>
-    <published>2017-08-13T07:27:44.000Z</published>
-    <updated>2017-08-18T01:02:01.201Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">1.三个地方清理setinteval  开关清理 函数开始清理 判断条件清理</div><div class="line"></div><div class="line">2.json </div><div class="line">	&#123;</div><div class="line">		name: &quot;张三&quot;,</div><div class="line">	&#125;</div><div class="line">	for(var attr in json)&#123;</div><div class="line">		json[attr]</div><div class="line">	&#125;</div><div class="line">	数组适合单一多条数据</div><div class="line">	对象json格式适合描述性的数据</div><div class="line"></div><div class="line">3. 可视区域的宽和高  document.documentElement.clentWidth</div><div class="line">document.documentElement.clentHight</div><div class="line">scrollLeft</div><div class="line">元素.scrollTop 该元素垂直方向滚动条滚动的距离</div><div class="line">获取页面的滚动距离 document.docuemntElement.scrollTop||document.body.scrollTop</div><div class="line">元素.scrollWidth/元素.scrollHeight  该元素的实际内容高度</div><div class="line">元素.offsetLeft/元素.offsetTop  元素距离顶部和做部的偏移量</div><div class="line">(元素.offsetParent:   该元素距离他最近的具有定位属性的父级 如果没有 指向body)</div><div class="line">offsetWidth/offsetHeight  相当于css中定义的宽度+左右padding+ 左右border</div><div class="line">clientWidth clientHeight(相当于css中定义的宽度加上左右的padding)</div><div class="line">clientLeft clientTop（可视区域距离外部的偏移量border）</div><div class="line"></div><div class="line">4. 元素.事件 = 事件处理函数   </div><div class="line">	虽然书写简单 但是同一个对象的同一个事件绑定多个事件处理函数容易发生覆盖（后者覆盖前者）</div><div class="line">	obj.addEventListener（事件类型，事件处理函数，是否捕获）标准浏览器中</div><div class="line">	obj.attachEvent(&quot;on&quot;+事件类型，事件处理函数) ie浏览器支持</div><div class="line">	绑定的兼容写法</div><div class="line">	function bind(obj,evType,evFn)&#123;</div><div class="line">		if(obj.addEventListener)&#123;</div><div class="line">			obj.addEventListener(evType,evFn,false);</div><div class="line">		&#125;else if(obj.attachEvent)&#123;</div><div class="line">			obj.attachEvent(&quot;on&quot;+evType,evFn);</div><div class="line">		&#125;else &#123;</div><div class="line">			obj[&quot;on&quot;+evType]=evFn;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	解绑 obj.removeEventListener() obj.detachEvent()</div><div class="line">事件流的三个阶段： 事件捕获-》事件目标-》事件冒泡      ie不支持捕获</div><div class="line"></div><div class="line">5.</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>dom总结</title>
     <link href="http://yoursite.com/2017/08/13/dom%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/08/13/dom总结/</id>
@@ -554,6 +487,94 @@ $(&amp;quot;.add&amp;quot;).css(&amp;q
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;###2 禁用按钮&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>唯品会</title>
+    <link href="http://yoursite.com/2017/08/13/%E5%94%AF%E5%93%81%E4%BC%9A/"/>
+    <id>http://yoursite.com/2017/08/13/唯品会/</id>
+    <published>2017-08-13T07:27:44.000Z</published>
+    <updated>2017-08-18T01:02:33.968Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<pre><code>1.  sel-area div i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-width: 5px;
+    vertical-align: middle;
+    border-color: #999 transparent transparent transparent;
+    border-style: solid dashed dotted dashed;}
+
+2.内部盒子动导致外部盒子定位不稳
+  设置外部盒子为相对定位
+
+3.
+ &lt;div class=&quot;index-rank-list clearfix&quot;&gt;
+      &lt;a class=&quot;index-rank-item&quot; href=&quot;&quot;&gt;
+           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
+           &lt;img src=&quot;images/weipin_index/1501479587607.jpg&quot; alt=&quot;&quot;/&gt;
+      &lt;/a&gt;
+      &lt;a class=&quot;index-rank-item index-rank-item1&quot; href=&quot;&quot;&gt;
+           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
+           &lt;img src=&quot;images/weipin_index/1501479675015.jpg&quot; alt=&quot;&quot;/&gt;
+      &lt;/a&gt;
+      &lt;a class=&quot;index-rank-item index-rank-item2&quot; href=&quot;&quot;&gt;
+           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
+           &lt;img src=&quot;images/weipin_index/1501479634643.jpg&quot; alt=&quot;&quot;/&gt;
+      &lt;/a&gt;
+  &lt;/div&gt;
+
+for(var i = 0; i &lt; $(&quot;.index-rank-list img&quot;).length ; i++) {
+$(&quot;.index-rank-list img&quot;).eq(i).mouseenter(function () {
+  jianjinjianchu($(this));
+    });
+  }
+如果在$内部取$(this).index() 得到的值是相对于span img 的 而不是3个img
+
+ pointer-events: none;  元素遮盖 绝对定位导致    给绝对定位元素设置这个属性  底层的元素就可以控制了
+
+ $(this).parent().children().eq(0).children().css(&quot;filter&quot;,&quot;blur(0px)&quot;);   //图片模糊恢复‘
+
+
+让元素固定与中间 使元素左边的距离不管浏览器窗口大小都稳定不变  固定定位之后 用left百分比控制居中 然后用margin-left往左移动
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;1.  sel-area div i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-width: 5px;
+    vertical-align: 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>运动函数</title>
+    <link href="http://yoursite.com/2017/08/13/%E8%BF%90%E5%8A%A8%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/08/13/运动函数总结/</id>
+    <published>2017-08-13T07:27:44.000Z</published>
+    <updated>2017-08-18T01:02:01.201Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">1.三个地方清理setinteval  开关清理 函数开始清理 判断条件清理</div><div class="line"></div><div class="line">2.json </div><div class="line">	&#123;</div><div class="line">		name: &quot;张三&quot;,</div><div class="line">	&#125;</div><div class="line">	for(var attr in json)&#123;</div><div class="line">		json[attr]</div><div class="line">	&#125;</div><div class="line">	数组适合单一多条数据</div><div class="line">	对象json格式适合描述性的数据</div><div class="line"></div><div class="line">3. 可视区域的宽和高  document.documentElement.clentWidth</div><div class="line">document.documentElement.clentHight</div><div class="line">scrollLeft</div><div class="line">元素.scrollTop 该元素垂直方向滚动条滚动的距离</div><div class="line">获取页面的滚动距离 document.docuemntElement.scrollTop||document.body.scrollTop</div><div class="line">元素.scrollWidth/元素.scrollHeight  该元素的实际内容高度</div><div class="line">元素.offsetLeft/元素.offsetTop  元素距离顶部和做部的偏移量</div><div class="line">(元素.offsetParent:   该元素距离他最近的具有定位属性的父级 如果没有 指向body)</div><div class="line">offsetWidth/offsetHeight  相当于css中定义的宽度+左右padding+ 左右border</div><div class="line">clientWidth clientHeight(相当于css中定义的宽度加上左右的padding)</div><div class="line">clientLeft clientTop（可视区域距离外部的偏移量border）</div><div class="line"></div><div class="line">4. 元素.事件 = 事件处理函数   </div><div class="line">	虽然书写简单 但是同一个对象的同一个事件绑定多个事件处理函数容易发生覆盖（后者覆盖前者）</div><div class="line">	obj.addEventListener（事件类型，事件处理函数，是否捕获）标准浏览器中</div><div class="line">	obj.attachEvent(&quot;on&quot;+事件类型，事件处理函数) ie浏览器支持</div><div class="line">	绑定的兼容写法</div><div class="line">	function bind(obj,evType,evFn)&#123;</div><div class="line">		if(obj.addEventListener)&#123;</div><div class="line">			obj.addEventListener(evType,evFn,false);</div><div class="line">		&#125;else if(obj.attachEvent)&#123;</div><div class="line">			obj.attachEvent(&quot;on&quot;+evType,evFn);</div><div class="line">		&#125;else &#123;</div><div class="line">			obj[&quot;on&quot;+evType]=evFn;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	解绑 obj.removeEventListener() obj.detachEvent()</div><div class="line">事件流的三个阶段： 事件捕获-》事件目标-》事件冒泡      ie不支持捕获</div><div class="line"></div><div class="line">5.</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;
     
     </summary>
     
@@ -614,6 +635,81 @@ hexo deploy
     </summary>
     
       <category term="hexo" scheme="http://yoursite.com/categories/hexo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>17-9-2</title>
+    <link href="http://yoursite.com/2017/05/11/17-9-2%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2017/05/11/17-9-2记录/</id>
+    <published>2017-05-11T08:23:15.000Z</published>
+    <updated>2017-09-03T13:10:20.832Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">1.template-web.js:3 Uncaught Error: template not found: Cannot read property &apos;value&apos; of null  模板没有添加id报的错误</div><div class="line"></div><div class="line">2. html = template(&apos;msg&apos;,message);  模板引入的格式 前者是id  后者是json</div><div class="line"></div><div class="line">3.json  最简单的两个方法   JSON.stringify(javascript对象)    把javascript对象序列化为json字符串</div><div class="line">						 JSON.parse(json对象)  				把json字符串解析为原生javascript对象</div><div class="line"></div><div class="line">4. JSON.stringify(javascript对象,过滤选择)</div><div class="line">	过滤选择:可以添加对象的名字 这样选择出来的东西就是添加的东西的值</div><div class="line"></div><div class="line">	JSON.stringify(javascript对象,func)</div><div class="line"></div><div class="line">	function(key,value) &#123;</div><div class="line">		switch(key) &#123;</div><div class="line">			case &quot;authors&quot;:</div><div class="line">				return value.join(&quot;,&quot;)</div><div class="line">			case &quot;year&quot;:</div><div class="line">				return 5000;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	如果匹配到上面一样的值了  那么就修改 没有匹配到就不用修改</div><div class="line"></div><div class="line">5. Date.getFullYear()   可以取到年</div></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> book = &#123;</div><div class="line">		<span class="string">"title"</span>: <span class="string">"Professional JavaScript"</span>,</div><div class="line">		<span class="string">"authors"</span>: [</div><div class="line">			<span class="string">"Nicholas C. Zakas"</span></div><div class="line">		],</div><div class="line">		<span class="attr">edition</span>: <span class="number">3</span>,</div><div class="line">		<span class="attr">year</span>: <span class="number">2011</span>,</div><div class="line">		<span class="attr">releaseDate</span>: <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2011</span>, <span class="number">11</span>, <span class="number">1</span>)</div><div class="line">	&#125;;</div><div class="line"></div><div class="line">	<span class="keyword">var</span> jsonText = <span class="built_in">JSON</span>.stringify(book);</div><div class="line">	</div><div class="line">	<span class="keyword">var</span> bookCopy = <span class="built_in">JSON</span>.parse(jsonText, <span class="function"><span class="keyword">function</span> (<span class="params">key,value</span>) </span>&#123;</div><div class="line">		<span class="keyword">if</span>(key == <span class="string">"releaseDate"</span>)&#123;</div><div class="line">			<span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>(value);</div><div class="line">		&#125;<span class="keyword">else</span>  &#123;</div><div class="line">			<span class="keyword">return</span> value;</div><div class="line">		&#125;</div><div class="line">	&#125;);</div><div class="line">	</div><div class="line">	<span class="built_in">document</span>.write(bookCopy.releaseDate.getFullYear());</div></pre></td></tr></table></figure>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">1. var xhr = new XMLHttpRequest();</div><div class="line">	xhr.open(&quot;get&quot;,&quot;url路径&quot;,是否异步)</div><div class="line">	xhr.send(null) null必须</div><div class="line"></div><div class="line">	</div><div class="line"></div><div class="line">	xhr.onreadystatechange = fucntion() &#123;</div><div class="line">		if(xhr.readyStete == 4)&#123;</div><div class="line">			if ((xhr.status &gt;= 200 &amp;&amp; xhr.status &lt; 300) || xhr.status == 304)&#123;</div><div class="line">				alert(xhr.responseText);</div><div class="line">				&#125; else &#123;</div><div class="line">				alert(&quot;Request was unsuccessful: &quot; + xhr.status);</div><div class="line">		&#125;	</div><div class="line">		</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">2. get请求</div><div class="line"></div><div class="line">	var url = &quot;example.php&quot;</div><div class="line">	url = addURLParam(url,&quot;name&quot;,&quot;asdf&quot;);</div><div class="line">	url = addURLParam(url,&quot;book&quot;,&quot;1324&quot;);</div><div class="line"></div><div class="line">	xhr.open(&quot;get&quot;,url,false);</div><div class="line"></div><div class="line">	使用addURLParam确保url格式良好</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>函数</title>
+    <link href="http://yoursite.com/2017/05/11/%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2017/05/11/函数/</id>
+    <published>2017-05-11T08:23:15.000Z</published>
+    <updated>2017-09-14T11:27:04.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>##声明函数和匿名函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">声明函数:</div><div class="line">function a() &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">这种函数可以在声明之前调用,原因 函数声明提升</div><div class="line"></div><div class="line">函数表达式(匿名函数):</div><div class="line">var a = function() &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">这种函数不可以在之前调用</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##声明函数和匿名函数&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div 
+    
+    </summary>
+    
+      <category term="函数" scheme="http://yoursite.com/categories/%E5%87%BD%E6%95%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>面向对象</title>
+    <link href="http://yoursite.com/2017/05/11/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://yoursite.com/2017/05/11/面向对象/</id>
+    <published>2017-05-11T08:23:15.000Z</published>
+    <updated>2017-09-12T12:10:57.608Z</updated>
+    
+    <content type="html"><![CDATA[<p>##修改属性默认的特性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Object.defineProperty(对象名字,&quot;属性名字&quot;,&#123;</div><div class="line">	   Configurable:表示能否delete删除属性从而重新定义属性   修改两次会出现错误</div><div class="line">	   Enumerable:表示能否通过for-in循环返回属性</div><div class="line">	   Writable:表示能否修改属性的值					前三默认值true</div><div class="line">	   Value:包含这个属性的数据值    默认值为underined</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>##创建工厂对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function create(name,age,job) &#123;</div><div class="line">	var o = new Object();</div><div class="line">	o.name = name;</div><div class="line">	o.age = age;</div><div class="line">	o.job = job;</div><div class="line">	o.sayName = fucntion() &#123;</div><div class="line">		alert(this.name);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var person1 = create(&quot;liming&quot;,12,&quot;shabi&quot;);</div><div class="line"></div><div class="line">写入完毕</div></pre></td></tr></table></figure></p>
+<p>##构造函数模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">function create(name,age,job) &#123;</div><div class="line">	this.name = name;</div><div class="line">	this.age = age;</div><div class="line">	this.job = job;</div><div class="line">	this.sayName = function() &#123;</div><div class="line">		alert(this.name);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var person1  = new Create(&quot;limign&quot;,12,&quot;shabi&quot;);</div><div class="line"></div><div class="line">与工厂模式不同  在创建的时候在new  </div><div class="line"></div><div class="line">构造函数大写字母开头,没有return语句</div></pre></td></tr></table></figure></p>
+<p>##constructor<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">构造函数的属性</div><div class="line">如果在上面这样写的话</div><div class="line">alert(person1.constructor == Person);  //true</div></pre></td></tr></table></figure></p>
+<p>##全局调用函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">在全局调用函数 this对象总是指向GLobal对象</div><div class="line">Global对象在浏览器中就是window对象</div></pre></td></tr></table></figure></p>
+<p>##构造函数的问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">上述的代码person1和person2都有一个名为sayName()的方法</div><div class="line">但是两个方法不是同一个function的实例 因此每定义一个函数</div><div class="line">就实例化一个对象</div><div class="line"></div><div class="line">解决:将函数定义转移到构造函数外部来解决问题</div><div class="line"></div><div class="line">function Person(name,age,job)&#123;</div><div class="line">	this.name = name;</div><div class="line">	this.age = age;</div><div class="line">	this.job = job;</div><div class="line">	this.sayName = sayName;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function sayName() &#123;</div><div class="line">	alert(this.name);</div><div class="line">&#125;</div><div class="line"></div><div class="line">var person1 = new Person(&quot;asdf&quot;,12,&quot;asdfasdf&quot;);</div><div class="line"></div><div class="line">解决了这个问题之后出现的问题:</div><div class="line">两个全局函数没有封装性可言 由此引出原型模式</div></pre></td></tr></table></figure></p>
+<p>##原型模式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">创造的每一个函数都有prototype(原型)属性.</div><div class="line">在此，我们将 sayName() 方法和所有属性直接添加到了 Person 的 prototype 属性中，构造函数</div><div class="line">变成了空函数。即使如此，也仍然可以通过调用构造函数来创建新对象，而且新对象还会具有相同的属</div><div class="line">性和方法。但与构造函数模式不同的是，新对象的这些属性和方法是由所有实例共享的。换句话说，</div><div class="line">person1 和 person2 访问的都是同一组属性和同一个 sayName() 函数。</div></pre></td></tr></table></figure></p>
+<p>##调用返回问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">当new调用Person的时候 如果有显示的erturn</div><div class="line">	简单类型无效 返回实例对象</div><div class="line">	复杂类型无效 会作为new Person的返回值</div></pre></td></tr></table></figure></p>
+<p>##检查对象是否存在于给出名称的属性对象<br>hasOwnProperty：是用来判断一个对象是否有你给出名称的属性或对象。不过需要注意的是，此方法无法检查该对象的原型链中是否具有该属性，该属性必须是对象本身的一个成员。</p>
+<p>isPrototypeOf:是用来判断要检查其原型链的对象是否存在于指定对象实例中，是则返回true，否则返回false。</p>
+<p>##原型对象的问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">对于引用类型值  两个对象 比如说是一个数组 push第一个</div><div class="line">那么第二个也改变 默认值prototype</div><div class="line"></div><div class="line">function Person()&#123;</div><div class="line">&#125;</div><div class="line">Person.prototype = &#123;</div><div class="line">constructor: Person,</div><div class="line">name : &quot;Nicholas&quot;,</div><div class="line">age : 29,</div><div class="line">job : &quot;Software Engineer&quot;,</div><div class="line">friends : [&quot;Shelby&quot;, &quot;Court&quot;],</div><div class="line">sayName : function () &#123;</div><div class="line">alert(this.name);</div><div class="line">&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"></div><div class="line">解决方案</div><div class="line"></div><div class="line">组合使用构造函数模式和原型模式</div><div class="line"></div><div class="line">function Person(name, age, job)&#123;</div><div class="line">this.name = name;</div><div class="line">this.age = age;</div><div class="line">this.job = job;</div><div class="line">this.friends = [&quot;Shelby&quot;, &quot;Court&quot;];</div><div class="line">&#125;</div><div class="line">Person.prototype = &#123;</div><div class="line">constructor : Person,</div><div class="line">sayName : function()&#123;</div><div class="line">alert(this.name);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">var person1 = new Person(&quot;Nicholas&quot;, 29, &quot;Software Engineer&quot;);</div><div class="line">var person2 = new Person(&quot;Greg&quot;, 27, &quot;Doctor&quot;);</div><div class="line">person1.friends.push(&quot;Van&quot;);</div><div class="line">alert(person1.friends); //&quot;Shelby,Count,Van&quot;</div><div class="line">alert(person2.friends); //&quot;Shelby,Count&quot;</div><div class="line">alert(person1.friends === person2.friends); //false</div><div class="line">alert(person1.sayName === person2.sayName); //true</div></pre></td></tr></table></figure></p>
+<p>##借用构造函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function SuperType()&#123;</div><div class="line">this.colors = [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;];</div><div class="line">&#125;</div><div class="line">function SubType()&#123;</div><div class="line">// 继承了 SuperType</div><div class="line">SuperType.call(this);</div><div class="line">&#125;</div><div class="line">var instance1 = new SubType();</div><div class="line">instance1.colors.push(&quot;black&quot;);</div><div class="line">alert(instance1.colors); //&quot;red,blue,green,black&quot;</div><div class="line">var instance2 = new SubType();</div><div class="line">alert(instance2.colors); //&quot;red,blue,green&quot;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##修改属性默认的特性&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div 
+    
+    </summary>
     
     
   </entry>
