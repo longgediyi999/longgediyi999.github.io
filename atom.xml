@@ -172,6 +172,46 @@ script中: var app = angular.module(&quot;a123&quot;,[]);
   </entry>
   
   <entry>
+    <title>git</title>
+    <link href="http://yoursite.com/2017/08/14/git/"/>
+    <id>http://yoursite.com/2017/08/14/git/</id>
+    <published>2017-08-14T13:20:18.000Z</published>
+    <updated>2017-09-27T13:14:30.062Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.git  status   检查版本状态</p>
+<p>2.git diff        显示修改了什么</p>
+<p>3.git reset –hard (commit号 不需要括号)  回到这个版本</p>
+<p>4.git reflog  显示过去干了什么 记录commit号</p>
+<p>5.Untracked files  从没添加过的状态</p>
+<p>6.git管理的是修改   </p>
+<p>实验  第一次修改-&gt;git add -&gt;第二次修改-&gt;git commit</p>
+<p>只会提交第一次修改的内容 也就是提交暂存区的内容第二次修改的不会被提交</p>
+<ol>
+<li>git diff HEAD – 文件名      工作区文件和版本库文件有什么不同</li>
+</ol>
+<p>8.git checkout – 文件名字   丢弃工作区的修改</p>
+<p>git checkout – 文件名字  把已经在工作区删除的文件 在版本库恢复</p>
+<ol>
+<li>git rm 文件名字 删除文件</li>
+<li>git 不能删除库里的文件?  只能通过删除桌面的文件和暂存区的文件后 提交修改</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1.git  status   检查版本状态&lt;/p&gt;
+&lt;p&gt;2.git diff        显示修改了什么&lt;/p&gt;
+&lt;p&gt;3.git reset –hard (commit号 不需要括号)  回到这个版本&lt;/p&gt;
+&lt;p&gt;4.git reflog  显示过去干了什么 记录
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>面试题8月</title>
     <link href="http://yoursite.com/2017/08/14/%E9%9D%A2%E8%AF%95%E9%A2%988%E6%9C%88/"/>
     <id>http://yoursite.com/2017/08/14/面试题8月/</id>
@@ -268,6 +308,119 @@ doctype不存在会导致文档以兼容模式运行.
     </summary>
     
       <category term="css" scheme="http://yoursite.com/categories/css/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>dom总结</title>
+    <link href="http://yoursite.com/2017/08/13/dom%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/08/13/dom总结/</id>
+    <published>2017-08-13T07:27:44.000Z</published>
+    <updated>2017-08-18T01:02:01.808Z</updated>
+    
+    <content type="html"><![CDATA[<p>###1 焦点问题</p>
+<blockquote>
+<ul>
+<li>当窗口获得焦点时：onfucus</li>
+<li>当窗口失去焦点时：onblue<br>上述用法和onclick类似</li>
+</ul>
+</blockquote>
+<p>###2 禁用按钮</p>
+<blockquote>
+<ul>
+<li>disabled = “true”</li>
+</ul>
+</blockquote>
+<p>###3 让页面自动获取焦点</p>
+<blockquote>
+<ul>
+<li>想要获取焦点的元素.focus()</li>
+</ul>
+</blockquote>
+<p>###4 节点的操作方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"> 1 父级元素.appendChild（需要添加的节点） 在父级元素里面的末位添加进去节点</div><div class="line">	</div><div class="line"> 2 var oUL = $(&quot;#oUl&quot;) </div><div class="line">	var o = document.createElement(&quot;li&quot;);  创建节点语句</div><div class="line">	var text = document.createTextNode(&quot;哈哈哈&quot;) 创建文本</div><div class="line">	o.appendChild(text);  把text添加到o文本节点中</div><div class="line">	oUl.appendChild(oLi);</div><div class="line"></div><div class="line"> 3 parentNode  指向父亲方法</div><div class="line"></div><div class="line"> 4 insertBefore  （需要添加的节点） 在父级元素里面的头部添加进去节点</div><div class="line"> 5 父级.removeChild（移除的节点） 父级移除子节点</div><div class="line"></div><div class="line"> 6 父级.replaceChild（要替换的节点） 替换</div><div class="line"></div><div class="line"> 7 oBox.clientWidth  获取div的width padding 不带单位   浏览器可视区域</div><div class="line"></div><div class="line"> 8 obox.clientHeight 获取div的height padding 不带单位  浏览器可视区域</div><div class="line"></div><div class="line"> 9 obox.offsetWidth  比上述多一个边框  width padding border 不带单位 </div><div class="line"></div><div class="line"> 10 obox.offsetHeight 带边框的高度  height padding border 不带单位</div><div class="line"></div><div class="line"> 11 obox.offsetLeft    距离body左边的距离  加上浏览器外边距（谷歌为8）</div><div class="line"> 12 oBox.offsetTop 距离body上边的距离  加上浏览器外边距</div><div class="line"></div><div class="line"> 13 document.onkeydown  键盘按下函数</div><div class="line"></div><div class="line"> 14 元素.focus()  让这个元素自动获取焦点</div><div class="line"> 15 offsetLeft返回当前元素的左边界到它的包含元素的左边界的偏移量，以像素为单位。类型：int。状态：只读</div><div class="line"> 16 上38 下40 左37 右 39</div><div class="line"> 17 offsetwidth = border+padding +width</div><div class="line">	clientWidth = padding+ width - 滚动条</div><div class="line"> 18 鼠标阻止事件冒泡 ev 传进去 ev.cancelBubble = &quot;true&quot;;</div><div class="line"></div><div class="line"> 19 document.documentElement.scrollTop  ie ff</div><div class="line">	document.body scrillTop 谷歌支持</div><div class="line">	(一般网页中 出于用户体验考虑不推荐出现水平滚动条 所以scrollLeft用的比较少)</div><div class="line">    document.documentElement.scrollLeft || document.body.scrollLeft</div><div class="line">    有兼容性问题 如何处理？</div><div class="line">    var scrollT = document.documentElement.scrollTop || document.body.scrollTop;</div><div class="line"></div><div class="line"> 20 具体的元素.scrollTop    重点(元素内部) 滚动条滚动的距离 比如说 body.scrollTop</div><div class="line">    具体的元素.scrollLeft</div><div class="line">    scrollWidth 页面内容的实际宽度 (包含滚动过的水平距离和可视区域的宽) </div><div class="line">    scrollHeight 页面内容实际高度 (包含滚动过的垂直距离和可视区域的高)</div><div class="line"> 21鼠标在对象上按下	</div><div class="line"></div><div class="line"> 22凭空创建节点   var rootElement = document.body;</div><div class="line">       		 var newDiv = document.createElement(&quot;div&quot;); </div><div class="line"></div><div class="line"> 23parseFloat(getStyle(div[0],&quot;top&quot;))  默认把px去掉了就</div><div class="line"> 24 obj.style[arrt] = current + &quot;px&quot;; 封装 格式【】这个</div><div class="line"></div><div class="line"> 25 mouseover mouseenter</div><div class="line">	mouseout  mouseleave</div><div class="line"></div><div class="line"></div><div class="line">&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###1 焦点问题&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;当窗口获得焦点时：onfucus&lt;/li&gt;
+&lt;li&gt;当窗口失去焦点时：onblue&lt;br&gt;上述用法和onclick类似&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;###2 禁用按钮&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>唯品会</title>
+    <link href="http://yoursite.com/2017/08/13/%E5%94%AF%E5%93%81%E4%BC%9A/"/>
+    <id>http://yoursite.com/2017/08/13/唯品会/</id>
+    <published>2017-08-13T07:27:44.000Z</published>
+    <updated>2017-08-18T01:02:33.968Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<pre><code>1.  sel-area div i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-width: 5px;
+    vertical-align: middle;
+    border-color: #999 transparent transparent transparent;
+    border-style: solid dashed dotted dashed;}
+
+2.内部盒子动导致外部盒子定位不稳
+  设置外部盒子为相对定位
+
+3.
+ &lt;div class=&quot;index-rank-list clearfix&quot;&gt;
+      &lt;a class=&quot;index-rank-item&quot; href=&quot;&quot;&gt;
+           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
+           &lt;img src=&quot;images/weipin_index/1501479587607.jpg&quot; alt=&quot;&quot;/&gt;
+      &lt;/a&gt;
+      &lt;a class=&quot;index-rank-item index-rank-item1&quot; href=&quot;&quot;&gt;
+           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
+           &lt;img src=&quot;images/weipin_index/1501479675015.jpg&quot; alt=&quot;&quot;/&gt;
+      &lt;/a&gt;
+      &lt;a class=&quot;index-rank-item index-rank-item2&quot; href=&quot;&quot;&gt;
+           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
+           &lt;img src=&quot;images/weipin_index/1501479634643.jpg&quot; alt=&quot;&quot;/&gt;
+      &lt;/a&gt;
+  &lt;/div&gt;
+
+for(var i = 0; i &lt; $(&quot;.index-rank-list img&quot;).length ; i++) {
+$(&quot;.index-rank-list img&quot;).eq(i).mouseenter(function () {
+  jianjinjianchu($(this));
+    });
+  }
+如果在$内部取$(this).index() 得到的值是相对于span img 的 而不是3个img
+
+ pointer-events: none;  元素遮盖 绝对定位导致    给绝对定位元素设置这个属性  底层的元素就可以控制了
+
+ $(this).parent().children().eq(0).children().css(&quot;filter&quot;,&quot;blur(0px)&quot;);   //图片模糊恢复‘
+
+
+让元素固定与中间 使元素左边的距离不管浏览器窗口大小都稳定不变  固定定位之后 用left百分比控制居中 然后用margin-left往左移动
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;1.  sel-area div i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-width: 5px;
+    vertical-align: 
+    
+    </summary>
     
     
   </entry>
@@ -449,119 +602,6 @@ $(&amp;quot;.add&amp;quot;).css(&amp;q
   </entry>
   
   <entry>
-    <title>dom总结</title>
-    <link href="http://yoursite.com/2017/08/13/dom%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2017/08/13/dom总结/</id>
-    <published>2017-08-13T07:27:44.000Z</published>
-    <updated>2017-08-18T01:02:01.808Z</updated>
-    
-    <content type="html"><![CDATA[<p>###1 焦点问题</p>
-<blockquote>
-<ul>
-<li>当窗口获得焦点时：onfucus</li>
-<li>当窗口失去焦点时：onblue<br>上述用法和onclick类似</li>
-</ul>
-</blockquote>
-<p>###2 禁用按钮</p>
-<blockquote>
-<ul>
-<li>disabled = “true”</li>
-</ul>
-</blockquote>
-<p>###3 让页面自动获取焦点</p>
-<blockquote>
-<ul>
-<li>想要获取焦点的元素.focus()</li>
-</ul>
-</blockquote>
-<p>###4 节点的操作方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"> 1 父级元素.appendChild（需要添加的节点） 在父级元素里面的末位添加进去节点</div><div class="line">	</div><div class="line"> 2 var oUL = $(&quot;#oUl&quot;) </div><div class="line">	var o = document.createElement(&quot;li&quot;);  创建节点语句</div><div class="line">	var text = document.createTextNode(&quot;哈哈哈&quot;) 创建文本</div><div class="line">	o.appendChild(text);  把text添加到o文本节点中</div><div class="line">	oUl.appendChild(oLi);</div><div class="line"></div><div class="line"> 3 parentNode  指向父亲方法</div><div class="line"></div><div class="line"> 4 insertBefore  （需要添加的节点） 在父级元素里面的头部添加进去节点</div><div class="line"> 5 父级.removeChild（移除的节点） 父级移除子节点</div><div class="line"></div><div class="line"> 6 父级.replaceChild（要替换的节点） 替换</div><div class="line"></div><div class="line"> 7 oBox.clientWidth  获取div的width padding 不带单位   浏览器可视区域</div><div class="line"></div><div class="line"> 8 obox.clientHeight 获取div的height padding 不带单位  浏览器可视区域</div><div class="line"></div><div class="line"> 9 obox.offsetWidth  比上述多一个边框  width padding border 不带单位 </div><div class="line"></div><div class="line"> 10 obox.offsetHeight 带边框的高度  height padding border 不带单位</div><div class="line"></div><div class="line"> 11 obox.offsetLeft    距离body左边的距离  加上浏览器外边距（谷歌为8）</div><div class="line"> 12 oBox.offsetTop 距离body上边的距离  加上浏览器外边距</div><div class="line"></div><div class="line"> 13 document.onkeydown  键盘按下函数</div><div class="line"></div><div class="line"> 14 元素.focus()  让这个元素自动获取焦点</div><div class="line"> 15 offsetLeft返回当前元素的左边界到它的包含元素的左边界的偏移量，以像素为单位。类型：int。状态：只读</div><div class="line"> 16 上38 下40 左37 右 39</div><div class="line"> 17 offsetwidth = border+padding +width</div><div class="line">	clientWidth = padding+ width - 滚动条</div><div class="line"> 18 鼠标阻止事件冒泡 ev 传进去 ev.cancelBubble = &quot;true&quot;;</div><div class="line"></div><div class="line"> 19 document.documentElement.scrollTop  ie ff</div><div class="line">	document.body scrillTop 谷歌支持</div><div class="line">	(一般网页中 出于用户体验考虑不推荐出现水平滚动条 所以scrollLeft用的比较少)</div><div class="line">    document.documentElement.scrollLeft || document.body.scrollLeft</div><div class="line">    有兼容性问题 如何处理？</div><div class="line">    var scrollT = document.documentElement.scrollTop || document.body.scrollTop;</div><div class="line"></div><div class="line"> 20 具体的元素.scrollTop    重点(元素内部) 滚动条滚动的距离 比如说 body.scrollTop</div><div class="line">    具体的元素.scrollLeft</div><div class="line">    scrollWidth 页面内容的实际宽度 (包含滚动过的水平距离和可视区域的宽) </div><div class="line">    scrollHeight 页面内容实际高度 (包含滚动过的垂直距离和可视区域的高)</div><div class="line"> 21鼠标在对象上按下	</div><div class="line"></div><div class="line"> 22凭空创建节点   var rootElement = document.body;</div><div class="line">       		 var newDiv = document.createElement(&quot;div&quot;); </div><div class="line"></div><div class="line"> 23parseFloat(getStyle(div[0],&quot;top&quot;))  默认把px去掉了就</div><div class="line"> 24 obj.style[arrt] = current + &quot;px&quot;; 封装 格式【】这个</div><div class="line"></div><div class="line"> 25 mouseover mouseenter</div><div class="line">	mouseout  mouseleave</div><div class="line"></div><div class="line"></div><div class="line">&gt;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###1 焦点问题&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;当窗口获得焦点时：onfucus&lt;/li&gt;
-&lt;li&gt;当窗口失去焦点时：onblue&lt;br&gt;上述用法和onclick类似&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;###2 禁用按钮&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>唯品会</title>
-    <link href="http://yoursite.com/2017/08/13/%E5%94%AF%E5%93%81%E4%BC%9A/"/>
-    <id>http://yoursite.com/2017/08/13/唯品会/</id>
-    <published>2017-08-13T07:27:44.000Z</published>
-    <updated>2017-08-18T01:02:33.968Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<pre><code>1.  sel-area div i {
-    display: inline-block;
-    width: 0px;
-    height: 0px;
-    border-width: 5px;
-    vertical-align: middle;
-    border-color: #999 transparent transparent transparent;
-    border-style: solid dashed dotted dashed;}
-
-2.内部盒子动导致外部盒子定位不稳
-  设置外部盒子为相对定位
-
-3.
- &lt;div class=&quot;index-rank-list clearfix&quot;&gt;
-      &lt;a class=&quot;index-rank-item&quot; href=&quot;&quot;&gt;
-           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
-           &lt;img src=&quot;images/weipin_index/1501479587607.jpg&quot; alt=&quot;&quot;/&gt;
-      &lt;/a&gt;
-      &lt;a class=&quot;index-rank-item index-rank-item1&quot; href=&quot;&quot;&gt;
-           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
-           &lt;img src=&quot;images/weipin_index/1501479675015.jpg&quot; alt=&quot;&quot;/&gt;
-      &lt;/a&gt;
-      &lt;a class=&quot;index-rank-item index-rank-item2&quot; href=&quot;&quot;&gt;
-           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
-           &lt;img src=&quot;images/weipin_index/1501479634643.jpg&quot; alt=&quot;&quot;/&gt;
-      &lt;/a&gt;
-  &lt;/div&gt;
-
-for(var i = 0; i &lt; $(&quot;.index-rank-list img&quot;).length ; i++) {
-$(&quot;.index-rank-list img&quot;).eq(i).mouseenter(function () {
-  jianjinjianchu($(this));
-    });
-  }
-如果在$内部取$(this).index() 得到的值是相对于span img 的 而不是3个img
-
- pointer-events: none;  元素遮盖 绝对定位导致    给绝对定位元素设置这个属性  底层的元素就可以控制了
-
- $(this).parent().children().eq(0).children().css(&quot;filter&quot;,&quot;blur(0px)&quot;);   //图片模糊恢复‘
-
-
-让元素固定与中间 使元素左边的距离不管浏览器窗口大小都稳定不变  固定定位之后 用left百分比控制居中 然后用margin-left往左移动
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;1.  sel-area div i {
-    display: inline-block;
-    width: 0px;
-    height: 0px;
-    border-width: 5px;
-    vertical-align: 
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>运动函数</title>
     <link href="http://yoursite.com/2017/08/13/%E8%BF%90%E5%8A%A8%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/08/13/运动函数总结/</id>
@@ -715,6 +755,32 @@ hexo deploy
   </entry>
   
   <entry>
+    <title>canvas</title>
+    <link href="http://yoursite.com/2017/05/11/canvas/"/>
+    <id>http://yoursite.com/2017/05/11/canvas/</id>
+    <published>2017-05-11T08:23:15.000Z</published>
+    <updated>2017-09-19T03:41:11.302Z</updated>
+    
+    <content type="html"><![CDATA[<p>##声明<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id = &apos;canvas&apos; w=&quot;100&quot; h=&quot;100&quot;&gt;&lt;/canvas&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">	var canvas = document.getElementById(&apos;canvas&apos;)</div><div class="line">	var context = canvas.getContext(&apos;2d&apos;)</div><div class="line"></div><div class="line">	</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>##矩形<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">fillRect() strokeRect() clearRect()</div><div class="line"></div><div class="line">接收4个参数: 矩形的X坐标 Y坐标  宽度 高度</div><div class="line"></div><div class="line">绘制之前 caontext.fillStyle = &quot;颜色&quot;  设置绘笔颜色  可以用rgb透明设置</div><div class="line"></div><div class="line">strokeRect 可以给矩形描边 </div><div class="line"></div><div class="line">fill代表填充  stroke代表描边</div><div class="line"></div><div class="line">clearRect 扣出来一个矩形</div></pre></td></tr></table></figure></p>
+<p>##绘制路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">arc(x, y, radius, startAngle, endAngle, counterclockwise) ：以 (x,y) 为圆心绘</div><div class="line">制一条弧线，弧线半径为 radius ，起始和结束角度（用弧度表示）分别为 startAngle 和</div><div class="line">endAngle 。最后一个参数表示 startAngle 和 endAngle 是否按逆时针方向计算，值为 false</div><div class="line">表示按顺时针方向计算。</div><div class="line">arcTo(x1, y1, x2, y2, radius) ：从上一点开始绘制一条弧线，到 (x2,y2) 为止，并且以</div><div class="line">给定的半径 radius 穿过 (x1,y1) 。</div><div class="line">bezierCurveTo(c1x, c1y, c2x, c2y, x, y) ：从上一点开始绘制一条曲线，到 (x,y) 为</div><div class="line">止，并且以 (c1x,c1y) 和 (c2x,c2y) 为控制点。</div><div class="line">lineTo(x, y) ：从上一点开始绘制一条直线，到 (x,y) 为止。</div><div class="line">moveTo(x, y) ：将绘图游标移动到 (x,y) ，不画线。</div><div class="line">quadraticCurveTo(cx, cy, x, y) ：从上一点开始绘制一条二次曲线，到 (x,y) 为止，并</div><div class="line">且以 (cx,cy) 作为控制点。</div><div class="line">rect(x, y, width, height) ：从点 (x,y) 开始绘制一个矩形，宽度和高度分别由 width 和</div><div class="line">height 指定。这个方法绘制的是矩形路径，而不是 strokeRect() 和 fillRect() 所绘制的独</div><div class="line">立的形状。</div></pre></td></tr></table></figure></p>
+<p>##填充 描边<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fill填充</div><div class="line">stroked描边</div><div class="line">setLineDash([5,2]) 根据路径每隔着2个元素画5元素</div></pre></td></tr></table></figure></p>
+<p>##画圆<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arc(&apos;x坐标&apos;,&apos;y坐标&apos;,&apos;长度&apos;,&apos;开始弧度&apos;,&apos;结束弧度&apos;)</div><div class="line"></div><div class="line">弧度 = 2* Math.PI / 360°</div></pre></td></tr></table></figure></p>
+<p>##画图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">img(元素,X坐标,y坐标,宽度,高度)</div><div class="line">img(元素,图片X坐标,图片Y坐标,原图像选择框的宽度,原图像选择框的高度,X坐标,y坐标,宽度,高度)</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##声明&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;
+    
+    </summary>
+    
+      <category term="canvas" scheme="http://yoursite.com/categories/canvas/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>html标签</title>
     <link href="http://yoursite.com/2017/05/08/heng/"/>
     <id>http://yoursite.com/2017/05/08/heng/</id>
@@ -784,64 +850,6 @@ start=”3”  决定了开始的位置。
     
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习的六条经验(转)</title>
-    <link href="http://yoursite.com/2017/05/08/acticle/"/>
-    <id>http://yoursite.com/2017/05/08/acticle/</id>
-    <published>2017-05-08T13:23:25.000Z</published>
-    <updated>2017-05-11T07:32:35.662Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.要避免骄傲，好学习他人的长处</p>
-<p>这被放在了第一条。我们国家的教育强调竞争，不重视合作。除了抄作业，高中几乎没有什么机会可以两个人合作出来的项目。因此，对于那些在班级，年级成绩靠前，在市、省、国、国际比赛取得名次的学生，要善用自己的天赋，而不是心存骄傲。</p>
-<p>要 避免骄傲，一是不要瞧不起成绩不如自己的同学。尽管我们的教育，到大学还是强调考试，甚至公务员也要考，英语也要考，但是在任何国家，尤其我们这儿，将来 的发展，和考试能力几乎完全没有关系。如果能够把每个同学，无论成绩好坏，都当成一个人格独立的个体，那么在十几岁的年纪里，就会形成一种先知先觉的一种 公民意识，而不会妄自尊大。</p>
-<p>有两个很残酷的事实：第一个，就是很多竞赛得奖者，后来的职业是继续辅导竞赛。我完全尊重每个人的劳动，但是必须承认，如果这样人有如此之多（你会知道原来这么多！），其实还是很可惜，因为当你取得高级别竞赛的名次，站在全校面前倍感光荣的时候，“将来辅导其他学生”这件事儿，肯定不在你的梦想范围里。<br>第二个现实，就是说，即使对于学习本身，竞赛的帮助并不大。一个共识是：大学入学的时候，竞赛生和非竞赛生差距比较大，但是大学毕业时，基本看不出差距，甚至很多学业最优秀的学生，都是非竞赛生。这个匪夷所思的事实，有很多原因。比如：找满足感——这些甚至都不是自己有意的，只是无意识的就会朝这里靠拢。</p>
-<p>也许你会说，这有什么不好？每个人都可以选择他要的生活方式。</p>
-<p>我想说，当然没什么不好，只是你这么做，就等于选择了困难模式。</p>
-<p>有没有想过为什么讨厌的家长总是让你学习，学习？尽管他们小时候未必是那个学习好的？<br>如果他们是那个学习好的，那他们让你学习，肯定是意识到学习的好处；如果他们不是，那多半是尝到了不学习恶果。（无意损人，请抓住主旨，勿断章取义）</p>
-<p>既然打游戏，和学习，都可以获得满足感，那么它们两者本质的不同在哪里？</p>
-<p>前者不可沉淀，过去了就过去；后者却能让改变自己，给自己带来看不见的变化。并且为自己创造机会。</p>
-<p>当然，也有打游戏到世界冠军，扮靓找来大款，打架变成拳王的。难道那样成功的概率比学习获得改善生活的机会要高吗？所以说，才是困难模式。不要因为小概率而蒙蔽自己。发达国家，那些不愁医保不愁吃穿的宅男里，天天打游戏，才可能有世界冠军，我们的出身决定了和他们拼不起。</p>
-<p>这些和自信到底有什么关系啊？</p>
-<p>以上就是说，不要因为学习上不足，就失去动力而分散注意力，过早的想在其他方面表现自己；任何方面都需要足够的专业才能把表现自己变成糊口的手段，学习是最简单的一条路。</p>
-<p>因此，看到那些成绩好的同学手执考卷，眉飞色舞，看到家长戳着自己的脑门骂人，看到老师失望的样子，都不可以放弃自己。如果想要超越，必须另辟蹊径。必须不断的努力，必须不断的寻找努力的方式（即方法），不要空谈方法，所有的方法都是实践中失败或者成功才获得的。</p>
-<p>在成绩不如人的时候，想要超过去，就必须具备他人所没有的品质。</p>
-<p>2.做好牺牲的准备</p>
-<p>几乎任何事情，都是有得必有失。一个人前闪耀的明星，可能<br>1）只是公司的一枚棋子，被迫做很多不情愿的事<br>2）一点私生活都没有，一点小事就可能满城风雨<br>3） 常年处于担心自己过气的焦虑和恐惧中</p>
-<p>对 于学习，也一样。没有白来的好事，能够帮助自己突飞猛进，却还不用付出多少代价。有些人不肯付出这些代价，觉得过大家一样的生活，就挺好。有些人苦苦想进步，只是不知道怎么办。对于前者，尽到自己认为足够的努力即可；后者，即想付出又不知道该怎么做的人，或者有雄心取得更大进步的人，是真正需要本文的读 者；为了提升，就需要做好牺牲的准备。</p>
-<p>原谅我把这几个真正大家一开始就想看的内容放到了最后，只有读到这里的人才能看到：</p>
-<p>学习的第一条，就是要练就大脑封闭术。</p>
-<p>不是封闭起来拒绝新知的封闭，而是要特意给大脑留下一块儿干净的空间。这个空间，不要受任何外界的干扰。即，不管情绪如何，外界或喜或悲，打开书/打开卷子，就忘掉一切，好像世界只有你和那个学习的内容。</p>
-<p>为了达到这个终极的目标，各种方式都可能需要用到，比如听音乐，发泄，运动，和朋友交流，聊qq。。。。不知不觉，就会发现，自己把本来用于学习的时间用到了其他事情上，而且还没有多少改善。</p>
-<p>其实并不难，人在想一件事的时候，脑子里当然想着它；为了使得大脑封闭，必须把自己的心血和精力，倾注到面前的书或其他的学习资料上。别的事情不要主动去想它，过了一会儿，书上的内容在大脑里占据的比例越来越大，就自然读进去了。</p>
-<p>这样做的好处很多，比如不会浮躁。浮躁就是在做一件事的时候，想另外一件事。沉下来，深吸两口气，不去想那一件事，多读几句，让这个要学的内容充满大脑，让那个烦心事逐渐排空。如果有意识的这样做，即以时日，不难做到，就会专注而高效，而不会杂念纷纷了。</p>
-<p>学习的第二条，就是要争取最多的工作时间。</p>
-<p>原 因很简单，每个人生来有不同的模样，成长于不同的环境，实在有很多很多不公平的事，而且这些不公平往往不朝着自己这一边倾斜。。。怎么办？上天赐给了人一 样最公平的东西，就是时间。无论聪明或者愚钝，无论贫贱或者富裕，每个人每天都有24小时，即86400秒（不要扯恒星日和太阳日！），再公平不过。</p>
-<p>试想一个男生身高1米82，那就是一个标准的美男子，有着人人趋之若鹜的高度。另一个男生1米56（无意对先天进行歧视），那不管我们多么想忽略这个事实，心里都会承认这个格子有点矮。182：156=7：6. 什么意思呢？</p>
-<p>如果一个人七天工作，和六天工作，其产生的差距其实是很大的，和身高的差距类似。只是对于工作上的一点，很难短期内直接看出。</p>
-<p>也 许有人觉得个人有休闲，不要太累，就是想慢慢的，悠哉悠哉，这当然要尊重个人的自由意志；然而，如果你心里想的是，你愿意试试看这种方法，只是不知道怎么 办，那么这里是针对你而写的。也许你读了很多传记，发现政治家，成功的企业家（包含果粉的神Jobs），科学家，都是连续工作的，他们是精力充沛？还是什 么？最近有一篇文章写奥巴马，“我教你怎么当总统”。里面有一重要的条，就是要天天运动。也许有人觉得，运动不是更累吗？其实休息有两种，一种是消极的休 息（消极不等于不必要），比如睡眠，懒懒地呆在那里什么的，一种是积极的休息，就是运动。除了奥巴马，比如著名生物学家施一公非常擅长长跑，比尔盖茨也是 坚持跑步运动。。</p>
-<p>有人说，这些人真厉害。做这么多事的同时，又天天运动，真是多面手。其实换个角度想，坚持运动正是能够完成大量工作的前提保证。运动可以增强细胞的自噬效应，可以增强心肺等器官的机能，使得人更能承受长期工作的劳累。</p>
-<p>不敢说100%，如果查看那些那些大牛们，有很大的比例都在于运动；各种运动中，又有很大的比例在于长跑。</p>
-<p>正因为如此，一个人才可能承受7天的工作量，反而不会疲劳。这是一个公开的秘密。</p>
-<p>学习的第三条，就是不去想学习的目的。</p>
-<p>所谓不去想学习的目的，并非说没有长远的理想，也不是说不要调整学习的方向，只是不要去天天问自己，“学这些干什么？有什么用？” </p>
-<p>要经历过很多事情之后，才有可能知道学习的目的，并且每个人会形成不同的理解。</p>
-<p>在我看来，要把每天割开来过，在学习的时候，只希望当天是最饱满的一天，做自己认为最有意义的事情，而不是拖拉到明天，或者为过去而懊恼。</p>
-<p>这样子每天认真学习，过一定的阶段，自己的视野才能取得有所觉察的增长，然后进而调整方法和内容，并更进一步的试图确定理想；过更长的阶段，学习会带来不同的机会，使得自己对于生活的选择余地更加广阔。总而言之，学习的目的，是在学习的过程当中慢慢获得的。</p>
-<p>如果还没开始学习，就先问目的，是一种永不可能实现的功利主义——因为不知道有什么用，所以不做。实际上的逻辑恰恰是反过来：因为没有做，所以不可能知道它的目的。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;1.要避免骄傲，好学习他人的长处&lt;/p&gt;
-&lt;p&gt;这被放在了第一条。我们国家的教育强调竞争，不重视合作。除了抄作业，高中几乎没有什么机会可以两个人合作出来的项目。因此，对于那些在班级，年级成绩靠前，在市、省、国、国际比赛取得名次的学生，要善用自己的天赋，而不是心存骄傲。&lt;/p
-    
-    </summary>
-    
-      <category term="小记" scheme="http://yoursite.com/categories/%E5%B0%8F%E8%AE%B0/"/>
-    
     
   </entry>
   
