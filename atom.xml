@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-25T10:47:51.001Z</updated>
+  <updated>2017-12-04T22:25:32.768Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue</title>
+    <link href="http://yoursite.com/2017/12/05/vue/"/>
+    <id>http://yoursite.com/2017/12/05/vue/</id>
+    <published>2017-12-04T22:24:45.000Z</published>
+    <updated>2017-12-04T22:25:32.768Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="vue笔记"><a href="#vue笔记" class="headerlink" title="##vue笔记"></a>##vue笔记</h2><p>##数据劫持原理(双向数据绑定)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">输入:</div><div class="line">   &lt;input type=&quot;&quot; name=&quot;&quot; value=&quot;&quot;&gt;</div><div class="line">   &lt;script&gt;</div><div class="line">       var person = &#123;</div><div class="line">           name: &apos;jack&apos;</div><div class="line">       &#125;</div><div class="line">       document.querySelector(&apos;input&apos;).value = person.name</div><div class="line"></div><div class="line">       document.querySelector(&apos;input&apos;).onkeyup = function (e) &#123;</div><div class="line">           var eleVal = e.target.value</div><div class="line">           person.name = eleVal</div><div class="line">       &#125;</div><div class="line"></div><div class="line">       var tmp = &quot;&quot;</div><div class="line">       Object.defineProperty(person, &apos;name&apos;, &#123;</div><div class="line">           set(newV) &#123;</div><div class="line">               tmp = newV</div><div class="line">               document.querySelector(&apos;input&apos;).value = newV</div><div class="line">           &#125;,</div><div class="line">           get()&#123;</div><div class="line">               return tmp</div><div class="line">           &#125;</div><div class="line">       &#125;)</div><div class="line">   &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>##vue基本使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;app&quot;&gt;</div><div class="line"></div><div class="line">   &lt;/div&gt;</div><div class="line"></div><div class="line">   &lt;script src=&quot;../node_modules/vue/dist/vue.js&quot;&gt;</div><div class="line"></div><div class="line">   &lt;/script&gt;</div><div class="line">   &lt;script&gt;</div><div class="line">       var vm = new Vue(&#123;</div><div class="line">           el: &apos;#app&apos;,</div><div class="line">           template: `</div><div class="line">               &lt;ul&gt;</div><div class="line">                   &lt;li&gt;悲&lt;/li&gt;</div><div class="line">                   &lt;li&gt;上&lt;/li&gt;</div><div class="line">                   &lt;li&gt;&#123;&#123;city1&#125;&#125;&lt;/li&gt;</div><div class="line">                   &lt;li&gt;&#123;&#123;city2&#125;&#125;&lt;/li&gt;</div><div class="line">                   &lt;input type=&quot;text&quot; v-model=&quot;city2&quot;/&gt;  //这个input元素与city2双向数据绑定</div><div class="line">               &lt;/ul&gt;</div><div class="line">           `,</div><div class="line">           data() &#123;</div><div class="line">               return &#123;</div><div class="line">                   city1: &apos;杭州&apos;,</div><div class="line">                   city2: &apos;hangzhou&apos;</div><div class="line">               &#125;</div><div class="line">           &#125;</div><div class="line">       &#125;)</div><div class="line"></div><div class="line">       vm.city1 = &apos;abc&apos;</div><div class="line">   &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;vue笔记&quot;&gt;&lt;a href=&quot;#vue笔记&quot; class=&quot;headerlink&quot; title=&quot;##vue笔记&quot;&gt;&lt;/a&gt;##vue笔记&lt;/h2&gt;&lt;p&gt;##数据劫持原理(双向数据绑定)&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;t
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>mysql解压版安装经验</title>
@@ -81,7 +101,7 @@
     <link href="http://yoursite.com/2017/08/22/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
     <id>http://yoursite.com/2017/08/22/响应式布局/</id>
     <published>2017-08-22T06:49:08.000Z</published>
-    <updated>2017-08-22T07:01:09.960Z</updated>
+    <updated>2017-08-22T07:01:09.961Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1.@media screen and (width:640px)&#123;&#125;  注意空格</div><div class="line"></div><div class="line">2.@media screen and (min-width:400px) and (max-width:800px)</div><div class="line"></div><div class="line">3.引入方式: &lt;link rel=&quot;stylesheet&quot; href=&quot;&quot; media=&quot;screen and (width:640px)&quot;&gt;</div></pre></td></tr></table></figure>
 ]]></content>
@@ -121,7 +141,7 @@
     <link href="http://yoursite.com/2017/08/17/AugularJs8%E6%9C%88/"/>
     <id>http://yoursite.com/2017/08/17/AugularJs8月/</id>
     <published>2017-08-17T00:39:16.000Z</published>
-    <updated>2017-08-17T13:11:26.117Z</updated>
+    <updated>2017-10-18T01:18:56.226Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <pre><code>声明应用:位html标签添加ng-app属性  可以指定一个应用 表明此标签包裹的内容都属于应用的一部分
@@ -167,46 +187,6 @@ script中: var app = angular.module(&quot;a123&quot;,[]);
     </summary>
     
       <category term="AngularJs" scheme="http://yoursite.com/categories/AngularJs/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>git</title>
-    <link href="http://yoursite.com/2017/08/14/git/"/>
-    <id>http://yoursite.com/2017/08/14/git/</id>
-    <published>2017-08-14T13:20:18.000Z</published>
-    <updated>2017-09-27T13:14:30.062Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.git  status   检查版本状态</p>
-<p>2.git diff        显示修改了什么</p>
-<p>3.git reset –hard (commit号 不需要括号)  回到这个版本</p>
-<p>4.git reflog  显示过去干了什么 记录commit号</p>
-<p>5.Untracked files  从没添加过的状态</p>
-<p>6.git管理的是修改   </p>
-<p>实验  第一次修改-&gt;git add -&gt;第二次修改-&gt;git commit</p>
-<p>只会提交第一次修改的内容 也就是提交暂存区的内容第二次修改的不会被提交</p>
-<ol>
-<li>git diff HEAD – 文件名      工作区文件和版本库文件有什么不同</li>
-</ol>
-<p>8.git checkout – 文件名字   丢弃工作区的修改</p>
-<p>git checkout – 文件名字  把已经在工作区删除的文件 在版本库恢复</p>
-<ol>
-<li>git rm 文件名字 删除文件</li>
-<li>git 不能删除库里的文件?  只能通过删除桌面的文件和暂存区的文件后 提交修改</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;1.git  status   检查版本状态&lt;/p&gt;
-&lt;p&gt;2.git diff        显示修改了什么&lt;/p&gt;
-&lt;p&gt;3.git reset –hard (commit号 不需要括号)  回到这个版本&lt;/p&gt;
-&lt;p&gt;4.git reflog  显示过去干了什么 记录
-    
-    </summary>
-    
-      <category term="git" scheme="http://yoursite.com/categories/git/"/>
     
     
   </entry>
@@ -270,11 +250,72 @@ doctype不存在会导致文档以兼容模式运行.
   </entry>
   
   <entry>
+    <title>git</title>
+    <link href="http://yoursite.com/2017/08/14/git/"/>
+    <id>http://yoursite.com/2017/08/14/git/</id>
+    <published>2017-08-14T13:20:18.000Z</published>
+    <updated>2017-09-27T13:14:30.063Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.git  status   检查版本状态</p>
+<p>2.git diff        显示修改了什么</p>
+<p>3.git reset –hard (commit号 不需要括号)  回到这个版本</p>
+<p>4.git reflog  显示过去干了什么 记录commit号</p>
+<p>5.Untracked files  从没添加过的状态</p>
+<p>6.git管理的是修改   </p>
+<p>实验  第一次修改-&gt;git add -&gt;第二次修改-&gt;git commit</p>
+<p>只会提交第一次修改的内容 也就是提交暂存区的内容第二次修改的不会被提交</p>
+<ol>
+<li>git diff HEAD – 文件名      工作区文件和版本库文件有什么不同</li>
+</ol>
+<p>8.git checkout – 文件名字   丢弃工作区的修改</p>
+<p>git checkout – 文件名字  把已经在工作区删除的文件 在版本库恢复</p>
+<ol>
+<li>git rm 文件名字 删除文件</li>
+<li>git 不能删除库里的文件?  只能通过删除桌面的文件和暂存区的文件后 提交修改</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1.git  status   检查版本状态&lt;/p&gt;
+&lt;p&gt;2.git diff        显示修改了什么&lt;/p&gt;
+&lt;p&gt;3.git reset –hard (commit号 不需要括号)  回到这个版本&lt;/p&gt;
+&lt;p&gt;4.git reflog  显示过去干了什么 记录
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>css不懂总结</title>
+    <link href="http://yoursite.com/2017/08/14/css%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2017/08/14/css总结/</id>
+    <published>2017-08-14T12:10:41.000Z</published>
+    <updated>2017-09-02T00:44:43.027Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. E:first-of-type </div><div class="line">选中每个父元素下子元素为E的元素</div><div class="line"></div><div class="line">2.</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
+    
+    </summary>
+    
+      <category term="css" scheme="http://yoursite.com/categories/css/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>bootstrap8月记录</title>
     <link href="http://yoursite.com/2017/08/14/bootstrap8%E6%9C%88%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/08/14/bootstrap8月记录/</id>
     <published>2017-08-14T12:10:41.000Z</published>
-    <updated>2017-08-27T11:55:35.571Z</updated>
+    <updated>2017-08-27T11:55:35.572Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">1.栅格系统  布局容器 始终需要</div><div class="line">.container 类用于固定宽度并支持响应式布局的容器。</div><div class="line">&lt;div class="container"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">.container-fluid 类似于100%宽度 占据全部视口</div><div class="line">&lt;div class="cantainer-fluid"&gt;</div><div class="line">...</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">2.行（row）”必须包含在 .container （固定宽度）或 </div><div class="line">.container-fluid （100% 宽度）中，</div><div class="line">以便为其赋予合适的排列（aligment）和内补（padding）。</div><div class="line">通过“行（row）”在水平方向创建一组“列（column）”。</div><div class="line"></div><div class="line">3.glyphicon 不要和其他组件混合使用</div><div class="line">图标类不能和其它组件直接联合使用。</div><div class="line">它们不能在同一个元素上与其他类共同存在。</div><div class="line">应该创建一个嵌套的 &lt;span&gt; 标签，</div><div class="line">并将图标类应用到这个 &lt;span&gt; 标签上。</div><div class="line"></div><div class="line">只对内容为空的元素起作用</div><div class="line">图标类只能应用在不包含任何文本内容或子元素的元素上。</div><div class="line"></div><div class="line">4.  .col.xs- 超小(手机)</div><div class="line">	.col.sm- 小屏幕(平板)</div><div class="line">	.col-md- 桌面显示器</div><div class="line">	.col-lg- 大显示器</div><div class="line"></div><div class="line">5. 如果是XX屏幕就隐藏  hidden-xx(屏幕) </div><div class="line"></div><div class="line">6. navbar-right 让标签靠右边   </div><div class="line"></div><div class="line">7.关于轮播图</div><div class="line">	(1) 一般用a包裹</div><div class="line">	(2)如果需要大小图互相换 这样设置在大屏幕 中屏幕 小屏幕 显示一张,</div><div class="line">	极小屏幕显示一样   用hidden-XX隐藏互相切换 </div><div class="line">	</div><div class="line">	data-interval="number"    自动循环每个项目之间的延迟的时间</div><div class="line">	data-pause="string"  鼠标进入时暂停 离开恢复</div><div class="line"></div><div class="line">8.关于栅格系统  另起一行不需要重新定义row  算好即可</div><div class="line">	如果上下不相同 可以另起一行row</div><div class="line"></div><div class="line">9.col-lg-offset-XX 列偏移</div><div class="line"></div><div class="line">10 列表组 list-group-item</div></pre></td></tr></table></figure>]]></content>
@@ -292,32 +333,11 @@ doctype不存在会导致文档以兼容模式运行.
   </entry>
   
   <entry>
-    <title>css不懂总结</title>
-    <link href="http://yoursite.com/2017/08/14/css%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2017/08/14/css总结/</id>
-    <published>2017-08-14T12:10:41.000Z</published>
-    <updated>2017-09-02T00:44:43.026Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. E:first-of-type </div><div class="line">选中每个父元素下子元素为E的元素</div><div class="line"></div><div class="line">2.</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/di
-    
-    </summary>
-    
-      <category term="css" scheme="http://yoursite.com/categories/css/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>dom总结</title>
     <link href="http://yoursite.com/2017/08/13/dom%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/08/13/dom总结/</id>
     <published>2017-08-13T07:27:44.000Z</published>
-    <updated>2017-08-18T01:02:01.808Z</updated>
+    <updated>2017-08-18T01:02:01.809Z</updated>
     
     <content type="html"><![CDATA[<p>###1 焦点问题</p>
 <blockquote>
@@ -360,77 +380,11 @@ doctype不存在会导致文档以兼容模式运行.
   </entry>
   
   <entry>
-    <title>唯品会</title>
-    <link href="http://yoursite.com/2017/08/13/%E5%94%AF%E5%93%81%E4%BC%9A/"/>
-    <id>http://yoursite.com/2017/08/13/唯品会/</id>
-    <published>2017-08-13T07:27:44.000Z</published>
-    <updated>2017-08-18T01:02:33.968Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<pre><code>1.  sel-area div i {
-    display: inline-block;
-    width: 0px;
-    height: 0px;
-    border-width: 5px;
-    vertical-align: middle;
-    border-color: #999 transparent transparent transparent;
-    border-style: solid dashed dotted dashed;}
-
-2.内部盒子动导致外部盒子定位不稳
-  设置外部盒子为相对定位
-
-3.
- &lt;div class=&quot;index-rank-list clearfix&quot;&gt;
-      &lt;a class=&quot;index-rank-item&quot; href=&quot;&quot;&gt;
-           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
-           &lt;img src=&quot;images/weipin_index/1501479587607.jpg&quot; alt=&quot;&quot;/&gt;
-      &lt;/a&gt;
-      &lt;a class=&quot;index-rank-item index-rank-item1&quot; href=&quot;&quot;&gt;
-           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
-           &lt;img src=&quot;images/weipin_index/1501479675015.jpg&quot; alt=&quot;&quot;/&gt;
-      &lt;/a&gt;
-      &lt;a class=&quot;index-rank-item index-rank-item2&quot; href=&quot;&quot;&gt;
-           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
-           &lt;img src=&quot;images/weipin_index/1501479634643.jpg&quot; alt=&quot;&quot;/&gt;
-      &lt;/a&gt;
-  &lt;/div&gt;
-
-for(var i = 0; i &lt; $(&quot;.index-rank-list img&quot;).length ; i++) {
-$(&quot;.index-rank-list img&quot;).eq(i).mouseenter(function () {
-  jianjinjianchu($(this));
-    });
-  }
-如果在$内部取$(this).index() 得到的值是相对于span img 的 而不是3个img
-
- pointer-events: none;  元素遮盖 绝对定位导致    给绝对定位元素设置这个属性  底层的元素就可以控制了
-
- $(this).parent().children().eq(0).children().css(&quot;filter&quot;,&quot;blur(0px)&quot;);   //图片模糊恢复‘
-
-
-让元素固定与中间 使元素左边的距离不管浏览器窗口大小都稳定不变  固定定位之后 用left百分比控制居中 然后用margin-left往左移动
-</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;1.  sel-area div i {
-    display: inline-block;
-    width: 0px;
-    height: 0px;
-    border-width: 5px;
-    vertical-align: 
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>jQuery</title>
     <link href="http://yoursite.com/2017/08/13/jQuery/"/>
     <id>http://yoursite.com/2017/08/13/jQuery/</id>
     <published>2017-08-13T07:27:44.000Z</published>
-    <updated>2017-08-13T07:37:29.005Z</updated>
+    <updated>2017-08-13T07:37:29.006Z</updated>
     
     <content type="html"><![CDATA[<hr>
 <pre><code>标准选择器
@@ -602,6 +556,72 @@ $(&amp;quot;.add&amp;quot;).css(&amp;q
   </entry>
   
   <entry>
+    <title>唯品会</title>
+    <link href="http://yoursite.com/2017/08/13/%E5%94%AF%E5%93%81%E4%BC%9A/"/>
+    <id>http://yoursite.com/2017/08/13/唯品会/</id>
+    <published>2017-08-13T07:27:44.000Z</published>
+    <updated>2017-08-18T01:02:33.968Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<pre><code>1.  sel-area div i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-width: 5px;
+    vertical-align: middle;
+    border-color: #999 transparent transparent transparent;
+    border-style: solid dashed dotted dashed;}
+
+2.内部盒子动导致外部盒子定位不稳
+  设置外部盒子为相对定位
+
+3.
+ &lt;div class=&quot;index-rank-list clearfix&quot;&gt;
+      &lt;a class=&quot;index-rank-item&quot; href=&quot;&quot;&gt;
+           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
+           &lt;img src=&quot;images/weipin_index/1501479587607.jpg&quot; alt=&quot;&quot;/&gt;
+      &lt;/a&gt;
+      &lt;a class=&quot;index-rank-item index-rank-item1&quot; href=&quot;&quot;&gt;
+           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
+           &lt;img src=&quot;images/weipin_index/1501479675015.jpg&quot; alt=&quot;&quot;/&gt;
+      &lt;/a&gt;
+      &lt;a class=&quot;index-rank-item index-rank-item2&quot; href=&quot;&quot;&gt;
+           &lt;span class=&quot;index-rank-item-icon&quot;&gt;&lt;/span&gt;
+           &lt;img src=&quot;images/weipin_index/1501479634643.jpg&quot; alt=&quot;&quot;/&gt;
+      &lt;/a&gt;
+  &lt;/div&gt;
+
+for(var i = 0; i &lt; $(&quot;.index-rank-list img&quot;).length ; i++) {
+$(&quot;.index-rank-list img&quot;).eq(i).mouseenter(function () {
+  jianjinjianchu($(this));
+    });
+  }
+如果在$内部取$(this).index() 得到的值是相对于span img 的 而不是3个img
+
+ pointer-events: none;  元素遮盖 绝对定位导致    给绝对定位元素设置这个属性  底层的元素就可以控制了
+
+ $(this).parent().children().eq(0).children().css(&quot;filter&quot;,&quot;blur(0px)&quot;);   //图片模糊恢复‘
+
+
+让元素固定与中间 使元素左边的距离不管浏览器窗口大小都稳定不变  固定定位之后 用left百分比控制居中 然后用margin-left往左移动
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;pre&gt;&lt;code&gt;1.  sel-area div i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-width: 5px;
+    vertical-align: 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>运动函数</title>
     <link href="http://yoursite.com/2017/08/13/%E8%BF%90%E5%8A%A8%E5%87%BD%E6%95%B0%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2017/08/13/运动函数总结/</id>
@@ -619,6 +639,53 @@ $(&amp;quot;.add&amp;quot;).css(&amp;q
     </summary>
     
       <category term="javascript" scheme="http://yoursite.com/categories/javascript/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>canvas</title>
+    <link href="http://yoursite.com/2017/05/11/canvas/"/>
+    <id>http://yoursite.com/2017/05/11/canvas/</id>
+    <published>2017-05-11T08:23:15.000Z</published>
+    <updated>2017-09-19T03:41:11.303Z</updated>
+    
+    <content type="html"><![CDATA[<p>##声明<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id = &apos;canvas&apos; w=&quot;100&quot; h=&quot;100&quot;&gt;&lt;/canvas&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">	var canvas = document.getElementById(&apos;canvas&apos;)</div><div class="line">	var context = canvas.getContext(&apos;2d&apos;)</div><div class="line"></div><div class="line">	</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>##矩形<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">fillRect() strokeRect() clearRect()</div><div class="line"></div><div class="line">接收4个参数: 矩形的X坐标 Y坐标  宽度 高度</div><div class="line"></div><div class="line">绘制之前 caontext.fillStyle = &quot;颜色&quot;  设置绘笔颜色  可以用rgb透明设置</div><div class="line"></div><div class="line">strokeRect 可以给矩形描边 </div><div class="line"></div><div class="line">fill代表填充  stroke代表描边</div><div class="line"></div><div class="line">clearRect 扣出来一个矩形</div></pre></td></tr></table></figure></p>
+<p>##绘制路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">arc(x, y, radius, startAngle, endAngle, counterclockwise) ：以 (x,y) 为圆心绘</div><div class="line">制一条弧线，弧线半径为 radius ，起始和结束角度（用弧度表示）分别为 startAngle 和</div><div class="line">endAngle 。最后一个参数表示 startAngle 和 endAngle 是否按逆时针方向计算，值为 false</div><div class="line">表示按顺时针方向计算。</div><div class="line">arcTo(x1, y1, x2, y2, radius) ：从上一点开始绘制一条弧线，到 (x2,y2) 为止，并且以</div><div class="line">给定的半径 radius 穿过 (x1,y1) 。</div><div class="line">bezierCurveTo(c1x, c1y, c2x, c2y, x, y) ：从上一点开始绘制一条曲线，到 (x,y) 为</div><div class="line">止，并且以 (c1x,c1y) 和 (c2x,c2y) 为控制点。</div><div class="line">lineTo(x, y) ：从上一点开始绘制一条直线，到 (x,y) 为止。</div><div class="line">moveTo(x, y) ：将绘图游标移动到 (x,y) ，不画线。</div><div class="line">quadraticCurveTo(cx, cy, x, y) ：从上一点开始绘制一条二次曲线，到 (x,y) 为止，并</div><div class="line">且以 (cx,cy) 作为控制点。</div><div class="line">rect(x, y, width, height) ：从点 (x,y) 开始绘制一个矩形，宽度和高度分别由 width 和</div><div class="line">height 指定。这个方法绘制的是矩形路径，而不是 strokeRect() 和 fillRect() 所绘制的独</div><div class="line">立的形状。</div></pre></td></tr></table></figure></p>
+<p>##填充 描边<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fill填充</div><div class="line">stroked描边</div><div class="line">setLineDash([5,2]) 根据路径每隔着2个元素画5元素</div></pre></td></tr></table></figure></p>
+<p>##画圆<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arc(&apos;x坐标&apos;,&apos;y坐标&apos;,&apos;长度&apos;,&apos;开始弧度&apos;,&apos;结束弧度&apos;)</div><div class="line"></div><div class="line">弧度 = 2* Math.PI / 360°</div></pre></td></tr></table></figure></p>
+<p>##画图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">img(元素,X坐标,y坐标,宽度,高度)</div><div class="line">img(元素,图片X坐标,图片Y坐标,原图像选择框的宽度,原图像选择框的高度,X坐标,y坐标,宽度,高度)</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##声明&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;
+    
+    </summary>
+    
+      <category term="canvas" scheme="http://yoursite.com/categories/canvas/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>函数</title>
+    <link href="http://yoursite.com/2017/05/11/%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2017/05/11/函数/</id>
+    <published>2017-05-11T08:23:15.000Z</published>
+    <updated>2017-09-14T11:27:04.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>##声明函数和匿名函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">声明函数:</div><div class="line">function a() &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">这种函数可以在声明之前调用,原因 函数声明提升</div><div class="line"></div><div class="line">函数表达式(匿名函数):</div><div class="line">var a = function() &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">这种函数不可以在之前调用</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##声明函数和匿名函数&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div 
+    
+    </summary>
+    
+      <category term="函数" scheme="http://yoursite.com/categories/%E5%87%BD%E6%95%B0/"/>
     
     
   </entry>
@@ -684,7 +751,7 @@ hexo deploy
     <link href="http://yoursite.com/2017/05/11/17-9-2%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/05/11/17-9-2记录/</id>
     <published>2017-05-11T08:23:15.000Z</published>
-    <updated>2017-09-03T13:10:20.832Z</updated>
+    <updated>2017-09-03T13:10:20.833Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">1.template-web.js:3 Uncaught Error: template not found: Cannot read property &apos;value&apos; of null  模板没有添加id报的错误</div><div class="line"></div><div class="line">2. html = template(&apos;msg&apos;,message);  模板引入的格式 前者是id  后者是json</div><div class="line"></div><div class="line">3.json  最简单的两个方法   JSON.stringify(javascript对象)    把javascript对象序列化为json字符串</div><div class="line">						 JSON.parse(json对象)  				把json字符串解析为原生javascript对象</div><div class="line"></div><div class="line">4. JSON.stringify(javascript对象,过滤选择)</div><div class="line">	过滤选择:可以添加对象的名字 这样选择出来的东西就是添加的东西的值</div><div class="line"></div><div class="line">	JSON.stringify(javascript对象,func)</div><div class="line"></div><div class="line">	function(key,value) &#123;</div><div class="line">		switch(key) &#123;</div><div class="line">			case &quot;authors&quot;:</div><div class="line">				return value.join(&quot;,&quot;)</div><div class="line">			case &quot;year&quot;:</div><div class="line">				return 5000;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	如果匹配到上面一样的值了  那么就修改 没有匹配到就不用修改</div><div class="line"></div><div class="line">5. Date.getFullYear()   可以取到年</div></pre></td></tr></table></figure>
 <hr>
@@ -699,27 +766,6 @@ hexo deploy
     </summary>
     
       <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>函数</title>
-    <link href="http://yoursite.com/2017/05/11/%E5%87%BD%E6%95%B0/"/>
-    <id>http://yoursite.com/2017/05/11/函数/</id>
-    <published>2017-05-11T08:23:15.000Z</published>
-    <updated>2017-09-14T11:27:04.869Z</updated>
-    
-    <content type="html"><![CDATA[<p>##声明函数和匿名函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">声明函数:</div><div class="line">function a() &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">这种函数可以在声明之前调用,原因 函数声明提升</div><div class="line"></div><div class="line">函数表达式(匿名函数):</div><div class="line">var a = function() &#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line">这种函数不可以在之前调用</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;##声明函数和匿名函数&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div 
-    
-    </summary>
-    
-      <category term="函数" scheme="http://yoursite.com/categories/%E5%87%BD%E6%95%B0/"/>
     
     
   </entry>
@@ -751,105 +797,6 @@ hexo deploy
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>canvas</title>
-    <link href="http://yoursite.com/2017/05/11/canvas/"/>
-    <id>http://yoursite.com/2017/05/11/canvas/</id>
-    <published>2017-05-11T08:23:15.000Z</published>
-    <updated>2017-09-19T03:41:11.302Z</updated>
-    
-    <content type="html"><![CDATA[<p>##声明<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;canvas id = &apos;canvas&apos; w=&quot;100&quot; h=&quot;100&quot;&gt;&lt;/canvas&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">	var canvas = document.getElementById(&apos;canvas&apos;)</div><div class="line">	var context = canvas.getContext(&apos;2d&apos;)</div><div class="line"></div><div class="line">	</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>##矩形<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">fillRect() strokeRect() clearRect()</div><div class="line"></div><div class="line">接收4个参数: 矩形的X坐标 Y坐标  宽度 高度</div><div class="line"></div><div class="line">绘制之前 caontext.fillStyle = &quot;颜色&quot;  设置绘笔颜色  可以用rgb透明设置</div><div class="line"></div><div class="line">strokeRect 可以给矩形描边 </div><div class="line"></div><div class="line">fill代表填充  stroke代表描边</div><div class="line"></div><div class="line">clearRect 扣出来一个矩形</div></pre></td></tr></table></figure></p>
-<p>##绘制路径<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">arc(x, y, radius, startAngle, endAngle, counterclockwise) ：以 (x,y) 为圆心绘</div><div class="line">制一条弧线，弧线半径为 radius ，起始和结束角度（用弧度表示）分别为 startAngle 和</div><div class="line">endAngle 。最后一个参数表示 startAngle 和 endAngle 是否按逆时针方向计算，值为 false</div><div class="line">表示按顺时针方向计算。</div><div class="line">arcTo(x1, y1, x2, y2, radius) ：从上一点开始绘制一条弧线，到 (x2,y2) 为止，并且以</div><div class="line">给定的半径 radius 穿过 (x1,y1) 。</div><div class="line">bezierCurveTo(c1x, c1y, c2x, c2y, x, y) ：从上一点开始绘制一条曲线，到 (x,y) 为</div><div class="line">止，并且以 (c1x,c1y) 和 (c2x,c2y) 为控制点。</div><div class="line">lineTo(x, y) ：从上一点开始绘制一条直线，到 (x,y) 为止。</div><div class="line">moveTo(x, y) ：将绘图游标移动到 (x,y) ，不画线。</div><div class="line">quadraticCurveTo(cx, cy, x, y) ：从上一点开始绘制一条二次曲线，到 (x,y) 为止，并</div><div class="line">且以 (cx,cy) 作为控制点。</div><div class="line">rect(x, y, width, height) ：从点 (x,y) 开始绘制一个矩形，宽度和高度分别由 width 和</div><div class="line">height 指定。这个方法绘制的是矩形路径，而不是 strokeRect() 和 fillRect() 所绘制的独</div><div class="line">立的形状。</div></pre></td></tr></table></figure></p>
-<p>##填充 描边<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fill填充</div><div class="line">stroked描边</div><div class="line">setLineDash([5,2]) 根据路径每隔着2个元素画5元素</div></pre></td></tr></table></figure></p>
-<p>##画圆<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arc(&apos;x坐标&apos;,&apos;y坐标&apos;,&apos;长度&apos;,&apos;开始弧度&apos;,&apos;结束弧度&apos;)</div><div class="line"></div><div class="line">弧度 = 2* Math.PI / 360°</div></pre></td></tr></table></figure></p>
-<p>##画图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">img(元素,X坐标,y坐标,宽度,高度)</div><div class="line">img(元素,图片X坐标,图片Y坐标,原图像选择框的宽度,原图像选择框的高度,X坐标,y坐标,宽度,高度)</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;##声明&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;
-    
-    </summary>
-    
-      <category term="canvas" scheme="http://yoursite.com/categories/canvas/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>html标签</title>
-    <link href="http://yoursite.com/2017/05/08/heng/"/>
-    <id>http://yoursite.com/2017/05/08/heng/</id>
-    <published>2017-05-08T13:23:25.000Z</published>
-    <updated>2017-08-20T13:51:24.328Z</updated>
-    
-    <content type="html"><![CDATA[<hr>
-<ul>
-<li>换行标签 &nbsp; &nbsp;&nbsp;&nbsp;  <code>&lt;br/&gt;</code></li>
-<li>水平线标签 &nbsp; <code>&lt;hr/&gt;</code></li>
-<li>段落标签&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;p&gt;文本内容&lt;/p&gt;</code></li>
-<li>标题标签&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>&lt;h1&gt;-&lt;h6&gt;&amp;nbsp;&amp;nbsp;: 1最大 取值到h6</code></li>
-<li>文本标签&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; <code>&lt;font&gt;文本内容&lt;/font&gt;</code></li>
-<li>文本倾斜标签&nbsp;<code>&lt;i&gt;&lt;/i&gt; &lt;em&gt;&lt;/em&gt;</code></li>
-<li>删除线标签&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;s&gt;&lt;/s&gt; &lt;del&gt;&lt;/del&gt;</code></li>
-<li>下划线标签&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;u&gt;&lt;/u&gt; &lt;ins&gt;&lt;/ins&gt;</code> </li>
-<li>图片标签 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;img src=&quot;来源（必写属性）&quot; alt=&quot;图片不显示的时候显示的文字&quot; title=&quot;鼠标放到图片上显示的文字&quot; width=&quot;宽&quot; height=&quot;高&quot;&gt;</code></li>
-<li>相对路径 &nbsp;&nbsp;&nbsp;&nbsp; <code>下一级目录a/a.jpg上一级目录../a.jpg上一级的其他目录../a/a.jpg  总结：找到下一级目录（文件夹）的图片（文件）用 / 跳出当前目录使用../</code></li>
-<li>绝对路径&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>f:\a\a\a.jpg</code></li>
-<li>超链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>&lt;a href=&quot;去往的路径，跳转的页面（必写属性）&quot; title=&quot;鼠标放到链接上显示的文字（提示文本）&quot; target=&quot;有两个填写方式(_self默认值)在自身页面打开(_blank)打开新页面&quot;&gt;&lt;/a&gt;</code></li>
-<li>锚链接&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>&lt;p id=&quot;sd&quot;&gt; 超链接到锚点 &lt;a href=&quot;#sd&quot;&gt;回到顶部&lt;/a&gt;</code></li>
-<li>无序列表<pre><code>&lt;ul type=&quot;&quot;&gt;  
-&lt;li&gt;&lt;/li&gt; (列表项)
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ul
-type=”square”      小方块
-type=”disc”        实心小圆圈
-type=”circle”      空心小圆圈
-</code></pre></li>
-</ul>
-<ul>
-<li>有序列表<pre><code>&lt;ol&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
-&lt;/ol&gt;
-type=”1,a,A,i,I” type的值可以为1,a,A,i,I
-start=”3”  决定了开始的位置。
-</code></pre></li>
-</ul>
-<ul>
-<li><p>自定义列表</p>
-<pre><code>&lt;dl&gt;      
-&lt;dt&gt;&lt;/dt&gt;  小标题  
-&lt;dd&gt;&lt;/dd&gt;  解释标题  
-&lt;dd&gt;&lt;/dd&gt;  解释标题  
-&lt;/dl&gt;  
-</code></pre></li>
-</ul>
-<ul>
-<li>音乐标签 <code>&lt;embed src=&quot;&quot; hidden=&quot;true&quot;&gt;</code></li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;换行标签 &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;  &lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;水平线标签 &amp;nbsp; &lt;code&gt;&amp;lt;hr/&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;段落标签&amp;nbsp;&amp;nb
-    
-    </summary>
-    
-      <category term="html" scheme="http://yoursite.com/categories/html/"/>
-    
-    
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
   </entry>
   
